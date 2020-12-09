@@ -1,0 +1,100 @@
+
+.header 
+	&__row 
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 25px 0
+
+	&__logo 
+	&__language 
+	&__address 
+        display: block
+        position: relative
+        padding-left: 43px
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            width: 30px
+            height: 30px
+            background: url('../../img/pin.svg') center no-repeat
+
+            
+	&__label 
+        font-size: 14px
+        line-height: 17.5px
+        color: #8591A3
+        margin-bottom: 2px
+	&__text 
+	&__schedule
+        display: block
+        position: relative
+        padding-left: 43px
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            width: 30px
+            height: 30px
+            background: url('../../img/clock.svg') center no-repeat
+             
+	&__button 
+        padding: 17px 28px 15px 28px
+        border: 2px solid #193B67
+        border-radius: 5px
+        &_text 
+            display: block
+            color: #193B67
+            font-size: 14px
+            line-height: 20.3px
+            position: relative
+            padding-left: 26px
+            &::before
+                content: ""
+                display: block
+                position: absolute
+                top: 0
+                left: 0
+                width: 16px
+                height: 16px
+                background: url('../../img/phone.svg') center no-repeat
+
+	&__navigate 
+        border-top: 1px solid #F3F7FA
+        border-bottom: 1px solid #F3F7FA
+.menu 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__item 
+        padding: 25px 15px
+        &:hover
+            color: #ffffff
+            background: #193B67
+            cursor: pointer
+
+
+
+
+
+.submenu
+    &__header
+        position: relative
+        padding-right: 25px
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            top: 0
+            right: 0
+            width: 16px
+            height: 16px
+            background: url('../../img/arrow-down.svg') center no-repeat
+
+        
+

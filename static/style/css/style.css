@@ -1,0 +1,239 @@
+.header__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 25px 0;
+}
+
+.header__address {
+  display: block;
+  position: relative;
+  padding-left: 43px;
+}
+
+.header__address::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: url("../../img/pin.svg") center no-repeat;
+}
+
+.header__label {
+  font-size: 14px;
+  line-height: 17.5px;
+  color: #8591A3;
+  margin-bottom: 2px;
+}
+
+.header__schedule {
+  display: block;
+  position: relative;
+  padding-left: 43px;
+}
+
+.header__schedule::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: url("../../img/clock.svg") center no-repeat;
+}
+
+.header__button {
+  padding: 17px 28px 15px 28px;
+  border: 2px solid #193B67;
+  border-radius: 5px;
+}
+
+.header__button_text {
+  display: block;
+  color: #193B67;
+  font-size: 14px;
+  line-height: 20.3px;
+  position: relative;
+  padding-left: 26px;
+}
+
+.header__button_text::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background: url("../../img/phone.svg") center no-repeat;
+}
+
+.header__navigate {
+  border-top: 1px solid #F3F7FA;
+  border-bottom: 1px solid #F3F7FA;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu__item {
+  padding: 25px 15px;
+}
+
+.menu__item:hover {
+  color: #ffffff;
+  background: #193B67;
+  cursor: pointer;
+}
+
+.submenu__header {
+  position: relative;
+  padding-right: 25px;
+}
+
+.submenu__header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  background: url("../../img/arrow-down.svg") center no-repeat;
+}
+
+.footer {
+  background: #19304C;
+  color: #ADBAC9;
+  padding: 70px 0 53px 0;
+}
+
+.footer__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__row:last-child {
+  margin-top: 65px;
+}
+
+.footer__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__links {
+  color: #ADBAC9;
+  margin-bottom: 30px;
+}
+
+.footer__links:last-child {
+  margin-bottom: 0;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+body {
+  color: #193B67;
+}
+
+a {
+  color: #193B67;
+}
+
+a:hover, a:active, a:focus {
+  color: #193B67;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.page {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.hide {
+  display: none;
+}
+
+.language-menu {
+  padding: 12px 15px;
+  background: #F3F7FA;
+  border-radius: 5px;
+}
+
+.language-menu__on {
+  position: relative;
+  padding: 0 28px 0 30px;
+  font-size: 16px;
+  color: #8591A3;
+}
+
+.language-menu__on::before, .language-menu__on::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.language-menu__on::before {
+  left: 0;
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
+  background: url("../../img/russia.svg") center no-repeat;
+}
+
+.language-menu__on::after {
+  right: 0;
+  background: url("../../img/arrow-down.svg") center no-repeat;
+}
+
+.language-menu__on:hover {
+  cursor: pointer;
+}

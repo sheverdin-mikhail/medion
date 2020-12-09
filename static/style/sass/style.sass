@@ -1,0 +1,63 @@
+@import 'header'
+@import 'footer'
+
+.container
+    max-width: 1180px
+    margin: 0 auto
+
+body
+    color: #193B67
+
+
+a
+    color: #193B67
+    &:hover,
+    &:active,
+    &:focus
+        color: #193B67
+        
+        
+.wrapper
+    min-height: 100%
+    display: flex
+    flex-direction: column
+
+.page
+    flex: 1 0 auto
+    
+
+
+.hide
+    display: none
+
+
+//Менюшка выбора языков
+.language-menu 
+    padding: 12px 15px
+    background: #F3F7FA
+    border-radius: 5px
+    &__on 
+        position: relative
+        padding: 0 28px 0 30px 
+        font-size: 16px
+        color: #8591A3
+        &::before,
+        &::after
+            content: ""
+            display: block
+            position: absolute
+            top: 0
+            width: 20px
+            height: 20px
+        &::before
+            left: 0
+            transform: translateY(-10%)
+            background: url('../../img/russia.svg') center no-repeat
+        &::after
+            right: 0
+            background: url('../../img/arrow-down.svg') center no-repeat
+        
+        &:hover
+            cursor: pointer
+                
+    &__item 
