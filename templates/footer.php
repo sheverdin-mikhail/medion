@@ -1,6 +1,8 @@
         <!-- Блок footer -->
         <div class="footer">
-            <div class="footer__map"></div>
+            <div class="footer__map map">
+                <div id="map" style="width: 100%; height: 100%"></div>
+            </div>
             <div class="container">
                 <div class="footer__footer">
                     <div class="footer__row ">
@@ -29,25 +31,25 @@
                         <div class="footer__column">
                             <div class="footer__info">
                                 <div class="footer__label">График работы:</div>
-                                <div class="footer__text">Пн - Сб:
+                                <div class="footer__text">Пн - Сб: <br>
                                     8:00 - 17:00</div>
                             </div>
                             <div class="footer__info">
                                 <div class="footer__label">Адрес центра:</div>
-                                <div class="footer__text">г.Ташкента, ул.Зульфияхонум 18</div>
+                                <div class="footer__text footer__text_address">г.Ташкента,<br> ул.Зульфияхонум 18</div>
                             </div>
                         </div>
                         <div class="footer__column">
                             <div class="footer__info">
                                 <div class="footer__label">Телефоны центра:</div>
-                                <div class="footer__text">
-                                    <p>+ 998 78 140 00 10</p>
-                                    <p>+ 998 78 140 00 10</p>
+                                <div class="footer__text footer__text_numbers">
+                                    <p class="footer__phone" >+ 998 78 140 00 10</p>
+                                    <p class="footer__phone" >+ 998 78 140 00 10</p>
                                 </div>
                             </div>
                             <div class="footer__info">
                                 <div class="footer__label">E-mail:</div>
-                                <div class="footer__text">example@info.com</div>
+                                <div class="footer__text footer__text_email">example@info.com</div>
                             </div>
                         </div>
                     </div>
@@ -56,12 +58,12 @@
                             <a href="" class="footer__links">Политика конфиденциальности</a>
                         </div>
                         <div class="footer__column">
-                            <p class="footer__copyright">все права защищены</p>
+                            <p class="footer__copyright">2020. Все права защищены.</p>
                         </div>
                         <div class="footer__column footer__column_social">
-                            <a href="" class="footer__social"></a>
-                            <a href="" class="footer__social"></a>
-                            <a href="" class="footer__social"></a>
+                            <a href="" class="footer__social"><img src="static/img/facebook.svg" alt=""></a>
+                            <a href="" class="footer__social"><img src="static/img/telegramm.svg" alt=""></a>
+                            <a href="" class="footer__social"><img src="static/img/instagramm.svg" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -72,5 +74,6 @@
 
 
     <script src="static/js/language-menu.js"></script>
+    <script src="static/js/script.js"></script>
 </body>
 </html>

@@ -4,9 +4,11 @@
 .footer 
     background: #19304C
     color: #ADBAC9
-    padding: 70px 0 53px 0
+    padding: 0 0 53px 0
     &__map 
-    &__footer 
+        height: 600px
+    &__footer
+        padding-top: 70px 
     &__row 
         display: flex
         justify-content: space-between
@@ -16,16 +18,71 @@
         display: flex
         flex-direction: column
         justify-content: space-between
+        &_social
+            flex-direction: row
+            justify-content: space-around
     &__logo 
     &__links 
         color: #ADBAC9
         margin-bottom: 30px
+        &:hover
+            color: darken(#ADBAC9, 20% )
         &:last-child
             margin-bottom: 0
     &__info 
     &__label 
+        margin-bottom: 10px
     &__text 
+        font-size: 14px
+        line-height: 16.8px
+        color: #fff
+        &_address
+            font-size: 16px
+            line-height: 19.2px
+        &_numbers
+            font-size: 20px
+            line-height: 24px
     &__copyright 
-    &__column_social 
+        color: #4A5E7B
+        font-size: 12px
+        line-height: 14.4px
+
     &__social 
+        display: block
+        margin-right: 14px
+    &__phone
+        margin-bottom: 7px
+        
+
+.map
+    &__card
+        padding: 23px 72px 24px 24px
+        position: relative
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            top: 50%
+            left: 0
+            width: 20px
+            height: 20px
+            background: url("../../img/rectangle.svg") center no-repeat
+            transform: translateX(-100%)
+    &__img
+        margin-bottom: 19px
+    &__label
+        margin-bottom: 5px
+        font-size: 13px
+        color: #8591A3
+    &__text
+        display: block
+        margin-bottom: 17px
+        color: #19304C
+        font-size: 16px
+        &_medion
+            font-size: 20px
+        &_address
+            line-height: 20px
+
+
 

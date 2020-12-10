@@ -124,7 +124,15 @@
 .footer {
   background: #19304C;
   color: #ADBAC9;
-  padding: 70px 0 53px 0;
+  padding: 0 0 53px 0;
+}
+
+.footer__map {
+  height: 600px;
+}
+
+.footer__footer {
+  padding-top: 70px;
 }
 
 .footer__row {
@@ -153,13 +161,104 @@
           justify-content: space-between;
 }
 
+.footer__column_social {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 .footer__links {
   color: #ADBAC9;
   margin-bottom: 30px;
 }
 
+.footer__links:hover {
+  color: #7086a1;
+}
+
 .footer__links:last-child {
   margin-bottom: 0;
+}
+
+.footer__label {
+  margin-bottom: 10px;
+}
+
+.footer__text {
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #fff;
+}
+
+.footer__text_address {
+  font-size: 16px;
+  line-height: 19.2px;
+}
+
+.footer__text_numbers {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.footer__copyright {
+  color: #4A5E7B;
+  font-size: 12px;
+  line-height: 14.4px;
+}
+
+.footer__social {
+  display: block;
+  margin-right: 14px;
+}
+
+.footer__phone {
+  margin-bottom: 7px;
+}
+
+.map__card {
+  padding: 23px 72px 24px 24px;
+  position: relative;
+}
+
+.map__card::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url("../../img/rectangle.svg") center no-repeat;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.map__img {
+  margin-bottom: 19px;
+}
+
+.map__label {
+  margin-bottom: 5px;
+  font-size: 13px;
+  color: #8591A3;
+}
+
+.map__text {
+  display: block;
+  margin-bottom: 17px;
+  color: #19304C;
+  font-size: 16px;
+}
+
+.map__text_medion {
+  font-size: 20px;
+}
+
+.map__text_address {
+  line-height: 20px;
 }
 
 .container {
@@ -236,4 +335,14 @@ a:hover, a:active, a:focus {
 
 .language-menu__on:hover {
   cursor: pointer;
+}
+
+.circle_layout {
+  background-color: transparent;
+  background: url("../../img/point.svg") center no-repeat;
+  position: absolute;
+  left: 0px;
+  top: -50px;
+  width: 46px;
+  height: 46px;
 }
