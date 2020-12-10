@@ -46,10 +46,15 @@
 	&__button 
         padding: 17px 28px 15px 28px
         border: 2px solid #193B67
+        color: #193B67
         border-radius: 5px
+        &:hover
+            background: #193B67
+            color: #ffffff
+        &:hover .header__button_text::before
+            background: url('../../img/phone-white.svg') center no-repeat
         &_text 
             display: block
-            color: #193B67
             font-size: 14px
             line-height: 20.3px
             position: relative
@@ -63,6 +68,7 @@
                 width: 16px
                 height: 16px
                 background: url('../../img/phone.svg') center no-repeat
+            
 
 	&__navigate 
         border-top: 1px solid #F3F7FA

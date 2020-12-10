@@ -10,11 +10,10 @@
     <!-- Основные стили -->
     <link rel="stylesheet" href="static/style/css/style.css">
 
-    <!-- Подключение Vue.js -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-
     <!-- Инициализация яндекс.карты -->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+
 
 
 </head>
@@ -29,11 +28,16 @@
                         <div class="header__logo">
                             <img src="static/img/medion_logo.jpg" alt="">
                         </div>
-                        <ul class="language-menu language-menu_header">
-                            <div class="language-menu__on" @click="show_list"><span>Рус</span></div>
-                            <li class="language-menu__item hide" :class="{ hide : active }">Рус</li>
-                            <li class="language-menu__item">Eng</li>
-                        </ul>
+                        <div class="language-menu">
+                            <div class="language-menu__on" >
+                                <span class="language-menu__header">Рус</span>
+                            </div>
+                            <div class="language-menu__items hide">
+                                <div class="language-menu__item" ><span class="language-menu__item_span language-menu__item_span_RU">Рус</span></div>
+                                <div class="language-menu__item"><span class="language-menu__item_span language-menu__item_span_UK">Eng</span></div>
+                            </div>
+                        </div>
+                        
                         <div class="header__address">
                             <span class="header__label">
                                 Наш адрес:

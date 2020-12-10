@@ -55,12 +55,21 @@
 .header__button {
   padding: 17px 28px 15px 28px;
   border: 2px solid #193B67;
+  color: #193B67;
   border-radius: 5px;
+}
+
+.header__button:hover {
+  background: #193B67;
+  color: #ffffff;
+}
+
+.header__button:hover .header__button_text::before {
+  background: url("../../img/phone-white.svg") center no-repeat;
 }
 
 .header__button_text {
   display: block;
-  color: #193B67;
   font-size: 14px;
   line-height: 20.3px;
   position: relative;
@@ -212,6 +221,32 @@
 .footer__social {
   display: block;
   margin-right: 14px;
+  width: 40px;
+  height: 40px;
+}
+
+.footer__social_facebook {
+  background: url("../../img/facebook.svg") center no-repeat;
+}
+
+.footer__social_facebook.active {
+  background: url("../../img/facebook-active.svg") center no-repeat;
+}
+
+.footer__social_telegramm {
+  background: url("../../img/telegramm.svg") center no-repeat;
+}
+
+.footer__social_telegramm.active {
+  background: url("../../img/telegramm-active.svg") center no-repeat;
+}
+
+.footer__social_instagramm {
+  background: url("../../img/instagramm.svg") center no-repeat;
+}
+
+.footer__social_instagramm.active {
+  background: url("../../img/instagramm-active.svg") center no-repeat;
 }
 
 .footer__phone {
@@ -300,19 +335,24 @@ a:hover, a:active, a:focus {
 }
 
 .language-menu {
-  padding: 12px 15px;
-  background: #F3F7FA;
-  border-radius: 5px;
+  position: relative;
 }
 
 .language-menu__on {
+  padding: 12px 15px;
+  background: #F3F7FA;
+  border-radius: 5px;
+  position: relative;
+}
+
+.language-menu__header {
   position: relative;
   padding: 0 28px 0 30px;
   font-size: 16px;
   color: #8591A3;
 }
 
-.language-menu__on::before, .language-menu__on::after {
+.language-menu__header::before, .language-menu__header::after {
   content: "";
   display: block;
   position: absolute;
@@ -321,20 +361,74 @@ a:hover, a:active, a:focus {
   height: 20px;
 }
 
-.language-menu__on::before {
+.language-menu__header::before {
   left: 0;
   -webkit-transform: translateY(-10%);
           transform: translateY(-10%);
   background: url("../../img/russia.svg") center no-repeat;
 }
 
-.language-menu__on::after {
+.language-menu__header::after {
   right: 0;
   background: url("../../img/arrow-down.svg") center no-repeat;
 }
 
-.language-menu__on:hover {
+.language-menu__header:hover {
   cursor: pointer;
+}
+
+.language-menu__items {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  padding-top: 4px;
+  width: 100%;
+  background: #193B67;
+  font-size: 16px;
+  color: #8591A3;
+  border-radius: 0 0 5px 5px;
+}
+
+.language-menu__item {
+  padding: 5px 0 5px 15px;
+}
+
+.language-menu__item:hover {
+  cursor: pointer;
+  background: #235390;
+  color: #ffffff;
+}
+
+.language-menu__item:last-child {
+  border-radius: 0 0 5px 5px;
+}
+
+.language-menu__item_span {
+  padding: 5px 28px 5px 30px;
+  position: relative;
+  display: block;
+}
+
+.language-menu__item_span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  -webkit-transform: translateY(15%);
+          transform: translateY(15%);
+}
+
+.language-menu__item_span_RU::before {
+  background: url("../../img/russia.svg") center no-repeat;
+}
+
+.language-menu__item_span_UK::before {
+  background: url("../../img/united-kingdom.svg") center no-repeat;
 }
 
 .circle_layout {

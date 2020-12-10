@@ -33,10 +33,14 @@ a
 
 //Менюшка выбора языков
 .language-menu 
-    padding: 12px 15px
-    background: #F3F7FA
-    border-radius: 5px
+    position: relative
     &__on 
+        padding: 12px 15px
+        background: #F3F7FA
+        border-radius: 5px
+        position: relative
+        
+    &__header
         position: relative
         padding: 0 28px 0 30px 
         font-size: 16px
@@ -59,8 +63,49 @@ a
         
         &:hover
             cursor: pointer
-                
+        
+    &__items
+        position: absolute
+        bottom: 0   
+        left: 0
+        transform: translateY(100%)    
+        
+        padding-top: 4px
+        width: 100%
+        background: #193B67
+        font-size: 16px
+        color: #8591A3
+        border-radius: 0 0 5px 5px
+            
     &__item 
+
+        padding: 5px 0 5px 15px
+        &:hover
+            cursor: pointer
+            background: lighten(#193B67, 10% )
+            color: #ffffff
+        &:last-child
+            border-radius: 0 0 5px 5px
+        &_span
+            padding: 5px 28px 5px 30px 
+            position: relative
+            display: block
+            &::before
+                content: ""
+                display: block
+                position: absolute
+                top: 0
+                width: 20px
+                height: 20px
+                left: 0
+                transform: translateY(15%)
+            &_RU
+                &::before
+                    background: url('../../img/russia.svg') center no-repeat 
+            &_UK
+                &::before
+                    background: url('../../img/united-kingdom.svg') center no-repeat 
+            
 
 
 .circle_layout 
