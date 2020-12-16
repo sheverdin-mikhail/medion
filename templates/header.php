@@ -70,32 +70,32 @@
                 </div>
                 <nav class="header__navigate">
                     <div class="container">
-                        <ul class="header__menu menu">
-                            <li><a href="/index.php" class="menu__item">
+                        <ul class="header__menu">
+                            <li><a href="/index.php" class="header__menu__item">
                                 Главная
                             </a></li>
-                            <li class="menu__item submenu">
+                            <li class="header__menu__item submenu">
                                 <ul class="">
                                     <span class="submenu__header">Клиника</span>
                                     <li class="submenu__item"></li>
                                 </ul>
                             </li>
-                            <li><a href="/services.php" class="menu__item">
+                            <li><a href="/services.php" class="header__menu__item">
                                 Услуги
                             </a></li>
-                            <li><a href="" class="menu__item">
+                            <li><a href="" class="header__menu__item">
                                 Департамент эстетической медицины 
                             </a></li>
                             <li><a href="" class="menu__item">
                                 Врачи
                             </a></li>
-                            <li><a href="" class="menu__item">
+                            <li><a href="" class="header__menu__item">
                                 СПА Комплекс
                             </a></li>
-                            <li><a href="" class="menu__item">
+                            <li><a href="" class="header__menu__item">
                                 Технологии 
                             </a></li>
-                            <li><a href="" class="menu__item">
+                            <li><a href="" class="header__menu__item">
                                 Контакты 
                             </a></li>
                         </ul>

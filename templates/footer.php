@@ -23,7 +23,7 @@
                         <div class="footer__column">
                             <a href="" class="footer__links">Главная</a>
                             <a href="" class="footer__links">Больница</a>
-                            <a href="" class="footer__links">Услуги</a>
+                            <a href="/services.php" class="footer__links">Услуги</a>
                             <a href="" class="footer__links">Эстетическая медицина</a>
                         </div>
                         <div class="footer__column">

@@ -2,7 +2,7 @@
 @import 'header'
 @import 'footer'
 @import 'main-page'
-
+@import 'services'
 .container
     max-width: 1180px
     margin: 0 auto
@@ -169,6 +169,9 @@ a
     border-radius: 5px
     position: relative
     margin: 0 10px 10px 0
+    &__img
+        padding: 17px
+        background: #fff
     &::before
         counter-increment: myCounter     
         display: block
@@ -201,13 +204,16 @@ a
         color: #454F5C
     &__more
         display: none
+    
     &.active
         background: #C31C22
         box-shadow: 0px 0px 41px rgba(126, 18, 22, 0.49)
         &::before
             color: #C73439
+        
         .card
-            
+            &__img
+                background: #C73439
             &__title
                 color: #fff
             &__text
@@ -236,3 +242,23 @@ a
                     width: 12px
                     height: 12px
                     background: url(../../img/white-vector.svg) center no-repeat
+
+        
+.menu
+    background: #FFFFFF
+    border: 1px solid #ECF1F6
+    box-sizing: border-box
+    box-shadow: 0px 8px 20px rgba(25, 59, 103, 0.03)
+    border-radius: 5px
+    &__item 
+        display: flex
+        justify-content: start
+        align-items: center
+        padding: 20px 0 27px 30px
+        border-top: 1px solid #ECF1F6
+        border-bottom: 1px solid #ECF1F6
+        &_img 
+            margin-right: 20px
+        &_text 
+            font-size: 16px
+            line-height: 155%

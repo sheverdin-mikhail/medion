@@ -6,7 +6,7 @@
 <!-- Блок с основным контентом страницы -->
 <div class="page">
         <!-- Блок с поиском -->
-        <div class="search">
+        <div class="search" style="background: url('static/img/search-bg.jpg') center no-repeat">
                 <div class="container">
                         <form action="" class="search__search">
                                 <input type="text" class="search__input" placeholder="Что-то ищете? Воспользуйтесь поиском по сайту...">
@@ -161,7 +161,7 @@
                                 </div>
                                 <div class="swiper-button swiper-button-prev stocks__navigation stocks__navigation_prev"></div>
                                 <div class="swiper-button swiper-button-next stocks__navigation stocks__navigation_next"></div>
-                                <div class="swiper-pagination"></div>
+                                <div class="swiper-pagination stocks__pagination"></div>
                         </div>
                 </div>
         </div>
