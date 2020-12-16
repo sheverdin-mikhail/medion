@@ -26,14 +26,19 @@ ymaps.ready(function () {
       }
   );
 
-
-
-
-
-
     map.geoObjects.add(circlePlacemark);
     map.behaviors.disable('scrollZoom');
 
 });
+
+
+$(document).ready(function(){
+
+    $('.card').hover(function(){
+        $(this).toggleClass('active')
+    })
+
+
+})
 
 

@@ -1,0 +1,184 @@
+
+
+
+.search 
+    background: url("../../img/search-bg.jpg") center no-repeat
+    padding: 60px 0 40px 0
+    background-size: cover
+    &__search 
+        padding: 10px 10px 10px 30px
+        background: #ffffff
+        display: flex
+        justify-content: space-between
+        box-shadow: 0px 19px 28px rgba(25, 59, 103, 0.02)
+        border-radius: 5px
+        margin-bottom: 154px
+    &__input 
+        color: #8591A3
+        position: relative
+        padding: 0 0px 0 36px
+        display: block
+        background: url('../../img/loupe.svg') center no-repeat
+        background-position: 0 50%
+        flex: 1 1 100%
+            
+            
+    &__button
+        padding: 12px 30px
+        background: #193B67
+        border-radius: 5px
+        color: #ffffff
+        margin-left: 40px   
+        &:hover
+            cursor: pointer
+    &__content
+        max-width: 938px
+       
+    &__slider 
+        text-align: center
+    &__title 
+        +header
+        margin-bottom: 16px
+    &__subtitle 
+        font-size: 18px
+        line-height: 27.9px
+        color: #454F5C
+        margin-bottom: 192px
+
+
+
+
+
+
+.about 
+    padding: 100px 0 61px 0
+    background: url('../../img/ellipse.svg')
+    background-position: 0 100%
+    background-repeat: no-repeat
+    background-color: #FBFBFC
+    &__content 
+        display: flex
+    &__block 
+        flex: 0 0 50%
+        min-width: 0
+        max-height: 570px
+        &_left
+            
+    &__header 
+        +header
+    &__text 
+        font-size: 16px
+        line-height: 25,6px
+        margin: 30px 0 45px 0
+        padding-right: 170px
+        &_text 
+            margin-bottom: 20px
+    &__sendbtn 
+        display: inline-block
+        +buttons
+        padding: 19px 32px 
+        margin-top: 64px
+        span
+            padding-right: 35px
+            position: relative
+            &::before
+                content: ""
+                display: block
+                position: absolute
+                top: 0
+                right: 0
+                width: 20px
+                height: 20px
+                background: url("../../img/send.svg")
+    &__slider 
+        min-width: 0
+    &__navigation
+        top: 50% !important
+
+
+
+.why 
+    padding: 100px 0 134px 0
+    &__header 
+        +header
+        margin-bottom: 45px
+    &__block
+        display: flex
+        justify-content: space-between
+        
+    &__item 
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        background: #EFF4F7
+        flex: 0 1 22%
+        border-radius: 5px
+        padding: 40px 0 0 0 
+    &__text 
+
+        padding: 0 35px
+        font-size: 21px
+        line-height: 29.4px
+    &__imageBox 
+        display: flex
+        align-items: flex-end
+        flex: 1 1 100%
+    &__image 
+        max-width: 100%
+
+
+.stocks 
+    padding-bottom: 70px
+    background: url(../../img/stocks-bg.jpg) bottom no-repeat
+    background-size: contain
+    &__row 
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 45px
+    &__header 
+        +header
+    &__button 
+        padding: 12px 24px
+        +buttons
+    &__slider
+        overflow: visible
+    &__slide 
+        background: #ffff
+        display: flex
+        flex-direction: column
+        padding: 20px 20px 30px 20px
+        border: 2px solid #ECF1F6
+        border-radius: 5px
+        align-items: start
+    &__date 
+        display: block
+        margin: 24px 0  13px 0
+        font-size: 14px
+        line-height: 18.9px
+        color: #8591A3
+    &__text 
+        max-width: 320px
+        margin-bottom: 25px
+        font-size: 20px
+        line-height: 27px
+    &__navigation
+        top: 50% !important
+        &_next
+            transform: translateX(200%)
+        &_prev
+            transform: translateX(-200%)
+    &__wrapper
+        overflow: visible
+
+
+.directions
+    padding: 100px 0 120px 0
+    &__header
+        +header
+        margin-bottom: 50px
+        max-width: 49%
+
+         
+       
+

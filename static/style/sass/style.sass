@@ -1,5 +1,7 @@
+@import 'mixins'
 @import 'header'
 @import 'footer'
+@import 'main-page'
 
 .container
     max-width: 1180px
@@ -116,3 +118,121 @@ a
     top: -50px
     width: 46px
     height: 46px
+
+
+.swiper
+    &-container 
+        width: 100%
+        height: 100%
+    &-wrapper 
+        position: relative
+    &-slide 
+        display: flex
+        justify-content: center
+    &-pagination
+        position: relative
+        &-bullet
+            background: darken(#DCE4EA, 10% )
+            border-radius: 5px
+            width: 10px
+            height: 10px
+            transition: all .3s ease 0s
+            &-active
+                width: 24px
+                background: #193B67
+                transition: width .3s ease 0s
+
+    &-button
+        display: block
+        width: 36px
+        height: 36px
+        background: url('../../img/white-arrow.svg') center no-repeat, #193B67
+        border-radius: 100%
+        top: 20%
+        &::after
+            display: none
+        &-next
+            transform: rotate(180deg)
+            right:  0
+        &-prev
+            left: 0
+        &:hover
+            cursor: pointer
+            background: url('../../img/white-arrow.svg') center no-repeat, #C31C22
+
+
+
+.card 
+    padding: 52px 30px 30px 30px
+    flex: 0 0 24%
+    background:  #FBFBFC
+    border-radius: 5px
+    position: relative
+    margin: 0 10px 10px 0
+    &::before
+        counter-increment: myCounter     
+        display: block
+        content: counter(myCounter)
+        position: absolute
+        top: 25px
+        right: 25px
+        width: 56px
+        height: 56px
+        font-size: 57px
+        color: #F5F5F8
+    &:nth-child(-n+9):before
+        content: '0' counter(myCounter)
+        
+        
+    &__container
+        display: flex
+        flex-wrap: wrap
+        justify-content: flex-start
+        list-style: none
+        counter-reset: myCounter
+    &__img 
+    &__title 
+        margin: 35px 0 10px 0
+        font-size: 21px
+        line-height: 125%
+    &__text 
+        font-size: 14px
+        line-height: 140%
+        color: #454F5C
+    &__more
+        display: none
+    &.active
+        background: #C31C22
+        box-shadow: 0px 0px 41px rgba(126, 18, 22, 0.49)
+        &::before
+            color: #C73439
+        .card
+            
+            &__title
+                color: #fff
+            &__text
+                color: #fff
+            &__more
+                display: block
+                width: 100%
+                bottom: 0
+                left: 0
+                color: #fff
+                text-transform: uppercase
+                margin-top: 25px
+                position: absolute
+                background: #C31C22
+                padding:  25px 30px 30px 30px
+                transform: translateY(95%)
+                z-index: 10
+                border-radius: 0 0 5px 5px
+                box-shadow:  0px 39px 37px rgba(126, 18, 22, 0.3)
+                &::before
+                    content: ""
+                    display: block
+                    position: absolute
+                    top: 25px
+                    right: 30px
+                    width: 12px
+                    height: 12px
+                    background: url(../../img/white-vector.svg) center no-repeat

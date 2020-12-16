@@ -7,8 +7,15 @@
 
     <!-- Обнуление стилей -->
     <link rel="stylesheet" href="static/style/css/normalize.css">
+
+    <!-- Подключение siper slider -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+
     <!-- Основные стили -->
     <link rel="stylesheet" href="static/style/css/style.css">
+
+
 
     <!-- Инициализация яндекс.карты -->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
