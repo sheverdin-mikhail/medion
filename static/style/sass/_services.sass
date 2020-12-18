@@ -33,7 +33,7 @@
         z-index: -1
         display: block
         width: 90%
-        height: 100%
+        height: 120%
         margin-top: 121px
     &__content
         display: flex
@@ -53,22 +53,17 @@
         display: flex
         flex-direction: column
         position: relative
+        margin-bottom: 25px
         &_title
-            background: #19304C
-            border-radius: 5px 5px 0px 0px
             display: flex
             flex-direction: column
-            color: #ffffff
-            font-size: 20px
-            line-height: 155%
-            padding: 19px 0 21px 28px
             span
                 font-size: 12px
                 line-height: 155%
                 letter-spacing: 0.06em
                 text-transform: uppercase
                 color: #8591A3
-        &::before
+        &::after
             counter-increment: myCounter     
             display: block
             content: counter(myCounter)
@@ -79,8 +74,48 @@
             line-height: 155%
             text-transform: uppercase
             color: #8591A3
-        &:nth-child(-n+9):before
+        &:nth-child(-n+9):after
             content: '0' counter(myCounter)
+        &_row
+            position: relative
+            background: #19304C
+            border-radius: 5px 5px 0px 0px
+            display: flex
+            justify-content: space-between
+            color: #ffffff
+            font-size: 20px
+            line-height: 155%
+            padding: 19px 120px 21px 86px
+            &::before  
+                position: absolute
+                top: 19px
+                left: 28px
+                font-size: 48px
+        &_more
+            align-self: flex-end
+            position: relative
+            line-height: 10px
+            font-size: 14px
+            line-height: 140%
+            letter-spacing: 0.06em
+            text-transform: uppercase
+            padding-right: 27px
+            &::before
+                content: ""
+                position: absolute
+                top: 0
+                right: 0
+                width: 20px
+                height: 20px
+                transform: rotate(-90deg)
+                background: url("../../img/white-vector.svg") center no-repeat
+            &:hover
+                cursor: pointer
+            &.active
+                &::before                    
+                    transform: rotate(90deg)
+
+                
             
     &__sublist 
         position: relative
@@ -90,32 +125,148 @@
         padding: 28px 0 
         &_item 
             display: flex
+            flex-direction: column
             justify-content: space-between
             margin-bottom: 28.62px
+            padding: 0 28px
             &:last-child
                 margin-bottom: 0
             hr
                 flex: 1 1 52.6%
                 border-bottom: 1px solid #F3F7FA
+            &_row
+                display: flex
+                justify-content: space-between
     &__item_text 
         font-size: 14px
         line-height: 155%
         color: #193B67
-        padding: 0 10px 0 27.7px
+        
     &__more 
         padding: 0 10px
+        position: relative
+        padding-right: 20px
+        &::before
+            content: ""
+            display: block
+            width: 10px
+            height: 10px
+            background: url('../../img/arrow-down.svg') center no-repeat
+            transform: translateY(25%)
+            position: absolute
+            top: 0
+            right: 0
+        &:hover
+            cursor: pointer
+        &.active
+            &::before
+                transform: translateY(25%) rotate(180deg)
     &__price 
         padding-right: 36.74px
+        margin-left: 10px
 
-    &__menu
-        background: #FFFFFF
-        border: 1px solid #ECF1F6
-        box-shadow: 0px 8px 20px rgba(25, 59, 103, 0.03)
-        border-radius: 5px
+   
+    &__description 
+        margin-top: 6px
+
+
+.description
+    &__label 
+        color: #8591A3
+        font-size: 14px
+        line-height: 160%
+        text-transform: uppercase
+    &__text
+        font-size: 16px
+        line-height: 160%
+        color: #454F5C
+        margin-bottom: 15px
+    &__buttons 
         display: flex
-        flex-direction: column
-        &__item
-            padding: 20px 0 20px 30px
-            display: flex
-            align-items: center
-            border-bottom: 1px solid  #ECF1F6
+        justify-content: flex-end
+        align-items: center
+        margin-bottom: 35px
+    &__button 
+        +buttons
+        padding: 15px 28px
+        &:hover
+            cursor: pointer
+    &__button_2 
+        color: #C31C22
+        background: #FFFFFF
+        border: 2px solid #C31C22
+        border-radius: 5px
+        margin-left: 10px
+        &:hover
+            color: #C31C22
+
+
+.doctors 
+    background: url('../../img/doctors-bg.jpg') bottom no-repeat
+    background-size: contain
+    padding: 0 0 70px 0
+    &__row 
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__title
+        +header
+    &__button 
+        padding: 16px 18px
+        border: 2px solid #193B67
+        border-radius: 5px
+        padding-left: 28px
+        span
+            font-size: 14px
+            line-height: 145%
+            padding-right: 34px
+            position: relative
+            &::before
+                content: ""
+                position: absolute
+                top: 0
+                right: 0
+                width: 20px
+                height: 20px
+                background: url('../../img/arrow-down.svg') center no-repeat
+                transform: rotate(-90deg)
+
+    &__slider 
+        margin-top: 60px
+        overflow: visible
+    &__card 
+        border-radius: 5px
+        overflow: hidden
+        background: #fff
+        &_info
+            padding: 25px 30px 35px 30px
+    &__img 
+        width: 100%
+    &__label 
+        font-size: 14px
+        line-height: 135%
+        color: #8591A3
+        display: block
+        margin-top: 25px
+    &__name 
+        font-size: 18px
+        line-height: 135%
+        color: #19304C
+        margin-top: 10px
+    &__position 
+        display: block
+        font-size: 14px
+        line-height: 145%
+        color: #454F5C
+        margin-top: 10px
+    &__navigation
+        top: 50% !important
+        &_next
+            transform: translateX(200%)
+        &_prev
+            transform: translateX(-200%)
+    &__pagination
+            margin-top: 96px
+
+
+            

@@ -36,8 +36,38 @@ $(document).ready(function(){
 
     $('.card').hover(function(){
         $(this).toggleClass('active')
-    })
+    });
 
+
+    $('.services__more').on('click', function(){
+
+            $(this).toggleClass('active');
+            
+            if($(this).hasClass('active')){
+                $(this).parent().siblings().slideDown();
+                if($(this).parent().parent().siblings().children().children().hasClass('active')){
+                    $(this).parent().parent().siblings().children('.hide').slideUp()
+                    $(this).parent().parent().siblings().children().children().toggleClass('active')
+                }
+            }else{
+                $(this).parent().siblings().slideUp();
+            }
+
+    });
+
+    $('.services__item_more').on('click', function(){
+        $(this).toggleClass('active')
+
+        if(($(this).hasClass('active'))){
+            $(this).parent().siblings().slideDown()
+            if($(this).parent().parent().siblings().children().children().hasClass('active')){
+                $(this).parent().parent().siblings().children('.hide').slideUp()
+                $(this).parent().parent().siblings().children().children().removeClass('active')
+            }
+        }else{
+            $(this).parent().siblings().slideUp()
+        }
+    })
 
 })
 

@@ -3,6 +3,16 @@
 @import 'footer'
 @import 'main-page'
 @import 'services'
+
+
+.wrapper
+    position: relative
+    overflow: hidden
+
+html 
+    scroll-behavior: smooth
+
+
 .container
     max-width: 1180px
     margin: 0 auto
@@ -185,6 +195,18 @@ a
         color: #F5F5F8
     &:nth-child(-n+9):before
         content: '0' counter(myCounter)
+
+    &__icon
+        width: 84px
+        height: 84px
+        background: #fff
+        position: relative
+        &::before
+            position: absolute
+            top: 50%
+            left: 50%
+            font-size: 50px
+            transform: translate(-50%, -50%)            
         
         
     &__container
@@ -193,7 +215,6 @@ a
         justify-content: flex-start
         list-style: none
         counter-reset: myCounter
-    &__img 
     &__title 
         margin: 35px 0 10px 0
         font-size: 21px
@@ -243,22 +264,95 @@ a
                     height: 12px
                     background: url(../../img/white-vector.svg) center no-repeat
 
+            &__icon
+
+                background: #C73439
+                &::before
+                    color: #ffffff
+                        
+       
+
         
-.menu
-    background: #FFFFFF
-    border: 1px solid #ECF1F6
-    box-sizing: border-box
-    box-shadow: 0px 8px 20px rgba(25, 59, 103, 0.03)
-    border-radius: 5px
+
+
+
+
+.clinics
+    &__title 
+        +header
+        font-size: 30px
+        line-height: 113%
+    &__row 
+        display: flex
+        margin-top: 25.6px
+        justify-content: space-between
     &__item 
         display: flex
+        flex-direction: column
+        flex: 0 1 32%
         justify-content: start
+        padding: 10px 10px 25px 10px
+        background: #FFFFFF
+        border: 1px solid #DFE8EE
+        border-radius: 5px
+    &__img 
+    &__name 
+        font-size: 16px
+        line-height: 130%
+        color: #193B67
+        margin-top: 20px
+    &__address 
+        font-size: 14px
+        line-height: 130%
+        color: #8591A3
+        margin-top: 5px
+        &::before
+            color: $blue
+            padding-right: 5px
+            font-size: 13px
+    &__buttons 
+        margin-top: 30px
+        
+    &__button 
+        font-size: 12px !important
+        line-height: 155%
+        +buttons
+        padding: 13px
+        position: relative
+        &:nth-child(1)
+            padding-left: 35px
+            &::before
+                position: absolute
+                top: 14px
+                left: 20px
+                transform: translateY(25%)
+
+
+.side-menu
+    background: #FFFFFF
+    border: 1px solid #ECF1F6
+    box-shadow: 0px 8px 20px rgba(25, 59, 103, 0.03)
+    border-radius: 5px
+    display: flex
+    flex-direction: column
+    &__item
+        padding: 20px 0 20px 30px
+        display: flex
         align-items: center
-        padding: 20px 0 27px 30px
-        border-top: 1px solid #ECF1F6
-        border-bottom: 1px solid #ECF1F6
-        &_img 
-            margin-right: 20px
-        &_text 
-            font-size: 16px
-            line-height: 155%
+        border-bottom: 1px solid  #ECF1F6
+    &__text
+        position: relative
+        display: block
+        padding-left: 60px
+        line-height: 40px
+        &::before
+            position: absolute
+            top: 0
+            left: 0
+            font-size: 40px
+        &:hover
+            color: #C31C22
+            cursor: pointer
+            
+            
+            

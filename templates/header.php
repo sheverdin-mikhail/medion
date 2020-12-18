@@ -13,6 +13,7 @@
 
 
     <!-- Основные стили -->
+    <link rel="stylesheet" href="static/style/css/iconsfont.css">
     <link rel="stylesheet" href="static/style/css/style.css">
 
 

@@ -49,3 +49,23 @@ const swiper3 = new Swiper( '.stocks__slider', {
 
 
 });
+
+const swiper4 = new Swiper( '.doctors__slider', {
+
+    slidesPerView: 4,
+    spaceBetween: 10,   
+    loop: false,
+    loopFillGroupWithBlank: true,
+
+    pagination: {
+        el: '.swiper-pagination',
+      },
+
+    //Стрелки навигации
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+
+});
