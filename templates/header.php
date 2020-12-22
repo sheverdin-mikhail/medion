@@ -84,19 +84,19 @@
                             <li><a href="/services.php" class="header__menu__item">
                                 Услуги
                             </a></li>
-                            <li><a href="" class="header__menu__item">
+                            <li><a href="/medicin.php" class="header__menu__item">
                                 Департамент эстетической медицины 
                             </a></li>
-                            <li><a href="" class="menu__item">
+                            <li><a href="/doctors.php" class="header__menu__item">
                                 Врачи
                             </a></li>
-                            <li><a href="" class="header__menu__item">
+                            <li><a href="/SPA.php" class="header__menu__item">
                                 СПА Комплекс
                             </a></li>
                             <li><a href="" class="header__menu__item">
                                 Технологии 
                             </a></li>
-                            <li><a href="" class="header__menu__item">
+                            <li><a href="/clinics.php" class="header__menu__item">
                                 Контакты 
                             </a></li>
                         </ul>

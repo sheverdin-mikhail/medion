@@ -1,9 +1,4 @@
 @import 'mixins'
-@import 'header'
-@import 'footer'
-@import 'main-page'
-@import 'services'
-
 
 .wrapper
     position: relative
@@ -178,7 +173,8 @@ a
     background:  #FBFBFC
     border-radius: 5px
     position: relative
-    margin: 0 10px 10px 0
+    margin: 0 15px 15px 0
+    
     &__img
         padding: 17px
         background: #fff
@@ -195,6 +191,8 @@ a
         color: #F5F5F8
     &:nth-child(-n+9):before
         content: '0' counter(myCounter)
+    &:nth-child(4n+4)
+        margin-right: 0
 
     &__icon
         width: 84px
@@ -326,6 +324,8 @@ a
                 top: 14px
                 left: 20px
                 transform: translateY(25%)
+        &:hover
+            background: #C31C22
 
 
 .side-menu
@@ -335,8 +335,9 @@ a
     border-radius: 5px
     display: flex
     flex-direction: column
+    align-self: flex-start
     &__item
-        padding: 20px 0 20px 30px
+        padding: 20px 35px 20px 30px
         display: flex
         align-items: center
         border-bottom: 1px solid  #ECF1F6
@@ -356,3 +357,12 @@ a
             
             
             
+@import 'header'
+@import 'footer'
+@import 'main-page'
+@import 'services'
+@import 'clinics'
+@import 'medicin'
+@import 'modal'
+@import 'doctors'
+@import 'spa'

@@ -1,0 +1,60 @@
+.spa
+    padding: 90px 0 100px 0
+    &__content 
+    &__title 
+        font-size: 30px
+        margin-bottom: 30px
+        line-height: 113%
+        color: #193B67
+    &__navigation 
+        display: flex
+        border-radius: 5px
+        background: #FFFFFF
+        margin-bottom: 40px
+        border-radius: 5px
+
+    &__navigation_object 
+        display: flex
+        flex-direction: column
+        flex: 0 1 25%
+        padding: 20px 0
+        border: 1px solid #EFF4F7
+        padding-left: 90px
+        position: relative
+        &:first-child
+            border-radius: 5px 0 0 5px
+            
+        &::before
+            position: absolute
+            top: 25px
+            left: 30px
+            font-size: 40px
+        &:last-child
+            padding-left: 30px
+            border-radius:  0 5px 5px 0
+        &:hover
+            cursor: pointer
+        &.active
+            background: #C31C22
+            color: #fff
+            border: none
+            &::after
+                content: ''
+                position: absolute
+                left: 50%
+                bottom: 0
+                border: 17px solid transparent
+                border-top: 17px solid #C31C22
+                transform: translateY(90%)
+            .spa__label,
+            .spa__name
+                color: #ffffff
+                
+    &__label 
+        font-size: 14px
+        line-height: 145%
+        color: #8591A3
+    &__name 
+        font-size: 20px
+        line-height: 145%
+        color: #193B67

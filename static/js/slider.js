@@ -69,3 +69,22 @@ const swiper4 = new Swiper( '.doctors__slider', {
 
 
 });
+
+
+const swiper5 = new Swiper( '.works__row', {
+
+    slidesPerView: 3,
+    spaceBetween: 11,   
+    loop: false,
+    loopFillGroupWithBlank: true,
+
+
+
+    //Стрелки навигации
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+
+});

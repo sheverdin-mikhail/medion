@@ -69,6 +69,16 @@ $(document).ready(function(){
         }
     })
 
+
+    $('.spa__navigation_object ').on('click', function(){
+        if(!($(this).hasClass('active'))){
+            $(this).addClass('active')
+            $(this).siblings().removeClass('active')
+        }
+    })
+
 })
+
+
 
 

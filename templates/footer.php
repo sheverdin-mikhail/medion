@@ -24,13 +24,13 @@
                             <a href="" class="footer__links">Главная</a>
                             <a href="" class="footer__links">Больница</a>
                             <a href="/services.php" class="footer__links">Услуги</a>
-                            <a href="" class="footer__links">Эстетическая медицина</a>
+                            <a href="/medicin.php" class="footer__links">Эстетическая медицина</a>
                         </div>
                         <div class="footer__column">
                             <a href="" class="footer__links">Врачи</a>
                             <a href="" class="footer__links">СПА-комплекс</a>
                             <a href="" class="footer__links">Технологии</a>
-                            <a href="" class="footer__links">Контакты</a>
+                            <a href="/clinics.php" class="footer__links">Контакты</a>
                         </div>
                         <div class="footer__column">
                             <div class="footer__info">

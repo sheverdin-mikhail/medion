@@ -1,0 +1,112 @@
+
+.medicin 
+    padding: 90px 0 120px 0
+    &__content
+    &__header 
+        +header
+        font-size: 30px
+        margin-bottom: 30px
+    &__card 
+        display: flex
+        background: #FFFFFF
+        border: 1px solid #EFF4F7
+        border-radius: 5px
+        padding: 30px
+        &_block
+            &:last-child
+                margin-left: 30px
+    &__img 
+        border-radius: 5px
+    &__buttons 
+        display: flex
+        justify-content: space-between
+        margin-top: 30px
+    &__button 
+        display: block
+        +buttons
+        padding: 16px 28px
+        font-size: 12px
+        line-height: 155%
+        &:last-child
+            border: 2px solid #193B67
+            background: #fff
+            font-size: 12px
+            line-height: 155%
+            color: #193B67
+            border-radius: 5px
+    &__title
+        font-size: 27px
+        line-height: 120%
+        margin-bottom: 10px
+    &__text
+        font-size: 16px
+        line-height: 160%
+        color: #454F5C
+
+    &__works 
+
+
+.works 
+    
+    &__title
+        font-size: 16px
+        line-height: 120%
+        letter-spacing: 0.06em
+        text-transform: uppercase
+        color: #19304C
+        margin-bottom: 26px
+    &__header
+        display: flex
+        justify-content: space-between
+        position: relative
+        align-items: center
+    &__row 
+        padding: 30px 25px 25px 25px
+        background: #EFF4F7
+        border-radius: 5px
+    &__item 
+
+    &__image 
+        position: relative
+    &__button
+        width: 26px
+        height: 26px
+    &__navigation
+        position: relative
+        right: 0
+        &_prev
+            position: absolute
+            left: -74px
+        &_next
+            position: absolute
+            left: -38px
+
+._before, 
+._in, 
+._after
+    position: relative
+    padding-bottom: 40px
+    &::before
+        position: absolute
+        content: ""
+        display: block
+        bottom: 0
+        width: 100%
+        padding: 12px 0
+        font-size: 14px
+        line-height: 120%
+        color: #FFFFFF
+        background: $blue
+        text-align: center
+
+._before
+    &::before
+        content: 'До процедуры'
+
+._in
+    &::before
+        content: 'В процессе работы'
+
+._after
+    &::before
+        content: 'Результат процедуры'
