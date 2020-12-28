@@ -77,6 +77,12 @@ $(document).ready(function(){
         }
     })
 
+
+
+    $('.services__menu__item_text').on('click', function(){
+        let href = $(this).attr("href")
+        $(href).children().children('span').trigger('click')
+    })
 })
 
 

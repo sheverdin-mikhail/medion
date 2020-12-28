@@ -42,10 +42,6 @@ a:hover, a:active, a:focus {
           flex: 1 0 auto;
 }
 
-.hide {
-  display: none;
-}
-
 .language-menu {
   position: relative;
 }
@@ -1355,8 +1351,8 @@ a:hover, a:active, a:focus {
 
 .services__sublist_item hr {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 52.6%;
-          flex: 1 1 52.6%;
+      -ms-flex: 1 1 36.6%;
+          flex: 1 1 36.6%;
   border-bottom: 1px solid #F3F7FA;
 }
 
@@ -2097,4 +2093,8 @@ a:hover, a:active, a:focus {
   font-size: 20px;
   line-height: 145%;
   color: #193B67;
+}
+
+.hide {
+  display: none;
 }
