@@ -2098,3 +2098,181 @@ a:hover, a:active, a:focus {
   line-height: 145%;
   color: #193B67;
 }
+
+.offer__title {
+  color: #193B67;
+  font-size: 30px;
+  margin: 90px 0px 35px 0px;
+}
+
+.offer__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  counter-reset: myCounter;
+  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0px 0px 50px 0px;
+}
+
+.offer__item {
+  background: #EFF4F7;
+  border-radius: 5px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33%;
+          flex: 0 1 33%;
+  padding: 35px 25px 30px 30px;
+  position: relative;
+}
+
+.offer__item::before {
+  counter-increment: myCounter;
+  display: block;
+  content: counter(myCounter);
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 56px;
+  height: 56px;
+  font-size: 57px;
+  color: #FFFFFF;
+}
+
+.offer__item:nth-child(-n+9):before {
+  content: "0" counter(myCounter);
+}
+
+.offer__item_title {
+  color: #193B67;
+  font-size: 20px;
+  padding: 34px 0px 10px 0px;
+}
+
+.offer__item_text {
+  color: #454F5C;
+  font-size: 14px;
+  padding: 0px 0px 40px 0px;
+}
+
+.offer__item_button {
+  display: inline-block;
+  background: #193B67;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 21.7px;
+  padding: 16px 28px;
+  margin: 0px 0px 30px 0px;
+}
+
+.offer__item_button:hover, .offer__item_button:active, .offer__item_button:focus {
+  color: #fff;
+}
+
+.offer__item_icon {
+  display: inline-block;
+  padding: 30px;
+  background: #fff;
+}
+
+.offer__item_icon::before {
+  font-size: 60px;
+}
+
+.specialist {
+  padding: 89px 0 100px 0;
+}
+
+.specialist__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.specialist__photo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 46%;
+          flex: 0 1 46%;
+}
+
+.specialist__img {
+  width: 100%;
+}
+
+.specialist__block_1 {
+  padding: 10px 0px 10px 0px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 48%;
+          flex: 0 1 48%;
+}
+
+.specialist__text {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #8591A3;
+  padding: 0px 0px 14px 0px;
+}
+
+.specialist__neme {
+  font-size: 30px;
+  color: #193B67;
+  margin: 0px 0px 21px 0px;
+}
+
+.specialist__position {
+  background: #EFF4F7;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 14px 17px;
+  margin: 0 0 25px 0;
+}
+
+.specialist__label {
+  padding: 0 0 0 33px;
+  position: relative;
+  line-height: 18px;
+}
+
+.specialist__label::before {
+  top: 0;
+  left: 0;
+  font-size: 18px;
+  position: absolute;
+}
+
+.specialist__label-1 span {
+  color: #193B67;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.specialist__text-1 {
+  font-size: 16px;
+  color: #454F5C;
+  margin: 0 0 28px 0;
+  line-height: 160%;
+}
+
+.specialist__button {
+  display: inline-block;
+  background: #193B67;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 21.7px;
+  padding: 17px 28px;
+}
+
+.specialist__button:hover, .specialist__button:active, .specialist__button:focus {
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
