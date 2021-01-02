@@ -1,5 +1,11 @@
 <? include "templates/header.php" ?>
+<?php 
+        require_once 'include/db.php';
+?>
 
+<?php 
+        require_once 'views/clinic_view.php';
+?>
 
 
 
@@ -10,9 +16,9 @@
       <!-- Блок с поиском -->
       <div class="search">
                 <div class="container">
-                        <form action="" class="search__search">
-                                <input type="text" class="search__input" placeholder="Что-то ищете? Воспользуйтесь поиском по сайту...">
-                                <input type="submit" class="search__button" value="Поиск">
+                        <form  action="/views/search.php" class="search__search">
+                        <input id="q" name="q" type="text" class="search__input" placeholder="Что-то ищете? Воспользуйтесь поиском по сайту...">
+                        <input type="submit" class="search__button" value="Поиск">
                         </form>
                         <ul class="search__navigation">
                                 <li class="search__navigation_item"><a href="/index.php">Главная</a></li>
@@ -53,54 +59,24 @@
                 </ul>
 
                 <div class="clinic__block">
-                    <div class="clinic__card">
+                    <?php foreach($clinics as $clinic): ?>
+                        <div class="clinic__card">
                         <div class="clinic__imgbox">
-                            <img src='static/img/clinic.jpg' alt="" class="clinic__img">
+                            <?php $img = base64_encode($clinic['clinics_img']);?>
+                            <img src="data:image/jpeg;base64,<?= $img ?>" alt="" class="clinic__img">
                         </div>
                         <div class="clinic__info">
-                            <h4 class="clinic__title clinics__title">Медицинский центр “Medion” </h4>
-                            <span class="clinic__address clinics__address _icon-pin">г.Ташкент,ул.Зульфияхоним, 18</span>
+                            <h4 class="clinic__title clinics__title">Медицинский центр <?=$clinic['name_clinics'] ?> </h4>
+                            <span class="clinic__address clinics__address _icon-pin"><?=$clinic['address_clinics'] ?></span>
                             <p class="clinic__text clinics__text">Поликлиника «MEDION» является крупным многопрофильным лечебно-профилактическим учреждением, оснащенным новейшим лечебно-диагностическим оборудованием. </p>
                             <div class="clinic__buttons clinics__buttons">
                                 <a href="" class="clinic__button clinics__button "><span class="_icon-communications">Позвонить</span></a>
                                 <a href="" class="clinic__button clinics__button "><span class="_icon-pin">Показать на карте</span></a>
-                                <a href="" class="clinic__button clinics__button "><span class="_icon-bookmark">Подробнее о клинике</span></a>
+                                <a href="/clinic.php?slug=<?=$clinic['clinics_slug'] ?>" class="clinic__button clinics__button "><span class="_icon-bookmark">Подробнее о клинике</span></a>
                             </div>
                         </div>
                     </div>
-
-                    <div class="clinic__card">
-                        <div class="clinic__imgbox">
-                            <img src='static/img/woman.jpg' alt="" class="clinic__img">
-                        </div>
-                        <div class="clinic__info">
-                            <h4 class="clinic__title clinics__title">Департамент эстетической медицины </h4>
-                            <span class="clinic__address clinics__address _icon-pin">г.Ташкент,ул.Зульфияхоним, 18</span>
-                            <p class="clinic__text clinics__text">При Департаменте Эстетической медицины создан салон красоты полного спектра. Уютный зал, с наличием ресепшена и зоны ожидания, обставленный по последнему слову техники, готов принять вас и оказать свои услуги.</p>
-                            <div class="clinic__buttons clinics__buttons">
-                                <a href="" class="clinic__button clinics__button "><span class="_icon-communications">Позвонить</span></a>
-                                <a href="" class="clinic__button clinics__button "><span class="_icon-pin">Показать на карте</span></a>
-                                <a href="" class="clinic__button clinics__button "><span class="_icon-bookmark">Подробнее о клинике</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="clinic__card">
-                        <div class="clinic__imgbox">
-                            <img src='static/img/food.jpg' alt="" class="clinic__img">
-                        </div>
-                        <div class="clinic__info">
-                            <h4 class="clinic__title clinics__title">Департамент диетологии</h4>
-                            <span class="clinic__address clinics__address _icon-pin">г.Ташкент,ул.Зульфияхоним, 18</span>
-                            <p class="clinic__text clinics__text">Современные и эффективные методики оздоровления организма и коррекции веса, а также индивидуальные программы питания при таких хронических заболеваниях, как сахарный диабет, заболевания сердца, ЖКТ и прочие.</p>
-                            <div class="clinic__buttons clinics__buttons">
-                                <a href="" class="clinic__button clinics__button "><span class="_icon-communications">Позвонить</span></a>
-                                <a href="" class="clinic__button clinics__button "><span class="_icon-pin">Показать на карте</span></a>
-                                <a href="" class="clinic__button clinics__button "><span class="_icon-bookmark">Подробнее о клинике</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <?php endforeach; ?>
             </div>
         </div>
     </div>

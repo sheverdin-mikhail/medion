@@ -9,9 +9,12 @@
         <div class="search" style="background: url('static/img/search-bg.jpg') center no-repeat; background-size: cover;">
                 <div class="container">
                         <form action="" class="search__search">
-                                <input type="text" class="search__input" placeholder="Что-то ищете? Воспользуйтесь поиском по сайту...">
+                                <input  autocomplete="off" id="q" name="q" type="text" class="search__input" placeholder="Что-то ищете? Воспользуйтесь поиском по сайту...">
                                 <input type="submit" class="search__button" value="Поиск">
                         </form>
+                        <ul class="search__list" id="search_list">
+
+                        </ul>
                         <div class="search__slider swiper-container">
                                 <div class="swiper-wrapper">
                                         <div class="swiper-slide">

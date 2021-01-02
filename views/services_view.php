@@ -45,9 +45,9 @@
         clinics.id_clinics= clinic_division.id_clinics       
         ";
         $result = mysqli_query($link, $sql);
-        $services = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        $clinics = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-        return $services;
+        return $clinics;
     }
 
     $divisions = get_divisions($link);

@@ -12,7 +12,7 @@
         background: #FFFFFF
         margin-bottom: 40px
         border-radius: 5px
-
+        flex-wrap: wrap
     &__navigation_object 
         display: flex
         flex-direction: column
@@ -21,7 +21,9 @@
         border: 1px solid #EFF4F7
         padding-left: 90px
         position: relative
-        &:first-child
+        margin-bottom: 20px
+        &:first-child,
+        &:nth-child(5n+5)
             border-radius: 5px 0 0 5px
             
         &::before
@@ -29,23 +31,16 @@
             top: 25px
             left: 30px
             font-size: 40px
+        &:nth-child(4n+4)
+            border-radius:  0 5px 5px 0
         &:last-child
             padding-left: 30px
-            border-radius:  0 5px 5px 0
         &:hover
             cursor: pointer
         &.active
             background: #C31C22
             color: #fff
             border: none
-            &::after
-                content: ''
-                position: absolute
-                left: 50%
-                bottom: 0
-                border: 17px solid transparent
-                border-top: 17px solid #C31C22
-                transform: translateY(90%)
             .spa__label,
             .spa__name
                 color: #ffffff

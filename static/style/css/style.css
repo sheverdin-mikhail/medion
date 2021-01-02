@@ -467,6 +467,9 @@ a:hover, a:active, a:focus {
           flex-direction: column;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 23%;
+          flex: 0 1 23%;
 }
 
 .side-menu__item {
@@ -482,9 +485,10 @@ a:hover, a:active, a:focus {
 
 .side-menu__text {
   position: relative;
-  display: block;
+  display: inline-block;
   padding-left: 60px;
-  line-height: 40px;
+  line-height: 150%;
+  width: 100%;
 }
 
 .side-menu__text::before {
@@ -492,6 +496,8 @@ a:hover, a:active, a:focus {
   top: 0;
   left: 0;
   font-size: 40px;
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
 }
 
 .side-menu__text:hover {
@@ -611,7 +617,7 @@ a:hover, a:active, a:focus {
 
 .header__menu__item:hover {
   color: #ffffff;
-  background: #193B67;
+  background: #C31C22;
   cursor: pointer;
 }
 
@@ -628,7 +634,7 @@ a:hover, a:active, a:focus {
   right: 0;
   width: 16px;
   height: 16px;
-  background: url("../../img/arrow-down.svg") center no-repeat;
+  background: url("../../img/white-vector.svg") center no-repeat;
 }
 
 .footer {
@@ -1620,11 +1626,8 @@ a:hover, a:active, a:focus {
 }
 
 .clinic__img {
-  width: 100%;
-}
-
-.clinic__imgbox {
-  min-width: 253px;
+  display: block;
+  height: 100%;
 }
 
 .clinic__info {
@@ -2022,6 +2025,8 @@ a:hover, a:active, a:focus {
   background: #FFFFFF;
   margin-bottom: 40px;
   border-radius: 5px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .spa__navigation_object {
@@ -2039,9 +2044,10 @@ a:hover, a:active, a:focus {
   border: 1px solid #EFF4F7;
   padding-left: 90px;
   position: relative;
+  margin-bottom: 20px;
 }
 
-.spa__navigation_object:first-child {
+.spa__navigation_object:first-child, .spa__navigation_object:nth-child(5n+5) {
   border-radius: 5px 0 0 5px;
 }
 
@@ -2052,9 +2058,12 @@ a:hover, a:active, a:focus {
   font-size: 40px;
 }
 
+.spa__navigation_object:nth-child(4n+4) {
+  border-radius: 0 5px 5px 0;
+}
+
 .spa__navigation_object:last-child {
   padding-left: 30px;
-  border-radius: 0 5px 5px 0;
 }
 
 .spa__navigation_object:hover {
@@ -2065,17 +2074,6 @@ a:hover, a:active, a:focus {
   background: #C31C22;
   color: #fff;
   border: none;
-}
-
-.spa__navigation_object.active::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  border: 17px solid transparent;
-  border-top: 17px solid #C31C22;
-  -webkit-transform: translateY(90%);
-          transform: translateY(90%);
 }
 
 .spa__navigation_object.active .spa__label,
@@ -2271,6 +2269,7 @@ a:hover, a:active, a:focus {
 .specialist__button:hover, .specialist__button:active, .specialist__button:focus {
   color: #fff;
 }
+
 .hide {
   display: none;
 }

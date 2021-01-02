@@ -10,9 +10,9 @@
       <!-- Блок с поиском -->
       <div class="search">
                 <div class="container">
-                        <form action="" class="search__search">
-                                <input type="text" class="search__input" placeholder="Что-то ищете? Воспользуйтесь поиском по сайту...">
-                                <input type="submit" class="search__button" value="Поиск">
+                        <form action="/views/search.php" class="search__search">
+                            <input name="q" type="text" class="search__input" placeholder="Что-то ищете? Воспользуйтесь поиском по сайту..."> 
+                            <input type="submit" class="search__button" value="Поиск">
                         </form>
                         <ul class="search__navigation">
                                 <li class="search__navigation_item"><a href="/index.php">Главная</a></li>

@@ -14,8 +14,8 @@
         <!-- Блок с поиском -->
         <div class="search">
                 <div class="container">
-                        <form action="" class="search__search">
-                                <input type="text" class="search__input" placeholder="Что-то ищете? Воспользуйтесь поиском по сайту...">
+                        <form action="/views/search.php" class="search__search">
+                                <input id="q" name="q" type="text" class="search__input" placeholder="Что-то ищете? Воспользуйтесь поиском по сайту...">
                                 <input type="submit" class="search__button" value="Поиск">
                         </form>
                         <ul class="search__navigation">
@@ -87,7 +87,7 @@
                                                                                                 <span class="clinics__name"><?=$clinic['name_clinics']?> </span>
                                                                                                 <span class="clinics__address _icon-pin"><?=$clinic['address_clinics']?></span>
                                                                                                 <div class="clinics__buttons">
-                                                                                                        <a href="/clinic.php/<?= $clinic['clinics_slug']?>" class="clinics__button _icon-bookmark">Подробнее о клинике</a>
+                                                                                                        <a href="/clinic.php?slug=<?= $clinic['clinics_slug']?>" class="clinics__button _icon-bookmark">Подробнее о клинике</a>
                                                                                                         <a href="" class="clinics__button _icon-communications"></a>
                                                                                                         <a href="" class="clinics__button _icon-pin"></a>
                                                                                                 </div>

@@ -1,29 +1,37 @@
 <? include "templates/header.php" ?>
+<?php 
+        require_once 'include/db.php';
+?>
+
+<?php 
+        require_once 'views/clinic_view.php';
+?>
 
 
+<?php 
+$slug = $_GET['slug'];
 
+$clinic = get_clinic($link, $slug)[0];
+
+?>
 
 <!-- Блок с основным контентом страницы -->
 
-<div class="pege">
-
-
-
-
+<div class="page">
 
  <!-- Блок с поиском -->
  <div class="search">
                 <div class="container">
-                        <form action="" class="search__search">
-                                <input type="text" class="search__input" placeholder="Что-то ищете? Воспользуйтесь поиском по сайту...">
-                                <input type="submit" class="search__button" value="Поиск">
+                        <form action="/views/search.php" class="search__search">
+                        <input id="q" name="q" type="text" class="search__input" placeholder="Что-то ищете? Воспользуйтесь поиском по сайту...">
+                        <input type="submit" class="search__button" value="Поиск">
                         </form>
                         <ul class="search__navigation">
                                 <li class="search__navigation_item"><a href="/index.php">Главная</a></li>
                                 <li class="search__navigation_item">Клиники</li>
                         </ul>
                         <h2 class="search__header">
-                            Medion Life
+                            <?= $clinic['name_clinics']?>
                         </h2>
                         
                 </div>
@@ -35,7 +43,7 @@
         <div class="container">
             <div class="offer__content">
                 <h2 class="offer__title">
-                    что мы предлогаем?
+                Что мы предлагаем?
                 </h2>
                 <ol class="offer__block">
                     <li class="offer__item">
