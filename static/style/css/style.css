@@ -834,6 +834,17 @@ a:hover, a:active, a:focus {
           flex: 1 1 100%;
 }
 
+.search__list li {
+  background: #fff;
+  padding: 12px 36px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.search__list li:hover {
+  cursor: pointer;
+}
+
 .search__button {
   padding: 12px 30px;
   background: #193B67;
@@ -1132,6 +1143,10 @@ a:hover, a:active, a:focus {
   font-size: 50px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.directions__card:hover {
+  cursor: pointer;
 }
 
 .search {
@@ -1623,6 +1638,7 @@ a:hover, a:active, a:focus {
   border-radius: 5px;
   margin-left: 30px;
   max-width: 870px;
+  margin-bottom: 15px;
 }
 
 .clinic__img {

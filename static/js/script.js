@@ -83,6 +83,39 @@ $(document).ready(function(){
         let href = $(this).attr("href")
         $(href).children().children('span').trigger('click')
     })
+
+
+
+
+    //Сортировка блока СПА процедур
+    let filter = $("[data-filter]");
+
+    filter.on("click", function(){
+       
+        let cat =$(this).data('filter');
+        if(cat != "all"){
+            $("[data-cat]").each(function(){
+
+                let workcat = $(this).data("cat");
+                
+                if (workcat != cat){
+    
+                    $(this).addClass('hide')
+    
+                }else{
+                    $(this).removeClass('hide')
+                }
+    
+            })
+        }else{
+            $("[data-cat]").each(function(){
+                    $(this).removeClass('hide')
+            })
+        }
+
+    });
+
+
 })
 
 
