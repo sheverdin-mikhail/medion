@@ -1,6 +1,12 @@
 <? include "templates/header.php" ?>
 
+<?php 
+        require_once 'include/db.php';
+?>
 
+<?php 
+        require_once 'views/index_view.php';
+?>
 
 
 <!-- Блок с основным контентом страницы -->
@@ -179,102 +185,17 @@
                                         Направления медицинского центра
                                 </h2>
                                 <ol class="directions__block card__container">
-                                        <li class="directions__card card">
-                                                <p class="_icon-anesthesia directions__icon card__icon">
-                                                <h3 class="card__title">Анастезиология</h3>
-                                                <p class="card__text">Безболезненное лечение заболеваний, и проведение хирургических операций </p>
-                                                <a href="" class="card__more">Подробнее</a>
-                                        </li>
-                                        <li class="directions__card card">
-                                                <p class="_icon-acne directions__icon card__icon">
-                                                <h3 class="card__title">Аллергология</h3>
-                                                <p class="card__text">Лечение приобретенных и хронических аллергий самыми современными методами </p>
-                                                <a href="" class="card__more">Подробнее</a>
-                                        </li>
-                                        <li class="directions__card card">
-                                                <p class="_icon-stomach directions__icon card__icon">
-                                                <h3 class="card__title">Гастроэнтерология</h3>
-                                                <p class="card__text">В нашем распоряжении современное оборудование для диагностики ЖКТ</p>
-                                                <a href="" class="card__more">Подробнее</a>
-                                        </li>
-                                        <li class="directions__card card">
-                                                <p class="_icon-feminism directions__icon card__icon">
-                                                <h3 class="card__title">Гинекология</h3>
-                                                <p class="card__text">В нашем распоряжении современное оборудование для диагностики ЖКТ</p>
-                                                <a href="" class="card__more">Подробнее</a>
-                                        </li>
-                                        <li class="directions__card card">
-                                                <p class="_icon-man directions__icon card__icon">
-                                                <h3 class="card__title">Детская невропатология</h3>
-                                                <p class="card__text">Детская диагностика патологий</p>
-                                                <a href="" class="card__more">Подробнее</a>
-                                        </li>
-                                        <li class="directions__card card">
-                                                <p class="_icon-apple directions__icon card__icon">
-                                                <h3 class="card__title">Диетология</h3>
-                                                <p class="card__text">В нашем распоряжении современное оборудование для диагностики ЖКТ</p>
-                                                <a href="" class="card__more">Подробнее</a>
-                                        </li>
-                                        <li class="directions__card card">
-                                                <p class="_icon-cardiology directions__icon card__icon">
-                                                <h3 class="card__title">Кардиология</h3>
-                                                <p class="card__text">В нашем распоряжении современное оборудование для диагностики ЖКТ</p>
-                                                <a href="" class="card__more">Подробнее</a>
-                                        </li>
-                                        <li class="directions__card card">
-                                                <p class="_icon-ear directions__icon card__icon">
-                                                <h3 class="card__title">Оттоларингология</h3>
-                                                <p class="card__text">В нашем распоряжении современное оборудование для диагностики ЖКТ</p>
-                                                <a href="" class="card__more">Подробнее</a>
-                                        </li>
-                                        <li class="directions__card card">
-                                                <p class="_icon-neuron directions__icon card__icon">
-                                                <h3 class="card__title">Невропатология</h3>
-                                                <p class="card__text">В нашем распоряжении современное оборудование для диагностики ЖКТ</p>
-                                                <a href="" class="card__more">Подробнее</a>
-                                        </li>
-                                        <li class="directions__card card">
-                                                <p class="_icon-pediatrician directions__icon card__icon">
-                                                <h3 class="card__title">Педиатрия</h3>
-                                                <p class="card__text">В нашем распоряжении современное оборудование для диагностики ЖКТ</p>
-                                                <a href="" class="card__more">Подробнее</a>
-                                        </li>
-                                        <li class="directions__card card">
-                                                <p class="_icon-broken-bone directions__icon card__icon">
-                                                <h3 class="card__title">Травматология - ортопедия</h3>
-                                                <p class="card__text">Детская диагностика патологий</p>
-                                                <a href="" class="card__more">Подробнее</a>
-                                        </li>
-                                        <li class="directions__card card">
-                                                <p class="_icon-kidneys directions__icon card__icon">
-                                                <h3 class="card__title">Урология</h3>
-                                                <p class="card__text">В нашем распоряжении современное оборудование для диагностики ЖКТ</p>
-                                                <a href="" class="card__more">Подробнее</a>
-                                        </li>
-                                        <li class="directions__card card">
-                                                <p class="_icon-physiotherapy directions__icon card__icon">
-                                                <h3 class="card__title">Физиотерапия</h3>
-                                                <p class="card__text">В нашем распоряжении современное оборудование для диагностики ЖКТ</p>
-                                                <a href="" class="card__more">Подробнее</a>
-                                        </li>
-                                        <li class="directions__card card">
-                                                <p class="_icon-thyroid directions__icon card__icon">
-                                                <h3 class="card__title">Эндокринология</h3>
-                                                <p class="card__text">В нашем распоряжении современное оборудование для диагностики ЖКТ</p>
-                                                <a href="" class="card__more">Подробнее</a>
-                                        </li>
-                                        <li class="directions__card card">
-                                                <p class="_icon-endoscope directions__icon card__icon">
-                                                <h3 class="card__title">Эндоскопия</h3>
-                                                <p class="card__text">В нашем распоряжении современное оборудование для диагностики ЖКТ</p>
-                                                <a href="" class="card__more">Подробнее</a>
-                                        </li>
-                                        <li class="directions__card card">
-                                                <p class="_icon-breast directions__icon card__icon">
-                                                <h3 class="card__title">Маммология</h3>
-                                                <p class="card__text">В нашем распоряжении современное оборудование для диагностики ЖКТ</p>
-                                                <a href="" class="card__more">Подробнее</a>
-                                        </li>
+                                        <?php foreach($divisions as $division):?>
+                                                <li class="directions__card card">
+                                                        <a href="/services.php?division_slug=<?=$division['slug']?>">
+                                                                <p class="_icon-<?=$division['icon']?> directions__icon card__icon">
+                                                                <h3 class="card__title"><?=$division['name']?></h3>
+                                                                <p class="card__text"><?=$division['description']?></p>
+                                                                <a href="/services.php?division_slug=<?=$division['slug']?>" class="card__more">Подробнее</a>
+                                                        </a>
+                                                </li>
+                                        <?php endforeach;?>
+                                       
                                 </ol>
                         </div>
                 </div>

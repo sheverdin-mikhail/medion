@@ -1,5 +1,13 @@
 <? include "templates/header.php" ?>
 
+<?php 
+        require_once 'include/db.php';
+?>
+
+<?php 
+        require_once 'views/doctors_view.php';
+?>
+
 
 
 
@@ -10,13 +18,16 @@
       <!-- Блок с поиском -->
       <div class="search">
                 <div class="container">
-                        <form action="/views/search.php" class="search__search">
-                        <input id="q" name="q" type="text" class="search__input" placeholder="Что-то ищете? Воспользуйтесь поиском по сайту...">
-                        <input type="submit" class="search__button" value="Поиск">
+                        <form action="" class="search__search">
+                                <input  autocomplete="off" id="q" name="q" type="text" class="search__input" placeholder="Что-то ищете? Воспользуйтесь поиском по сайту...">
+                                <input type="submit" class="search__button" value="Поиск">
                         </form>
+                        <ul class="search__list" id="search_list">
+
+                        </ul>
                         <ul class="search__navigation">
                                 <li class="search__navigation_item"><a href="/index.php">Главная</a></li>
-                                <li class="search__navigation_item">Эстетическая медицина</li>
+                                <li class="search__navigation_item">Врачи</li>
                         </ul>
                         <h2 class="search__header">
                             Наши врачи  
@@ -34,92 +45,33 @@
                     <h2 class="medic__title">Специалисты нашего центра</h2>
 
                     <ul class="medic__list">
-                        <li class="medic__item">
-                            <div class="medic__direction">
-                                <span class="medic__direction_name">Кардиология</span>
-                                <span class="medic__direction_numb">4 специалиста</span>
-                            </div>
-                            <ul class="medic__doctors">
-                                    <li class="medic__doctors_item">
-                                        <div class="doctors__card">
-                                            <img src="static/img/doctor.jpg" alt="" class="doctors__img">
-                                            <div class="doctors__card_info">
-                                                    <span class="doctors__label">Врач-педиатр высшей категории</span>
-                                                    <p class="doctors__name">Ильясов Дониёр Ходжиакбарович</p>
-                                                    <p class="doctors__position">Стаж работы 20 лет в области педиатрии и диагностики детских заболеваний</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="medic__doctors_item">
-                                        <div class="doctors__card">
-                                            <img src="static/img/doctor.jpg" alt="" class="doctors__img">
-                                            <div class="doctors__card_info">
-                                                    <span class="doctors__label">Врач-педиатр высшей категории</span>
-                                                    <p class="doctors__name">Ильясов Дониёр Ходжиакбарович</p>
-                                                    <p class="doctors__position">Главный врач. Врач высшей категории — отоларинголог</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="medic__doctors_item">
-                                        <div class="doctors__card">
-                                            <img src="static/img/doctor.jpg" alt="" class="doctors__img">
-                                            <div class="doctors__card_info">
-                                                    <span class="doctors__label">Врач-педиатр высшей категории</span>
-                                                    <p class="doctors__name">Ильясов Дониёр Ходжиакбарович</p>
-                                                    <p class="doctors__position">Главный врач. Врач высшей категории — отоларинголог</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="medic__doctors_item">
-                                        <div class="doctors__card">
-                                            <img src="static/img/doctor.jpg" alt="" class="doctors__img">
-                                            <div class="doctors__card_info">
-                                                    <span class="doctors__label">Врач-педиатр высшей категории</span>
-                                                    <p class="doctors__name">Ильясов Дониёр Ходжиакбарович</p>
-                                                    <p class="doctors__position">Главный врач. Врач высшей категории — отоларинголог</p>
-                                            </div>
-                                        </div>
-                                    </li>
+                        <?php foreach($category as $cat): ?>
+                            <li class="medic__item">
+                                <div class="medic__direction">
+                                    <span class="medic__direction_name"><?= $cat['name_doctors-category']?></span>
+                                    <span class="medic__direction_numb">4 специалиста</span>
+                                </div>
+                                <ul class="medic__doctors">
+                                    <?php foreach($doctors as $doc): ?>
+                                        <?php if($doc['name_doctors-category'] == $cat['name_doctors-category']):?>
+                                            <li class="medic__doctors_item">
+                                                <div class="doctors__card">
+                                                    <img src="static/img/doctor.jpg" alt="" class="doctors__img">
+                                                    <div class="doctors__card_info">
+                                                            <span class="doctors__label"><?=$doc['post_doctor'] ?></span>
+                                                            <p class="doctors__name"><?=$doc['name_doctor'] ?></p>
+                                                            <p class="doctors__position"> <? 
+                                                                if($doc['experience_doctor']!= (NULL || ' ') )
+                                                                    {echo 'Стаж работы '.$doc['experience_doctor'].'в области педиатрии и диагностики детских заболеваний';}; ?>
+                                                             </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
                                 </ul>
-                        </li>
-                        <li class="medic__item">
-                            <div class="medic__direction">
-                                <span class="medic__direction_name">Педиатрия</span>
-                                <span class="medic__direction_numb">3 специалиста</span>
-                            </div>
-                            <ul class="medic__doctors">
-                                    <li class="medic__doctors_item">
-                                        <div class="doctors__card">
-                                            <img src="static/img/doctor.jpg" alt="" class="doctors__img">
-                                            <div class="doctors__card_info">
-                                                    <span class="doctors__label">Врач-педиатр высшей категории</span>
-                                                    <p class="doctors__name">Ильясов Дониёр Ходжиакбарович</p>
-                                                    <p class="doctors__position">Главный врач. Врач высшей категории — отоларинголог</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="medic__doctors_item">
-                                        <div class="doctors__card">
-                                            <img src="static/img/doctor.jpg" alt="" class="doctors__img">
-                                            <div class="doctors__card_info">
-                                                    <span class="doctors__label">Врач-педиатр высшей категории</span>
-                                                    <p class="doctors__name">Ильясов Дониёр Ходжиакбарович</p>
-                                                    <p class="doctors__position">Главный врач. Врач высшей категории — отоларинголог</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="medic__doctors_item">
-                                        <div class="doctors__card">
-                                            <img src="static/img/doctor.jpg" alt="" class="doctors__img">
-                                            <div class="doctors__card_info">
-                                                    <span class="doctors__label">Врач-педиатр высшей категории</span>
-                                                    <p class="doctors__name">Ильясов Дониёр Ходжиакбарович</p>
-                                                    <p class="doctors__position">Главный врач. Врач высшей категории — отоларинголог</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                        </li>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
 
                 </div>

@@ -16,10 +16,13 @@
       <!-- Блок с поиском -->
       <div class="search">
                 <div class="container">
-                        <form  action="/views/search.php" class="search__search">
-                        <input id="q" name="q" type="text" class="search__input" placeholder="Что-то ищете? Воспользуйтесь поиском по сайту...">
-                        <input type="submit" class="search__button" value="Поиск">
+                        <form action="" class="search__search">
+                                <input  autocomplete="off" id="q" name="q" type="text" class="search__input" placeholder="Что-то ищете? Воспользуйтесь поиском по сайту...">
+                                <input type="submit" class="search__button" value="Поиск">
                         </form>
+                        <ul class="search__list" id="search_list">
+
+                        </ul>
                         <ul class="search__navigation">
                                 <li class="search__navigation_item"><a href="/index.php">Главная</a></li>
                                 <li class="search__navigation_item">Клиники</li>
@@ -38,24 +41,11 @@
         <div class="container">
             <div class="clinic__content">
                 <ul class="side-menu">
-                    <li class="side-menu__item ">
-                        <a href="" class="side-menu__text _icon-hospital">Поликлиника</a>
-                    </li>
-                    <li class="side-menu__item">
-                        <a href="" class="side-menu__text _icon-test-2">Лаборатория</a>
-                    </li>
-                    <li class="side-menu__item">
-                        <a href="" class="side-menu__text _icon-stethoscope">Функциональная<br>диагностика</a>
-                    </li>
-                    <li class="side-menu__item">
-                        <a href="" class="side-menu__text _icon-surgery ">Операционный блок</a>
-                    </li>
-                    <li class="side-menu__item">
-                        <a href="" class="side-menu__text _icon-dental">Стоматология</a>
-                    </li>
-                    <li class="side-menu__item">
-                        <a href="" class="side-menu__text _icon-heart">MEDION LIFE</a>
-                    </li>
+                    <?php foreach($divisions as $division): ?>
+                        <li class="side-menu__item">
+                            <a href="/services.php?division_slug=<?=$division['slug']?>" class="_icon-<?=$division['icon']?> side-menu__text"><?=$division['name']?></a>
+                        </li>
+                    <?php endforeach; ?>
                 </ul>
 
                 <div class="clinic__block">

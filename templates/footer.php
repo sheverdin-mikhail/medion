@@ -87,6 +87,7 @@
         <script src="static/js/script.js"></script>
 
         <script src="static/js/search.js"></script>
+        
         </body>
 
         </html>

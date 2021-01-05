@@ -1,8 +1,13 @@
 <? include "templates/header.php" ?>
 
 
+<?php 
+        require_once 'include/db.php';
+?>
 
-
+<?php 
+        require_once 'views/spa_view.php';
+?>
 <!-- Блок с основным контентом страницы -->
 <div class="page">
 
@@ -10,13 +15,16 @@
       <!-- Блок с поиском -->
       <div class="search">
                 <div class="container">
-                        <form action="/views/search.php" class="search__search">
-                                <input id="q" name="q" type="text" class="search__input" placeholder="Что-то ищете? Воспользуйтесь поиском по сайту...">
+                        <form action="" class="search__search">
+                                <input  autocomplete="off" id="q" name="q" type="text" class="search__input" placeholder="Что-то ищете? Воспользуйтесь поиском по сайту...">
                                 <input type="submit" class="search__button" value="Поиск">
                         </form>
+                        <ul class="search__list" id="search_list">
+
+                        </ul>
                         <ul class="search__navigation">
                                 <li class="search__navigation_item"><a href="/index.php">Главная</a></li>
-                                <li class="search__navigation_item">Эстетическая медицина</li>
+                                <li class="search__navigation_item">СПА комплекс</li>
                         </ul>
                         <h2 class="search__header">
                         SPA-комплекс
@@ -33,72 +41,28 @@
                 <div class="spa__content">
                     <h2 class="spa__title">Мы предоставляем процедуры: </h2>
                     <div class="spa__navigation">
-                        <div class="spa__navigation_object _icon-facial active">
-                            <span class="spa__label">Услуги косметолога</span>
-                            <span class="spa__name">Уход за лицом</span>
-                        </div>
-                        <div class="spa__navigation_object _icon-stones">
-                            <span class="spa__label">Профилактические услуги</span>
-                            <span class="spa__name">SPA-услуги</span>
-                        </div>
-                        <div class="spa__navigation_object _icon-nail">
-                            <span class="spa__label">Маникюр и педикюр  </span>
-                            <span class="spa__name">Ногтевой сервис</span>
-                        </div>
-                        <div class="spa__navigation_object">
-                            <span class="spa__label">16 услуг</span>
+                        <?php foreach($category as $cat):?>
+                            <div class="spa__navigation_object _icon-<?=$cat['icon_category']?> " data-filter="<?=$cat['name_category']?>">
+                                <span class="spa__label"><?=$cat['description_category']?></span>
+                                <span class="spa__name"><?=$cat['name_category']?></span>
+                            </div>
+                        <?php endforeach;?>
+                        <div class="spa__navigation_object active"  data-filter="all">
+                            <span class="spa__label">Услуг: <?=count($procedures)?></span>
                             <span class="spa__name">Показать все услуги</span>
                         </div>
                     </div>
                     <ol class="spa__list card__container">
-                        <li class="card">
-                            <p class="card__icon _icon-bath"></p>
-                            <h3 class="card__title">Углекислая ванна</h3>
-                            <p class="card__text">Эта удивительная взаимосвязь с природой не прервалась и по сей день.</p>
-                            <a href="" class="card__more">Подробнее об услуге</a>
+                        <?php foreach($procedures as $procedure):?>
+                        <li class="card" data-cat="<?= $procedure['category'] ?>">
+                            <a href="/spa-procedure.php?id=<?=$procedure["id_spa-procedure"]?>">
+                                <p class="card__icon _icon-<?=$procedure['icon']?>"></p>
+                                <h3 class="card__title"><?=$procedure['name_spa-procedure']?></h3>
+                                <p class="card__text">Эта удивительная взаимосвязь с природой не прервалась и по сей день.</p>
+                                <a href="" class="card__more">Подробнее об услуге</a>
+                            </a>
                         </li>
-                        <li class="card">
-                            <p class="card__icon _icon-hand"></p>
-                            <h3 class="card__title">Углекислая ванна</h3>
-                            <p class="card__text">Эта удивительная взаимосвязь с природой не прервалась и по сей день.</p>
-                            <a href="" class="card__more">Подробнее об услуге</a>
-                        </li>
-                        <li class="card">
-                            <p class="card__icon _icon-massage"></p>
-                            <h3 class="card__title">Углекислая ванна</h3>
-                            <p class="card__text">Эта удивительная взаимосвязь с природой не прервалась и по сей день.</p>
-                            <a href="" class="card__more">Подробнее об услуге</a>
-                        </li>
-                        <li class="card">
-                            <p class="card__icon _icon-peeler"></p>
-                            <h3 class="card__title">Углекислая ванна</h3>
-                            <p class="card__text">Эта удивительная взаимосвязь с природой не прервалась и по сей день.</p>
-                            <a href="" class="card__more">Подробнее об услуге</a>
-                        </li>
-                        <li class="card">
-                            <p class="card__icon _icon-bath"></p>
-                            <h3 class="card__title">Углекислая ванна</h3>
-                            <p class="card__text">Эта удивительная взаимосвязь с природой не прервалась и по сей день.</p>
-                            <a href="" class="card__more">Подробнее об услуге</a>
-                        </li>
-                        <li class="card">
-                            <p class="card__icon _icon-hand"></p>
-                            <h3 class="card__title">Углекислая ванна</h3>
-                            <p class="card__text">Эта удивительная взаимосвязь с природой не прервалась и по сей день.</p>
-                            <a href="" class="card__more">Подробнее об услуге</a>
-                        </li>
-                        <li class="card">
-                            <p class="card__icon _icon-massage"></p>
-                            <h3 class="card__title">Углекислая ванна</h3>
-                            <p class="card__text">Эта удивительная взаимосвязь с природой не прервалась и по сей день.</p>
-                            <a href="" class="card__more">Подробнее об услуге</a>
-                        </li>
-                        <li class="card">
-                            <p class="card__icon _icon-peeler"></p>
-                            <h3 class="card__title">Углекислая ванна</h3>
-                            <p class="card__text">Эта удивительная взаимосвязь с природой не прервалась и по сей день.</p>
-                            <a href="" class="card__more">Подробнее об услуге</a>
-                        </li>
+                        <?php endforeach;?>
                     </ol>
                 </div>
             </div>
