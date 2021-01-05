@@ -58,8 +58,8 @@
                             <a href="/spa-procedure.php?id=<?=$procedure["id_spa-procedure"]?>">
                                 <p class="card__icon _icon-<?=$procedure['icon']?>"></p>
                                 <h3 class="card__title"><?=$procedure['name_spa-procedure']?></h3>
-                                <p class="card__text">Эта удивительная взаимосвязь с природой не прервалась и по сей день.</p>
-                                <a href="" class="card__more">Подробнее об услуге</a>
+                                <p class="card__text"><?=$procedure['description_spa-procedure']." ".$procedure['quantity_spa-procedure']?></p>
+                                <a href="/spa-procedure.php?id=<?=$procedure["id_spa-procedure"]?>" class="card__more">Подробнее об услуге</a>
                             </a>
                         </li>
                         <?php endforeach;?>

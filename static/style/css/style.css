@@ -436,6 +436,13 @@ a:hover, a:active, a:focus {
   color: #fff;
 }
 
+.clinics__button:hover {
+  border: 2px solid #C31C22;
+  border-radius: 5px;
+  background: #fff;
+  color: #C31C22;
+}
+
 .clinics__button:nth-child(1) {
   padding-left: 35px;
 }
@@ -834,14 +841,15 @@ a:hover, a:active, a:focus {
           flex: 1 1 100%;
 }
 
-.search__list li {
+.search__list li a {
+  display: block;
   background: #fff;
   padding: 12px 36px;
   border-radius: 5px;
   margin-top: 10px;
 }
 
-.search__list li:hover {
+.search__list li a:hover {
   cursor: pointer;
 }
 
@@ -933,6 +941,13 @@ a:hover, a:active, a:focus {
 
 .about__sendbtn:hover, .about__sendbtn:active, .about__sendbtn:focus {
   color: #fff;
+}
+
+.about__sendbtn:hover {
+  border: 2px solid #C31C22;
+  border-radius: 5px;
+  background: #fff;
+  color: #C31C22;
 }
 
 .about__sendbtn span {
@@ -1057,6 +1072,13 @@ a:hover, a:active, a:focus {
 
 .stocks__button:hover, .stocks__button:active, .stocks__button:focus {
   color: #fff;
+}
+
+.stocks__button:hover {
+  border: 2px solid #C31C22;
+  border-radius: 5px;
+  background: #fff;
+  color: #C31C22;
 }
 
 .stocks__slider {
@@ -1471,6 +1493,13 @@ a:hover, a:active, a:focus {
 }
 
 .description__button:hover {
+  border: 2px solid #C31C22;
+  border-radius: 5px;
+  background: #fff;
+  color: #C31C22;
+}
+
+.description__button:hover {
   cursor: pointer;
 }
 
@@ -1492,7 +1521,16 @@ a:hover, a:active, a:focus {
   padding: 0 0 70px 0;
 }
 
-.doctors__row {
+.doctors__more {
+  position: relative;
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #193B67;
+  margin-top: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1502,6 +1540,19 @@ a:hover, a:active, a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.doctors__more::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 100%;
+  background: url("../../img/arrow-down.svg") center no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .doctors__title {
@@ -1545,10 +1596,28 @@ a:hover, a:active, a:focus {
   border-radius: 5px;
   overflow: hidden;
   background: #fff;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .doctors__card_info {
   padding: 25px 30px 35px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
 }
 
 .doctors__img {
@@ -1576,6 +1645,7 @@ a:hover, a:active, a:focus {
   line-height: 145%;
   color: #454F5C;
   margin-top: 10px;
+  margin-bottom: 25px;
 }
 
 .doctors__navigation {
@@ -1740,6 +1810,13 @@ a:hover, a:active, a:focus {
 
 .medicin__button:hover, .medicin__button:active, .medicin__button:focus {
   color: #fff;
+}
+
+.medicin__button:hover {
+  border: 2px solid #C31C22;
+  border-radius: 5px;
+  background: #fff;
+  color: #C31C22;
 }
 
 .medicin__button:last-child {
@@ -2181,6 +2258,13 @@ a:hover, a:active, a:focus {
   color: #fff;
 }
 
+.offer__item_button:hover {
+  border: 2px solid #C31C22;
+  border-radius: 5px;
+  background: #fff;
+  color: #C31C22;
+}
+
 .offer__item_icon {
   display: inline-block;
   padding: 30px;
@@ -2284,6 +2368,247 @@ a:hover, a:active, a:focus {
 
 .specialist__button:hover, .specialist__button:active, .specialist__button:focus {
   color: #fff;
+}
+
+.specialist__button:hover {
+  border: 2px solid #C31C22;
+  border-radius: 5px;
+  background: #fff;
+  color: #C31C22;
+}
+
+.procedure__card {
+  padding: 89px 0 120px 0;
+}
+
+.procedure__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.procedure__image-box {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 35.5%;
+          flex: 0 0 35.5%;
+  border: 5px;
+  overflow: hidden;
+}
+
+.procedure__image {
+  width: 100%;
+}
+
+.procedure__info {
+  padding: 10px 50px;
+}
+
+.procedure__label {
+  display: block;
+  color: #8591A3;
+  font-size: 14px;
+  line-height: 160%;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.procedure__name {
+  margin-bottom: 14px;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 120%;
+}
+
+.procedure__description {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 160%;
+  margin-bottom: 28px;
+}
+
+.procedure__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 85%;
+  padding: 17px 24px;
+  border: 2px solid #DFE8EE;
+  border-radius: 2px;
+  margin-bottom: 28px;
+}
+
+.procedure__price-label {
+  display: block;
+  font-size: 14px;
+  line-height: 160%;
+  color: #8591A3;
+}
+
+.procedure__price-num {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 160%;
+}
+
+.procedure__button {
+  display: inline-block;
+  background: #193B67;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 21.7px;
+  padding: 17px 28px;
+  margin-right: 10px;
+}
+
+.procedure__button:hover, .procedure__button:active, .procedure__button:focus {
+  color: #fff;
+}
+
+.procedure__button:hover {
+  border: 2px solid #C31C22;
+  border-radius: 5px;
+  background: #fff;
+  color: #C31C22;
+}
+
+.similar {
+  margin-bottom: 100px;
+}
+
+.similar__title {
+  font-size: 30px;
+  line-height: 113%;
+  color: #193B67;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+
+.similar__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  counter-reset: myCounter;
+  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.similar__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 32.5%;
+          flex: 0 1 32.5%;
+  background: #EFF4F7;
+  border-radius: 5px;
+  padding: 130px 30px 30px 30px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.similar__item::after {
+  counter-increment: myCounter;
+  display: block;
+  content: counter(myCounter);
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 56px;
+  height: 56px;
+  font-size: 57px;
+  color: #FFFFFF;
+}
+
+.similar__item:nth-child(-n+9):after {
+  content: "0" counter(myCounter);
+}
+
+.similar__item::before {
+  position: absolute;
+  left: 35px;
+  top: 30px;
+  font-size: 60px;
+}
+
+.similar__item_title {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 130%;
+  margin-bottom: 10px;
+}
+
+.similar__item_text {
+  font-size: 14px;
+  line-height: 160%;
+  color: #454F5C;
+  margin-bottom: 30px;
+}
+
+.similar__item_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.similar__item_button {
+  padding: 17px 25px;
+  display: inline-block;
+  background: #193B67;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 21.7px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 155%;
+}
+
+.similar__item_button:hover, .similar__item_button:active, .similar__item_button:focus {
+  color: #fff;
+}
+
+.similar__item_button:hover {
+  border: 2px solid #C31C22;
+  border-radius: 5px;
+  background: #fff;
+  color: #C31C22;
+}
+
+.similar__item_price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 0;
+  text-align: right;
+}
+
+.similar__item_price label {
+  font-size: 12px;
+  line-height: 160%;
+  color: #8591A3;
+}
+
+.similar__item_price span {
+  font-size: 16px;
+  line-height: 160%;
+  color: #193B67;
 }
 
 .hide {

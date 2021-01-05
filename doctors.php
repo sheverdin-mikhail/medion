@@ -58,12 +58,13 @@
                                                 <div class="doctors__card">
                                                     <img src="static/img/doctor.jpg" alt="" class="doctors__img">
                                                     <div class="doctors__card_info">
-                                                            <span class="doctors__label"><?=$doc['post_doctor'] ?></span>
-                                                            <p class="doctors__name"><?=$doc['name_doctor'] ?></p>
-                                                            <p class="doctors__position"> <? 
-                                                                if($doc['experience_doctor']!= (NULL || ' ') )
-                                                                    {echo 'Стаж работы '.$doc['experience_doctor'].'в области педиатрии и диагностики детских заболеваний';}; ?>
-                                                             </p>
+                                                        <span class="doctors__label"><?=$doc['post_doctor'] ?></span>
+                                                        <p class="doctors__name"><?=$doc['name_doctor'] ?></p>
+                                                        <p class="doctors__position"> <? 
+                                                            if($doc['experience_doctor']!= (NULL || ' ') )
+                                                                {echo 'Стаж работы '.$doc['experience_doctor'].'в области педиатрии и диагностики детских заболеваний';}; ?>
+                                                        </p>
+                                                        <a href="/doctor.php?id_doctor=<?=$doc['id_doctor']?>" class="doctors__more">Подробнее о враче</a>
                                                     </div>
                                                 </div>
                                             </li>
