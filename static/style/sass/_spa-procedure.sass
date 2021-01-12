@@ -1,0 +1,133 @@
+.procedure 
+    &__card 
+        padding: 89px 0 120px 0
+    &__block 
+        display: flex
+    &__image-box 
+        flex: 0 0 35.5%
+        border: 5px 
+        overflow: hidden
+        
+    &__image 
+        width: 100%
+    &__info 
+        padding: 10px 50px
+    &__label 
+        display: block
+        color: #8591A3
+        font-size: 14px
+        line-height: 160%
+        letter-spacing: 0.06em
+        text-transform: uppercase
+        margin-bottom: 14px
+    &__name 
+        margin-bottom: 14px
+        font-weight: bold
+        font-size: 30px
+        line-height: 120%
+    &__description 
+        font-weight: bold
+        font-size: 16px
+        line-height: 160%
+        margin-bottom: 28px
+    &__row 
+        display: flex
+        justify-content: space-between
+        max-width: 85%
+        padding: 17px 24px
+        border: 2px solid #DFE8EE
+        border-radius: 2px
+        margin-bottom: 28px
+    &__price-label
+        display: block
+        font-size: 14px
+        line-height: 160%
+        color: #8591A3
+    &__price-num 
+        display: block
+        font-weight: bold
+        font-size: 14px
+        line-height: 160%
+    &__buttons
+
+    &__button 
+        +buttons
+        padding: 17px 28px
+        margin-right: 10px
+        
+                        
+
+.similar
+    margin-bottom: 100px
+    &__title 
+        font-size: 30px
+        line-height: 113%
+        color: #193B67
+        font-weight: bold
+        margin-bottom: 35px
+        
+    &__list 
+        display: flex
+        flex-wrap: wrap
+        counter-reset: myCounter
+        list-style: none
+        justify-content: space-between
+    &__item 
+        flex: 0 1 32.5%
+        background: #EFF4F7
+        border-radius: 5px
+        padding: 130px 30px 30px 30px
+        position: relative
+        margin-bottom: 15px
+        &::after
+            counter-increment: myCounter     
+            display: block
+            content: counter(myCounter)
+            position: absolute
+            top: 25px
+            right: 25px
+            width: 56px
+            height: 56px
+            font-size: 57px
+            color: #FFFFFF
+        &:nth-child(-n+9):after
+            content: '0' counter(myCounter)
+        &::before
+            position: absolute
+            left: 35px
+            top: 30px
+            font-size: 60px
+
+        &_title 
+            font-weight: 600
+            font-size: 25px
+            line-height: 130%
+            margin-bottom: 10px
+        &_text 
+            font-size: 14px
+            line-height: 160%
+            color: #454F5C
+            margin-bottom: 30px
+        &_row 
+            display: flex
+            justify-content: space-between
+        &_button
+            padding: 17px 25px
+            +buttons
+            font-weight: 600
+            font-size: 12px
+            line-height: 155%
+        &_price 
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            padding: 5px 0
+            text-align: right
+            label
+                font-size: 12px
+                line-height: 160%
+                color: #8591A3
+            span
+                font-size: 16px
+                line-height: 160%
+                color: #193B67

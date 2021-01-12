@@ -15,8 +15,21 @@
             $categoriyes = mysqli_fetch_all($result, MYSQLI_ASSOC);
             return $categoriyes;
         };
+
+        function get_spaSimilar($link, $procedure_id){
+                $sql = "SELECT * FROM spa_procedure 
+                INNER JOIN spa_category 
+                ON `spa_category`.`id_category-spa`= $procedure_id 
+                AND `spa_procedure`.`id_category-spa`= $procedure_id";
+                $result = mysqli_query($link, $sql);
+                $similar = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                return $similar;
+        };
+
         $procedure = get_spaProcedure($link, $procedure_id)[0];
+        $similar = get_spaSimilar($link, $procedure['id_category-spa']);
 ?>
+
 <!-- Блок с основным контентом страницы -->
 <div class="page">
 
@@ -33,9 +46,12 @@
                         </ul>
                         <ul class="search__navigation">
                                 <li class="search__navigation_item"><a href="/index.php">Главная</a></li>
-                                <li class="search__navigation_item" style="
-border-right: 1px solid #ADBAC9;"><a href="/SPA.php">СПА комплекс</a></li>
-                                <li class="search__navigation_item"><?=$procedure['name_spa-procedure']?></li>   
+                                <li class="search__navigation_item" style="border-right: 1px solid #ADBAC9;">
+                                        <a href="/SPA.php">СПА комплекс</a>
+                                </li>
+                                <li class="search__navigation_item">
+                                        <?=$procedure['name_spa-procedure']?>
+                                </li>   
                         </ul>
                         <h2 class="search__header">
                         <?=$procedure['name_spa-procedure']?>
@@ -46,9 +62,62 @@ border-right: 1px solid #ADBAC9;"><a href="/SPA.php">СПА комплекс</a>
       
         
 
+        <div class="procedure__card">
+               <div class="container">
+                        <div class="procedure__block">
+                                <div class="procedure__image-box">
+                                        <img src="static/img/spa_img/MRT.jpg" alt="" class="procedure__image">
+                                </div>
+                                <div class="procedure__info">
+                                        <span class="procedure__label">
+                                        Описание услуги
+                                        </span> 
+                                        <h3 class="procedure__name">
+                                                <?=$procedure['name_spa-procedure']?>
+                                        </h3>
+                                        <p class="procedure__description">
+                                        <?=$procedure['description_spa-procedure']?>
+                                        </p>
+                                        <div class="procedure__row">
+                                                <span class="procedure__price-label">Стоимость услуги:</span>
+                                                <span class="procedure__price-num"><?=$procedure['price_spa-procedure']?> сум за <?=$procedure['quantity_spa-procedure']?></span>
+                                        </div>
+                                        <div class="procedure__buttons">
+                                                <a href="" class="procedure__button">Записаться на прием</a>
+                                                <a href="" class="procedure__button">Бесплатная консультация</a>
+                                        </div>
+                                </div>  
+                        </div>
+               </div>
+        </div>
 
 
 
+        <div class="similar">
+               <div class="container">
+                         <h2 class="similar__title">
+                        Похожие виды услуг
+                        </h2>
+                        <ul class="similar__list">
+                                <?php foreach($similar as $sim):?>
+                                        <? if($sim['id_spa-procedure'] != $procedure['id_spa-procedure']):?>
+                                                <li class="similar__item _icon-<?=$sim['icon_category']?>">
+                                                        <h3 class="similar__item_title"><?=$sim['name_spa-procedure']?></h3>
+                                                        <p class="similar__item_text"><?=$sim['description_spa-procedure']?> </p>
+                                                        <div class="similar__item_row">
+                                                                <a href="" class="similar__item_button">Записаться на прием</a>
+                                                                <div class="similar__item_price">
+                                                                        <label>Стоимость услуги:</label>
+                                                                        <span><?=$sim['price_spa-procedure']?> сум<br> за <?=$sim['quantity_spa-procedure']?></span>
+                                                                </div>
+                                                        </div>
+                                        
+                                                </li>
+                                        <? endif;?>
+                                <?php endforeach; ?>
+                        </ul>
+               </div>
+        </div>
 
 
 
@@ -59,58 +128,6 @@ border-right: 1px solid #ADBAC9;"><a href="/SPA.php">СПА комплекс</a>
 <? include "templates/footer.php" ?>
 
 
-INSERT INTO `doctors` (`name_doctor`, `post_doctor`, `experience_doctor`, `id_doctors-category`) 
-
-VALUES
-        ('Маджидова Ирода Нуруллаевна', 'Неотолог' ,' ', 4),
-        ('Мустафина Елена Рафиковна	', 'Педиатр' ,' ', 5),
-        ('Салихова Галия Саидовна', 'Педиатр', ' ', 5),
-        ('Шайзаков Алишер Нуруллаевич', 'Невролог-невропатолог' ,' ', 6),
-        ('Назарова Адиба Газиевна', 'Невролог', '37 лет ', 6),
-        ('Раупова Севара Амановна', 'Невролог детский', ' ', 6),
-        ('Рафикова Земфира Барсовна', 'Невролог детский' ,' ', 6),
-        ('Мухиддинова Мукаддас Араббаевна', 'Невролог', ' 8 лет', 6),
-        ('Тухтаева Нигора Шакировна', 'Невролог ЭЭГ', ' 26 лет', 6),
-        ('Убайдуллаева Саодат Фатхуллаевна', 'Нейрофизиолог' ,' ', 7),
-        ('Абдурахманова Наима Абдураззаковна', 'Кардиолог' ,' ', 8),
-        ('Узбекова Наилья Камильевна', 'Кардиолог', '18 лет', 8),
-        ('Ким Дмитрий Ильич', 'Эндоскопист' ,' ', 9),
-        ('Мирзаева Гульнора Шухратовна', 'Эндоскопист', ' ', 9),
-        ('Мухаммедкаримов Алишер Кабилджанович', 'Эндоскопист' ' ', 9),
-        ('Турсунова Дилором Мирсобитовна', 'Аллерголог - терапевт' ,' ', 10),
-        ('Даминов Рустам Уткурович', 'Пульманолог', ' ', 11),
-        ('Абдумажидов Алишер Абдулхайрович', 'Уролог', ' 19 лет', 12),
-        ('Раззакова Наргиза Пулатовна', 'Маммолог', ' ', 13),
-        ('Сутланова Зиёда Муталовна', 'Окулист', ' ', 14),
-        ('Шамирзаев Хаким Иркинович', 'Зав. Отделением радиологии', '22 года ', 15),
-        ('Маткурбанов Бахтиер Джуманазарович', 'Радиолог', ' ', 15),
-        ('Сабиров Бурхон Фархатович', 'Лаборант', ' ', 15),
-        ('Рузматов Сирожиддин Бахтиер угли', 'Лаборант', ' ', 15),
-        ('Аъзамова Дилафруз Зокиржон кизи', 'Лаборант', ' ', 15),
-        ('Халматова Барно Дамин кизи', 'Лаборант', ' ', 15),
-        ('Хабибрахманова Гузаль Равкатовна', 'Лаборант', ' ', 15),
-        ('Батманов Артем Леонидович', 'Заведущий отделением реанимации и анестезиологии', ' ', 16),
-        ('Азимова Юлия Владимировна', 'Анестезиолог-реаниматолог', ' 18 лет', 16),
-        ('Мукинова Кристина Валерьевна', 'Анестезиолог-реаниматолог', '6 лет ', 16),
-        ('Юсупова Оксана Евгеньевна', 'Анестезиолог-реаниматолог', ' ', 16),
-        ('Закиров Рустам Рухуллаевич', 'Зав. Отделения ДЭМ', ' ', 17),
-        ('Акилова Наргиза Фархадовна', 'Дерматолог- косметолог', ' ', 17),
-        ('Нурматова Ирода Бахтияровна', 'Дерматолог- косметолог', ' ', 17),
-        ('Сердюкова Ольга Анатольевна', 'Дерматолог- косметолог', '26 лет ', 17),
-        ('Тапия Владимир Фернандес', 'Пластический хирург', ' ', 18),
-        ('Камалов Султонхужа Таваккалхужаевич', 'Пластический хирург', '6 лет ', 18),
-        ('Исламов Темур Тельманович', 'Пластический хирург', ' ', 18),
-        ('Оганесян Вадим Романович', 'Пластический хирург', ' ', 18),
-        ('Курбанова Олеся Анатольевна', 'Диетолог', ' ', 19),
-        ('Шарахмедов Шорахмат Шарасулович', 'Трихолог', ' 12 лет', 20),
-        ('Шамсиддинова Наргиза Алихановна', 'Гинеколог', ' ', 21),
-        ('Акбаров Дониер Дильшодович', 'Зав. отд. стоматологии', ' 12 лет', 22),
-        ('Абдурасулова Севара Теминдаровна', 'Стоматолог-терапевт', ' ', 22),
-        ('Ахмедов Даврон Анвар угли', 'Стоматолог-терапевт', '18 лет ', 22),
-        ('Махмудов Муроджон Хикматович', 'Стоматолог-терапевт', ' ', 22),
-        ('Туракулова Машхура Шоназаровна', 'Мед. Сестра стоматологии', ' ', 23),
-        ('Мухамедова Гульрух Фарихджанова', 'Мед. Сестра ', ' ', 23),
-        ('Холматова Донохон Худойбердиевна', 'Мед. Сестра ', ' ', 23);
 
         
        

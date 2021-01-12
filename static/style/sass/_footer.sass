@@ -103,5 +103,62 @@
         &_address
             line-height: 20px
 
+@media screen and ( min-width: 310px  ) and (max-width: 990px)
+    .footer
+        padding: 50px 0 30px 0
+        &__map 
+        &__footer
+        &__row 
+            flex-direction: column
+            
+        &__column 
+            flex-direction: row
+            flex-wrap: wrap
+            &:first-child
+                justify-content: center
+            &:nth-child(1),
+            &:nth-child(3),
+            &:nth-child(4)
+                margin-bottom: 35px
+            &_social
+                order: 0
+                justify-content: center
+            &_link
+                order: 1
+                justify-content: center
+                .footer__links
+                    flex: 0 0 100%
+                    text-align: center
+            &_copyright
+                order: 2
+                justify-content: center
+                
+                
+        &__logo 
+        &__links 
+            flex: 0 1 50%
+           
+                
+
+        &__info 
+            flex: 0 1 50%
+        &__label 
+        &__text 
+            font-size: 14px 
+            line-height: 17px
+            font-weight: 600
+            &_email
+                font-weight: 400
+        &__phone 
+        &__copyright 
+         
+        &__social 
+            &_facebook
+            &_telegramm 
+            &_instagramm 
+
+
+    
+
 
 
