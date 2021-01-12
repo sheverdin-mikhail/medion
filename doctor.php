@@ -1,16 +1,37 @@
 <? include "templates/header.php" ?>
 
+<?php 
+        require_once 'include/db.php';
+?>
 
+<?php 
+    $doc_id = (int)$_GET['id_doctor'];
+    function doctorView($link, $doc_id){
+        $sql = "SELECT *
+        FROM doctors WHERE `doctors`.`id_doctor` LIKE $doc_id ";
+        $result = mysqli_query($link, $sql);
+        $doctor = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        return $doctor;
+    };
 
+    function get_doctorSimilar($link, $procedure_id){
+        $sql = "SELECT * FROM doctors
+        INNER JOIN doctors_category ON `doctors_category`.`id_doctors-category`=$procedure_id AND
+        `doctors`.`id_doctors-category` = $procedure_id";
+        $result = mysqli_query($link, $sql);
+        $similar = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        return $similar;
+    };
+
+    $doctor = doctorView($link, $doc_id)[0];
+    $doctors = get_doctorSimilar($link, $doctor['id_doctors-category']);
+    
+
+?>
 
 <!-- Блок с основным контентом страницы -->
 
 <div class="page">
-
-
-
-
-
 
  <!-- Блок с поиском -->
  <div class="search">
@@ -24,10 +45,11 @@
                         </ul>
                         <ul class="search__navigation">
                                 <li class="search__navigation_item"><a href="/index.php">Главная</a></li>
-                                <li class="search__navigation_item">Клиники</li>
+                                <li class="search__navigation_item" style="border-right: 1px solid #ADBAC9;"><a href="/doctors.php" >Врачи</a></li>
+                                <li class="search__navigation_item"><?= $doctor['name_doctor']?></li>
                         </ul>
                         <h2 class="search__header">
-                            Ильясов Дониёр Ходжиакбарович
+                        <?= $doctor['name_doctor']?>
                         </h2>
                         
                 </div>
@@ -50,15 +72,15 @@
                             О враче клиники
                         </p>
                         <h2 class="specialist__neme">
-                            Ильясов Дониёр Ходжиакбарович
+                            <?= $doctor['name_doctor']?>
                         </h2>
                         <div class="specialist__position">
                             
                             <p class="specialist__label _icon-doctor">
-                                Врач высшей категории - оттоларинголог
+                            <?= $doctor['post_doctor']?>
                             </p>
                             <p class="specialist__label-1">
-                                <span>20</span> лет опыта
+                                <span><?= $doctor['experience_doctor'][0].$doctor['experience_doctor'][1]?></span> лет опыта
                             </p>
                         </div>
                         <p class="specialist__text-1">
@@ -77,7 +99,34 @@
 
     
 
-
+    <div class="doctors">
+                <div class="container">
+                        <div class="doctors__row">
+                                <h2 class="doctors__title">Другие врачи направления - <?=$doctors[0]['name_doctors-category']?> </h2>
+                        </div>
+                        <div class="doctors__row">
+                            <div class="doctors__block">
+                               <?php foreach($doctors as $doc):?>
+                                    <?php if($doc['id_doctor'] != $doctor['id_doctor']):?>
+                                        <div class="doctors__card-doctor">
+                                        <img src="static/img/doctor.jpg" alt="" class="doctors__img">
+                                        <div class="doctors__card_info">
+                                            <span class="doctors__label"><?=$doc['name_doctors-category'] ?></span>
+                                            <p class="doctors__name"><?=$doc['name_doctor'] ?></p>
+                                            <p class="doctors__position"><?=$doc['post_doctor'] ?>
+                                            <?php if($doc['experience_doctor']!=null)
+                                                {echo '<br>Стаж работы: '.$doc['experience_doctor'];}
+                                            ?>
+                                            </p>
+                                            <a href="/doctor.php?id_doctor=<?=$doc['id_doctor']?>" class="doctors__more">Подробнее о враче</a>
+                                        </div>
+                                    </div>
+                                    <?php endif; ?>
+                               <?php endforeach; ?>
+                            </div>
+                        </div>
+                </div>          
+        </div>
 
 
 

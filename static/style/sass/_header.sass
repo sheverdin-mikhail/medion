@@ -1,6 +1,5 @@
 
 .header 
-    
     &__row 
         display: flex
         justify-content: space-between
@@ -43,15 +42,12 @@
             background: url('../../img/clock.svg') center no-repeat
             
     &__button 
+        +buttons
+        background: #fff
         padding: 17px 28px 15px 28px
         border: 2px solid #193B67
         color: #193B67
         border-radius: 5px
-        &:hover
-            background: #193B67
-            color: #ffffff
-        &:hover .header__button_text::before
-            background: url('../../img/phone-white.svg') center no-repeat
         &_text 
             display: block
             font-size: 14px
@@ -59,14 +55,10 @@
             position: relative
             padding-left: 26px
             &::before
-                content: ""
-                display: block
                 position: absolute
                 top: 0
                 left: 0
-                width: 16px
-                height: 16px
-                background: url('../../img/phone.svg') center no-repeat
+                font-size: 16px
     &__navigate 
         border-top: 1px solid #F3F7FA
         border-bottom: 1px solid #F3F7FA
@@ -101,3 +93,84 @@
 
         
 
+@media screen and ( min-width: 310px ) and ( max-width: 990px)
+    .header
+        position: fixed
+        background: #fff
+        z-index: 10
+        width: 100%
+        overflow: auto
+        &.active
+            height: 100%
+        &__row 
+        &__logo
+            width: 50%
+            img
+                width: 100%
+        &__address 
+            display: none
+            margin: 38px 0 28px 0
+        &__label 
+        &__text 
+        &__schedule 
+            display: none
+            margin: 28px 0 30px
+        &__button 
+            display: none
+            text-align: center
+            &_text 
+                display: inline-block
+            margin-bottom: 20px
+
+        &__navigate 
+        &__menu 
+            position: absolute
+            flex-direction: column
+            align-items: start
+            justify-content: space-between
+            transform: translateY(-150%) translateX(-6%)
+            background: #fff
+            z-index: 10
+            width: 100%
+            padding: 0 6%
+            transition: all 0.3s ease 0s
+            opacity: 0
+            li
+                width: 100%
+            &__item 
+                display: block
+                padding: 14px 0
+                font-size: 16px
+                line-height: 19px
+                font-weight: bold
+                &:hover
+                    background: #fff
+                    color: $blue
+            &.active
+                transform: translateY(0) translateX(-6%)
+                opacity: 1
+
+    .language-menu
+        &__on 
+            padding: 11px 8px
+        &__header 
+            font-size: 12px
+            padding-left: 22px
+            padding-right: 17px
+            &::before
+                width: 16px
+                height: 16px
+                background-size: contain
+            &::after
+                height: 12.8px
+        &__items 
+        &__item 
+        &__item_span 
+        &__item_span_RU 
+        &__item_span_UK 
+
+    .hide 
+    .submenu 
+        &__header 
+        &__item 
+    

@@ -100,18 +100,20 @@
                         </h2>
                         <ul class="similar__list">
                                 <?php foreach($similar as $sim):?>
-                                        <li class="similar__item _icon-<?=$sim['icon_category']?>">
-                                        <h3 class="similar__item_title"><?=$sim['name_spa-procedure']?></h3>
-                                        <p class="similar__item_text"><?=$sim['description_spa-procedure']?> </p>
-                                        <div class="similar__item_row">
-                                                <a href="" class="similar__item_button">Записаться на прием</a>
-                                                <div class="similar__item_price">
-                                                        <label>Стоимость услуги:</label>
-                                                        <span><?=$sim['pice_spa-procedure']?> за <?=$sim['quantity_spa-procedure']?></span>
-                                                </div>
-                                        </div>
-                                
-                                </li>
+                                        <? if($sim['id_spa-procedure'] != $procedure['id_spa-procedure']):?>
+                                                <li class="similar__item _icon-<?=$sim['icon_category']?>">
+                                                        <h3 class="similar__item_title"><?=$sim['name_spa-procedure']?></h3>
+                                                        <p class="similar__item_text"><?=$sim['description_spa-procedure']?> </p>
+                                                        <div class="similar__item_row">
+                                                                <a href="" class="similar__item_button">Записаться на прием</a>
+                                                                <div class="similar__item_price">
+                                                                        <label>Стоимость услуги:</label>
+                                                                        <span><?=$sim['price_spa-procedure']?> сум<br> за <?=$sim['quantity_spa-procedure']?></span>
+                                                                </div>
+                                                        </div>
+                                        
+                                                </li>
+                                        <? endif;?>
                                 <?php endforeach; ?>
                         </ul>
                </div>

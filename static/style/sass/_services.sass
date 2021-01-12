@@ -210,6 +210,13 @@
     background: url('../../img/doctors-bg.jpg') bottom no-repeat
     background-size: contain
     padding: 0 0 70px 0
+    &__row
+        display: flex
+        justify-content: space-between
+    &__block
+        display: flex
+        justify-content: start
+        margin-top: 25px
     &__more
         position: relative
         display: block
@@ -266,6 +273,15 @@
         height: 100%
         display: flex
         flex-direction: column
+        &-doctor
+            flex: 0 1 23%
+            background: #fff
+            display: flex
+            flex-direction: column
+            margin-right: 15px
+            &:nth-child(4n + 4)
+                margin-right: 0
+                
         &_info
             padding: 25px 30px 35px 30px
             display: flex
@@ -301,4 +317,66 @@
             margin-top: 96px
 
 
-            
+@media screen and ( min-width: 310px ) and ( max-width: 990px)
+    .search
+        padding-bottom: 114px
+        background: url('../../img/search_bg_mob.jpg') center no-repeat
+        background-size: cover
+        &__header
+            +header_mob
+            max-width: 100%
+
+
+    .services
+        background-color: #FBFBFC
+        &__blueBlock 
+            display: none
+        &__content 
+            flex-direction: column
+        &__menu
+        &__item_text 
+        &__list 
+            flex: 0 0 100%
+            max-width: 100%
+        &__item
+        &__item_row 
+            padding: 9px 11px 9px 65px
+            &::before
+                top: 14px
+                left: 20px
+                font-size: 30px
+        &__item_title 
+            font-size: 16px
+            line-height: 155%
+            span
+                font-size: 12px
+                line-height: 155%
+        &__item_more
+            font-size: 10px
+        &__sublist
+        &__sublist_item
+        &__sublist_item_row 
+        &__item_text 
+        &__more 
+        &__price 
+        &__description 
+
+/*WD
+    .description
+        &__label 
+        &__text
+        &__button
+        &__button 
+        &__button_1
+        &__button_2 
+        &__clinics 
+    .clinic
+        &__title
+        &__row 
+        &__item
+        &__img 
+        &__name
+        &__address 
+        &__buttons 
+        &__button
+

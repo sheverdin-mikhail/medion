@@ -9,7 +9,7 @@
                         <div class="footer__column">
                             <img src="/static/img/footer-logo.svg" alt="" class="footer__logo">
 
-                            <div class="language-menu">
+                            <div class="language-menu _pc">
                                 <div class="language-menu__on">
                                     <span class="language-menu__header">Рус</span>
                                 </div>
@@ -58,10 +58,10 @@
                         </div>
                     </div>
                     <div class="footer__row">
-                        <div class="footer__column">
+                        <div class="footer__column footer__column_link">
                             <a href="" class="footer__links">Политика конфиденциальности</a>
                         </div>
-                        <div class="footer__column">
+                        <div class="footer__column footer__column_copyright">
                             <p class="footer__copyright">2020. Все права защищены.</p>
                         </div>
                         <div class="footer__column footer__column_social">

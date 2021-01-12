@@ -38,6 +38,13 @@ $(document).ready(function(){
         $(this).toggleClass('active')
     });
 
+    $('.menu__burger').on('click', function(){
+        $(this).toggleClass('active')
+        $('.header__menu').toggleClass('active')
+        $('body').toggleClass('_lock')
+        $('.header').toggleClass('active')
+        $('.search__search').toggleClass('hide')
+    })
 
     $('.services__more').on('click', function(){
 

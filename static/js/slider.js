@@ -1,17 +1,24 @@
 const swiper1 = new Swiper( '.search__slider', {
 
+
     //Точки 
     pagination: {
-        el: '.swiper-pagination',
-      },
+    el: '.swiper-pagination',
+    },
     //Бесконечная прокрутка  
     loop: true,
 
-    //Стрелки навигации
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+
+   breakpoints: {
+       990: {
+        
+            //Стрелки навигации
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        }
+   }
 
 
 });
@@ -21,22 +28,27 @@ const swiper2 = new Swiper( '.about__slider', {
     //Бесконечная прокрутка  
     loop: true,
     
-    //Стрелки навигации
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
 
+    breakpoints: {
+        310: {
+            //Стрелки навигации
+            pagination: {
+                el: '.swiper-pagination',
+              },
+        },
+        990: {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        }
+    }
 
 });
 
 const swiper3 = new Swiper( '.stocks__slider', {
 
-    slidesPerView: 3,
-    spaceBetween: 10,   
-    loop: false,
-    loopFillGroupWithBlank: true,
-
+    
     pagination: {
         el: '.swiper-pagination',
       },
@@ -46,7 +58,19 @@ const swiper3 = new Swiper( '.stocks__slider', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-
+    spaceBetween: 10,   
+    breakpoints: {
+        310:{
+            slidesPerView: 1,
+            loop: true,
+        },
+        990:{
+            slidesPerView: 3,
+            
+            loop: false,
+            loopFillGroupWithBlank: true,
+        }
+    }
 
 });
 
