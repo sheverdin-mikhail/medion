@@ -9,7 +9,7 @@
     <!-- Обнуление стилей -->
     <link rel="stylesheet" href="static/style/css/normalize.css">
 
-    <!-- Подключение siper slider -->
+    <!-- Подключение swiper slider -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
 

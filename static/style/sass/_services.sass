@@ -210,6 +210,7 @@
     background: url('../../img/doctors-bg.jpg') bottom no-repeat
     background-size: contain
     padding: 0 0 70px 0
+    margin-bottom: 100px
     &__row
         display: flex
         justify-content: space-between
@@ -273,6 +274,7 @@
         height: 100%
         display: flex
         flex-direction: column
+        border: 1px solid #EFF4F7;
         &-doctor
             flex: 0 1 23%
             background: #fff
@@ -300,6 +302,7 @@
         line-height: 135%
         color: #19304C
         margin-top: 10px
+        flex: 1 1 100%
     &__position 
         display: block
         font-size: 14px
@@ -324,6 +327,9 @@
         background-size: cover
         &__header
             +header_mob
+            max-width: 100%
+            margin-bottom: 10px
+        &__subheader
             max-width: 100%
 
 
@@ -361,7 +367,17 @@
         &__price 
         &__description 
 
-/*WD
+
+    .doctors
+        
+        background: #FBFBFC
+        &__title
+            +header_mob
+        &__name
+            font-weight: bold
+        &__slider
+            margin-bottom: 35px
+
     .description
         &__label 
         &__text

@@ -367,9 +367,12 @@ a:hover, a:active, a:focus {
 }
 
 .clinics__button:hover, .clinics__button:active, .clinics__button:focus {
-  border: 2px solid #C31C22;
   border-radius: 5px;
   background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #C31C22;
+  border-radius: 5px;
   color: #C31C22;
 }
 
@@ -511,9 +514,12 @@ a:hover, a:active, a:focus {
 }
 
 .header__button:hover, .header__button:active, .header__button:focus {
-  border: 2px solid #C31C22;
   border-radius: 5px;
   background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #C31C22;
+  border-radius: 5px;
   color: #C31C22;
 }
 
@@ -834,9 +840,6 @@ a:hover, a:active, a:focus {
 }
 
 @media screen and (min-width: 310px) and (max-width: 990px) {
-  .footer {
-    padding: 50px 0 30px 0;
-  }
   .footer__row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1050,9 +1053,12 @@ a:hover, a:active, a:focus {
 }
 
 .about__sendbtn:hover, .about__sendbtn:active, .about__sendbtn:focus {
-  border: 2px solid #C31C22;
   border-radius: 5px;
   background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #C31C22;
+  border-radius: 5px;
   color: #C31C22;
 }
 
@@ -1181,9 +1187,12 @@ a:hover, a:active, a:focus {
 }
 
 .stocks__button:hover, .stocks__button:active, .stocks__button:focus {
-  border: 2px solid #C31C22;
   border-radius: 5px;
   background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #C31C22;
+  border-radius: 5px;
   color: #C31C22;
 }
 
@@ -1297,6 +1306,7 @@ a:hover, a:active, a:focus {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    border-radius: 0;
   }
   .search__input {
     width: 100%;
@@ -1761,9 +1771,12 @@ a:hover, a:active, a:focus {
 }
 
 .description__button:hover, .description__button:active, .description__button:focus {
-  border: 2px solid #C31C22;
   border-radius: 5px;
   background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #C31C22;
+  border-radius: 5px;
   color: #C31C22;
 }
 
@@ -1787,6 +1800,7 @@ a:hover, a:active, a:focus {
   background: url("../../img/doctors-bg.jpg") bottom no-repeat;
   background-size: contain;
   padding: 0 0 70px 0;
+  margin-bottom: 100px;
 }
 
 .doctors__row {
@@ -1891,6 +1905,7 @@ a:hover, a:active, a:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border: 1px solid #EFF4F7;
 }
 
 .doctors__card-doctor {
@@ -1943,6 +1958,9 @@ a:hover, a:active, a:focus {
   line-height: 135%;
   color: #19304C;
   margin-top: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
 }
 
 .doctors__position {
@@ -1984,6 +2002,10 @@ a:hover, a:active, a:focus {
     color: #193B67;
     font-weight: bold;
     max-width: 100%;
+    margin-bottom: 10px;
+  }
+  .search__subheader {
+    max-width: 100%;
   }
   .services {
     background-color: #FBFBFC;
@@ -2022,26 +2044,23 @@ a:hover, a:active, a:focus {
   .services__item_more {
     font-size: 10px;
   }
+  .doctors {
+    background: #FBFBFC;
+  }
+  .doctors__title {
+    font-size: 25px;
+    line-height: 130%;
+    color: #193B67;
+    font-weight: bold;
+  }
+  .doctors__name {
+    font-weight: bold;
+  }
+  .doctors__slider {
+    margin-bottom: 35px;
+  }
 }
 
-/*WD
-    .description
-        &__label
-        &__text
-        &__button
-        &__button
-        &__button_1
-        &__button_2
-        &__clinics
-    .clinic
-        &__title
-        &__row
-        &__item
-        &__img
-        &__name
-        &__address
-        &__buttons
-        &__button */
 .clinic {
   padding: 60px 0 200px 0;
 }
@@ -2129,6 +2148,61 @@ a:hover, a:active, a:focus {
   top: 0;
   left: 0;
   font-size: 14px;
+}
+
+@media screen and (min-width: 310px) and (max-width: 990px) {
+  .clinic {
+    padding: 30px 0 60px 0;
+  }
+  .clinic__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .clinic__card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 0;
+    max-width: 100%;
+    padding: 10px 10px 20px 10px;
+  }
+  .clinic__imgbox {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .clinic__img {
+    width: 100%;
+  }
+  .clinic__info {
+    margin-left: 10px;
+  }
+  .clinic__title {
+    font-weight: 600;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 130%;
+  }
+  .clinic__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .clinic__button {
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .clinic__button span {
+    display: inline-block;
+    padding: 0 0 0 24px;
+  }
+  .clinic__button:hover {
+    color: #fff;
+  }
 }
 
 .modal {
@@ -2244,6 +2318,47 @@ a:hover, a:active, a:focus {
   font-size: 20px;
 }
 
+@media screen and (min-width: 310px) and (max-width: 990px) {
+  .modal__bg {
+    width: 300px;
+    height: 102%;
+    left: 10px;
+    top: 0;
+  }
+  .modal__content {
+    padding: 35px 25px 45px 30px;
+    background: url("../../img/midal_bg_mob.jpg") center no-repeat;
+    background-size: cover;
+  }
+  .modal__title {
+    font-size: 25px;
+    line-height: 130%;
+    color: #193B67;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  .modal__text {
+    font-size: 14px;
+    line-height: 160%;
+    color: #C8D4E4;
+  }
+  .modal__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .modal__input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    margin-bottom: 12px;
+  }
+  .modal__agree {
+    margin-bottom: 24px;
+  }
+}
+
 .medic {
   padding: 90px 0 100px 0;
 }
@@ -2291,6 +2406,13 @@ a:hover, a:active, a:focus {
 }
 
 .medic__doctors_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: #FFFFFF;
   border: 1px solid #EFF4F7;
   -webkit-box-sizing: border-box;
@@ -2390,6 +2512,23 @@ a:hover, a:active, a:focus {
   color: #193B67;
 }
 
+@media screen and (min-width: 310px) and (max-width: 990px) {
+  .spa__navigation {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+  .spa__navigation_object {
+    padding: 15px 18px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 80%;
+            flex: 1 0 80%;
+  }
+  .spa__navigation_object::before {
+    display: none;
+  }
+}
+
 .offer__title {
   color: #193B67;
   font-size: 30px;
@@ -2459,9 +2598,12 @@ a:hover, a:active, a:focus {
 }
 
 .offer__item_button:hover, .offer__item_button:active, .offer__item_button:focus {
-  border: 2px solid #C31C22;
   border-radius: 5px;
   background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #C31C22;
+  border-radius: 5px;
   color: #C31C22;
 }
 
@@ -2479,13 +2621,20 @@ a:hover, a:active, a:focus {
   padding: 89px 0 100px 0;
 }
 
-.specialist__block {
+.specialist__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.specialist__block {
+  padding: 10px 0px 10px 0px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 48%;
+          flex: 0 1 48%;
 }
 
 .specialist__photo {
@@ -2498,14 +2647,7 @@ a:hover, a:active, a:focus {
   width: 100%;
 }
 
-.specialist__block_1 {
-  padding: 10px 0px 10px 0px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 48%;
-          flex: 0 1 48%;
-}
-
-.specialist__text {
+.specialist__about {
   text-transform: uppercase;
   font-size: 14px;
   color: #8591A3;
@@ -2549,7 +2691,7 @@ a:hover, a:active, a:focus {
   font-weight: bold;
 }
 
-.specialist__text-1 {
+.specialist__text {
   font-size: 16px;
   color: #454F5C;
   margin: 0 0 28px 0;
@@ -2567,10 +2709,36 @@ a:hover, a:active, a:focus {
 }
 
 .specialist__button:hover, .specialist__button:active, .specialist__button:focus {
-  border: 2px solid #C31C22;
   border-radius: 5px;
   background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #C31C22;
+  border-radius: 5px;
   color: #C31C22;
+}
+
+@media screen and (min-width: 310px) and (max-width: 990px) {
+  .specialist {
+    background: #FBFBFC;
+  }
+  .specialist__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .specialist__position {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .specialist__label {
+    margin-bottom: 3px;
+  }
+  .specialist__button {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .procedure__card {
@@ -2663,9 +2831,12 @@ a:hover, a:active, a:focus {
 }
 
 .procedure__button:hover, .procedure__button:active, .procedure__button:focus {
-  border: 2px solid #C31C22;
   border-radius: 5px;
   background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #C31C22;
+  border-radius: 5px;
   color: #C31C22;
 }
 
@@ -2679,6 +2850,14 @@ a:hover, a:active, a:focus {
   color: #193B67;
   font-weight: bold;
   margin-bottom: 35px;
+}
+
+.similar__pagination {
+  margin-top: 40px;
+}
+
+.similar__slide {
+  height: 100% !important;
 }
 
 .similar__list {
@@ -2695,14 +2874,18 @@ a:hover, a:active, a:focus {
 }
 
 .similar__item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 32.5%;
-          flex: 0 1 32.5%;
   background: #EFF4F7;
   border-radius: 5px;
   padding: 130px 30px 30px 30px;
   position: relative;
-  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
 }
 
 .similar__item::after {
@@ -2741,6 +2924,9 @@ a:hover, a:active, a:focus {
   line-height: 160%;
   color: #454F5C;
   margin-bottom: 30px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
 }
 
 .similar__item_row {
@@ -2753,6 +2939,7 @@ a:hover, a:active, a:focus {
 }
 
 .similar__item_button {
+  display: block;
   padding: 17px 25px;
   display: inline-block;
   background: #193B67;
@@ -2763,16 +2950,22 @@ a:hover, a:active, a:focus {
   font-weight: 600;
   font-size: 12px;
   line-height: 155%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .similar__item_button:hover, .similar__item_button:active, .similar__item_button:focus {
-  border: 2px solid #C31C22;
   border-radius: 5px;
   background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #C31C22;
+  border-radius: 5px;
   color: #C31C22;
 }
 
 .similar__item_price {
+  display: block;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2799,17 +2992,95 @@ a:hover, a:active, a:focus {
   color: #193B67;
 }
 
+@media screen and (min-width: 310px) and (max-width: 990px) {
+  .procedure__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .procedure__info {
+    padding: 0;
+    margin-top: 30px;
+  }
+  .procedure__label {
+    font-size: 14px;
+    line-height: 160%;
+  }
+  .procedure__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  .procedure__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .procedure__button {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .similar__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+    padding-top: 110px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .similar__item_title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+  }
+  .similar__item_text {
+    margin-bottom: 10px;
+  }
+  .similar__item_row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .similar__item_button {
+    width: 100%;
+    text-align: center;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .similar__item_price {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    text-align: start;
+  }
+}
+
 .hide {
   display: none;
 }
 
 .swiper-container {
   width: 100%;
-  height: 100%;
 }
 
 .swiper-wrapper {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .swiper-slide {
@@ -2923,9 +3194,12 @@ a:hover, a:active, a:focus {
 }
 
 .medicin__button:hover, .medicin__button:active, .medicin__button:focus {
-  border: 2px solid #C31C22;
   border-radius: 5px;
   background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #C31C22;
+  border-radius: 5px;
   color: #C31C22;
 }
 
@@ -3037,6 +3311,97 @@ a:hover, a:active, a:focus {
   content: 'Результат процедуры';
 }
 
+@media screen and (min-width: 310px) and (max-width: 990px) {
+  .medicin {
+    padding: 72px 0 60px 0;
+  }
+  .medicin__header {
+    font-size: 25px;
+    line-height: 130%;
+    color: #193B67;
+    font-weight: bold;
+  }
+  .medicin__card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 13px 9px 20px 9px;
+  }
+  .medicin__card_block:last-child {
+    margin-left: 0;
+  }
+  .medicin__img {
+    max-width: 100%;
+  }
+  .medicin__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .medicin__button {
+    margin-bottom: 12px;
+  }
+  .medicin__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+  }
+  .medicin__text {
+    font-size: 12px;
+    line-height: 160%;
+  }
+  .works__row {
+    background: #fff;
+    padding: 0;
+    margin-top: 18px;
+    border-radius: 0;
+    overflow: hidden;
+  }
+  .works__title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    color: #19304C;
+  }
+  .works__button {
+    position: absolute;
+    display: block;
+    top: 65%;
+  }
+  .works__navigation_prev {
+    left: 0;
+  }
+  .works__navigation_next {
+    left: 100%;
+    -webkit-transform: translateX(-100%) rotate(180deg);
+            transform: translateX(-100%) rotate(180deg);
+  }
+  .works__item {
+    border-radius: 2px;
+    overflow: hidden;
+    width: 100%;
+  }
+  .works__image {
+    width: 100%;
+  }
+  .works__wrapper {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  ._before::before {
+    content: 'До';
+  }
+  ._in::before {
+    content: 'Во время';
+  }
+  ._after::before {
+    content: 'После';
+  }
+}
+
 ._mobile {
   display: none;
 }
@@ -3063,7 +3428,6 @@ a:hover, a:active, a:focus {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
-    max-width: 100%;
   }
   .side-menu__text::before {
     -webkit-transform: translateY(-20%);
@@ -3123,5 +3487,19 @@ a:hover, a:active, a:focus {
   }
   .swiper-button {
     display: none;
+  }
+  .swiper-slide {
+    min-height: 100% !important;
+  }
+  .works__button {
+    display: block;
+  }
+  .card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+  }
+  .card:hover {
+    cursor: pointer;
   }
 }

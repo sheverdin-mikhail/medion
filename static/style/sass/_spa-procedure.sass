@@ -48,8 +48,7 @@
         font-weight: bold
         font-size: 14px
         line-height: 160%
-    &__buttons
-
+    
     &__button 
         +buttons
         padding: 17px 28px
@@ -65,7 +64,10 @@
         color: #193B67
         font-weight: bold
         margin-bottom: 35px
-        
+    &__pagination
+        margin-top: 40px
+    &__slide
+        height: 100% !important
     &__list 
         display: flex
         flex-wrap: wrap
@@ -73,12 +75,13 @@
         list-style: none
         justify-content: space-between
     &__item 
-        flex: 0 1 32.5%
         background: #EFF4F7
         border-radius: 5px
         padding: 130px 30px 30px 30px
         position: relative
-        margin-bottom: 15px
+        display: flex
+        flex-direction: column
+        height: 100%
         &::after
             counter-increment: myCounter     
             display: block
@@ -108,16 +111,20 @@
             line-height: 160%
             color: #454F5C
             margin-bottom: 30px
+            flex: 1 1 100%
         &_row 
             display: flex
             justify-content: space-between
         &_button
+            display: block
             padding: 17px 25px
             +buttons
             font-weight: 600
             font-size: 12px
             line-height: 155%
+            align-self: flex-start
         &_price 
+            display: block
             display: flex
             flex-direction: column
             justify-content: space-between
@@ -131,3 +138,63 @@
                 font-size: 16px
                 line-height: 160%
                 color: #193B67
+
+
+@media screen and ( min-width: 310px ) and ( max-width: 990px)
+
+    .procedure
+        &__card
+            
+        &__block
+            flex-direction: column
+        &__image-box
+        &__image
+        &__info
+            padding: 0
+            margin-top: 30px
+            
+        &__label
+            font-size: 14px
+            line-height: 160%
+
+
+        &__name
+        &__description
+        &__row
+            flex-wrap: wrap
+            width: 100%
+        &__price-label
+        &__price-num
+        &__buttons
+            flex-direction: column
+        &__button 
+            display: block
+            margin-bottom: 10px
+
+    .similar
+        &__title 
+
+        &__list 
+        &__item 
+            display: flex
+            flex-direction: column
+            padding: 20px
+            padding-top: 110px
+            justify-content: space-around
+        &__item_title 
+            font-weight: 600
+            font-size: 20px
+            line-height: 130%
+        &__item_text 
+            margin-bottom: 10px
+        &__item_row 
+            flex-wrap: wrap
+            align-items: center
+            justify-content: start
+        &__item_button 
+            width: 100%
+            text-align: center
+            order: 1
+        &__item_price 
+            order: 0
+            text-align: start

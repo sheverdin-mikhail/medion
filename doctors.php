@@ -18,17 +18,17 @@
       <!-- Блок с поиском -->
       <div class="search">
                 <div class="container">
-                        <form action="" class="search__search">
-                                <input  autocomplete="off" id="q" name="q" type="text" class="search__input" placeholder="Что-то ищете? Воспользуйтесь поиском по сайту...">
+                <form action="" class="search__search">
+                                <div class="search__block">
+                                <input  autocomplete="off" id="q" name="q" type="text" class="search__input" placeholder="Поиск по сайту">
                                 <input type="submit" class="search__button" value="Поиск">
-                        </form>
-                        <ul class="search__list" id="search_list">
+                                </div>
+                                <div class="search__block">
+                                <ul class="search__list" id="search_list">
 
-                        </ul>
-                        <ul class="search__navigation">
-                                <li class="search__navigation_item"><a href="/index.php">Главная</a></li>
-                                <li class="search__navigation_item">Врачи</li>
-                        </ul>
+                                </ul>
+                                </div>
+                        </form>
                         <h2 class="search__header">
                             Наши врачи  
                         </h2>
@@ -44,32 +44,38 @@
                 <div class="medic__content">
                     <h2 class="medic__title">Специалисты нашего центра</h2>
 
-                    <ul class="medic__list">
+                    <ul class="medic__list ">
                         <?php foreach($category as $cat): ?>
                             <li class="medic__item">
                                 <div class="medic__direction">
                                     <span class="medic__direction_name"><?= $cat['name_doctors-category']?></span>
                                     <span class="medic__direction_numb">4 специалиста</span>
                                 </div>
-                                <ul class="medic__doctors">
-                                    <?php foreach($doctors as $doc): ?>
-                                        <?php if($doc['name_doctors-category'] == $cat['name_doctors-category']):?>
-                                            <li class="medic__doctors_item">
-                                                <div class="doctors__card">
-                                                    <img src="static/img/doctor.jpg" alt="" class="doctors__img">
-                                                    <div class="doctors__card_info">
-                                                        <span class="doctors__label"><?=$doc['post_doctor'] ?></span>
-                                                        <p class="doctors__name"><?=$doc['name_doctor'] ?></p>
-                                                        <p class="doctors__position"> <? 
-                                                            if($doc['experience_doctor']!= (NULL || ' ') )
-                                                                {echo 'Стаж работы '.$doc['experience_doctor'].'в области педиатрии и диагностики детских заболеваний';}; ?>
-                                                        </p>
-                                                        <a href="/doctor.php?id_doctor=<?=$doc['id_doctor']?>" class="doctors__more">Подробнее о враче</a>
+                                <ul class="doctors__row">
+                                    <div class="doctors__slider swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <?php foreach($doctors as $doc): ?>
+                                            <?php if($doc['name_doctors-category'] == $cat['name_doctors-category']):?>
+                                                <li class="swiper-slide">
+                                                    <div class="doctors__card">
+                                                        <img src="static/img/doctor.jpg" alt="" class="doctors__img">
+                                                        <div class="doctors__card_info">
+                                                            <span class="doctors__label"><?=$doc['post_doctor'] ?></span>
+                                                            <p class="doctors__name"><?=$doc['name_doctor'] ?></p>
+                                                            <p class="doctors__position"> <? 
+                                                                if($doc['experience_doctor']!= (NULL || ' ') )
+                                                                    {echo 'Стаж работы '.$doc['experience_doctor'].'в области педиатрии и диагностики детских заболеваний';}; ?>
+                                                            </p>
+                                                            <a href="/doctor.php?id_doctor=<?=$doc['id_doctor']?>" class="doctors__more">Подробнее о враче</a>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </li>
-                                        <?php endif; ?>
-                                    <?php endforeach; ?>
+                                                </li>
+                                            <?php endif; ?>
+                                            <?php endforeach; ?>
+                                            
+                                        </div>
+                                        <div class="swiper-pagination doctors__pagination"></div>
+                                    </div>
                                 </ul>
                             </li>
                         <?php endforeach; ?>

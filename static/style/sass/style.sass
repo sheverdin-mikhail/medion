@@ -31,8 +31,8 @@ a
 
 .page
     flex: 1 0 auto
-    
 
+    
 
 
 
@@ -335,9 +335,9 @@ a
 .swiper
     &-container 
         width: 100%
-        height: 100%
     &-wrapper 
         position: relative
+        display: flex
     &-slide 
         display: flex
         justify-content: center
@@ -395,7 +395,7 @@ a
     .side-menu
         display: block
         flex: 1 1 100%
-        max-width: 100%
+        
         &__item
         &__text
             &::before
@@ -447,13 +447,23 @@ a
     .swiper
         &-button
             display: none
+        &-slide
+            min-height: 100% !important
+    .works
+        &__button
+            display: block
 
     .card 
+        flex: 1 0 100%
+        &:hover
+            cursor: pointer
         &__container 
         &__icon 
         &__title 
         &__text 
         &__more 
+
+
 
 
                     
