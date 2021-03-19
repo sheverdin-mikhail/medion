@@ -58,7 +58,7 @@
                                             <?php if($doc['name_doctors-category'] == $cat['name_doctors-category']):?>
                                                 <li class="swiper-slide">
                                                     <div class="doctors__card">
-                                                        <img src="static/img/doctor.jpg" alt="" class="doctors__img">
+                                                        <img src="static/img/doctors_photo/<?=$doc['name_doctor'] ?>.jpg" alt="no photo" class="doctors__img">
                                                         <div class="doctors__card_info">
                                                             <span class="doctors__label"><?=$doc['post_doctor'] ?></span>
                                                             <p class="doctors__name"><?=$doc['name_doctor'] ?></p>

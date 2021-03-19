@@ -10,7 +10,7 @@
         &_item 
             padding: 0 15px
             color: #ADBAC9
-            font-size: 14px
+            font-size: 17px
             line-height: 113%
             &:nth-child(1)
                 padding-left: 0
@@ -21,7 +21,7 @@
         margin-top: 60px
         max-width: 65%
     &__subheader
-        font-size: 16px
+        font-size: 19px
         line-height: 155%
         color: #454F5C
         max-width: 60%
@@ -63,7 +63,7 @@
             display: flex
             flex-direction: column
             span
-                font-size: 12px
+                font-size: 15px
                 line-height: 155%
                 letter-spacing: 0.06em
                 text-transform: uppercase
@@ -75,7 +75,7 @@
             position: absolute
             top: 16px
             right: 28px
-            font-size: 35px
+            font-size: 38px
             line-height: 155%
             text-transform: uppercase
             color: #8591A3
@@ -88,7 +88,7 @@
             display: flex
             justify-content: space-between
             color: #ffffff
-            font-size: 20px
+            font-size: 23px
             line-height: 155%
             padding: 19px 120px 21px 86px
             &::before  
@@ -100,7 +100,7 @@
             align-self: flex-end
             position: relative
             line-height: 10px
-            font-size: 14px
+            font-size: 17px
             line-height: 140%
             letter-spacing: 0.06em
             text-transform: uppercase
@@ -143,7 +143,7 @@
                 display: flex
                 justify-content: space-between
     &__item_text 
-        font-size: 14px
+        font-size: 17px
         line-height: 155%
         color: #193B67
         
@@ -178,11 +178,11 @@
 .description
     &__label 
         color: #8591A3
-        font-size: 14px
+        font-size: 17px
         line-height: 160%
         text-transform: uppercase
     &__text
-        font-size: 16px
+        font-size: 19px
         line-height: 160%
         color: #454F5C
         margin-bottom: 15px
@@ -210,7 +210,6 @@
     background: url('../../img/doctors-bg.jpg') bottom no-repeat
     background-size: contain
     padding: 0 0 70px 0
-    margin-bottom: 100px
     &__row
         display: flex
         justify-content: space-between
@@ -222,7 +221,7 @@
         position: relative
         display: block
         font-weight: 600
-        font-size: 14px
+        font-size: 17px
         line-height: 140%
         letter-spacing: 0.06em
         text-transform: uppercase
@@ -250,7 +249,7 @@
         border-radius: 5px
         padding-left: 28px
         span
-            font-size: 14px
+            font-size: 17px
             line-height: 145%
             padding-right: 34px
             position: relative
@@ -292,20 +291,20 @@
     &__img 
         width: 100%
     &__label 
-        font-size: 14px
+        font-size: 17px
         line-height: 135%
         color: #8591A3
         display: block
         margin-top: 25px
     &__name 
-        font-size: 18px
+        font-size: 21px
         line-height: 135%
         color: #19304C
         margin-top: 10px
         flex: 1 1 100%
     &__position 
         display: block
-        font-size: 14px
+        font-size: 17px
         line-height: 145%
         color: #454F5C
         margin-top: 10px
@@ -340,32 +339,65 @@
         &__content 
             flex-direction: column
         &__menu
-        &__item_text 
+            
         &__list 
-            flex: 0 0 100%
-            max-width: 100%
+            flex: 1 0 100%
+            width: 100%
         &__item
+            &::after
+                font-size: 27px
+                line-height: 155%
+                top: 12px
+                right: 11px
         &__item_row 
             padding: 9px 11px 9px 65px
+            &:hover
+                cursor: pointer
             &::before
                 top: 14px
                 left: 20px
-                font-size: 30px
+                font-size: 33px
+                
         &__item_title 
-            font-size: 16px
+            font-size: 19px
             line-height: 155%
             span
-                font-size: 12px
+                font-size: 15px
                 line-height: 155%
         &__item_more
-            font-size: 10px
+            padding: 0
+            position: absolute
+            bottom: 4px
+            right: 13px
+            &::before
+                display: none
+            &._mobile
+                font-weight: bold
+                font-size: 9px
+                line-height: 140%
         &__sublist
         &__sublist_item
+            padding: 0 10px
+            hr
+                display: none
         &__sublist_item_row 
+            flex-wrap: wrap
         &__item_text 
+            flex: 1 0 100%
+            line-height: 20px
+            margin-bottom: 7px
+            order: 0
         &__more 
+            order: 2
         &__price 
+            order: 1
+            padding: 0
+            margin: 0
         &__description 
+        &__label
+            font-size: 17px
+            line-height: 155%
+            margin-bottom: 7px
 
 
     .doctors
@@ -382,17 +414,51 @@
         &__label 
         &__text
         &__button
-        &__button 
+            margin-bottom: 20px 
+            width: 100%
+            text-align: center
+        &__buttons
+            flex-direction: column
+            
         &__button_1
         &__button_2 
+            margin: 0
         &__clinics 
-    .clinic
+    .clinics
         &__title
+            max-width: 100%
+            font-size: 28px
+            line-height: 130%
         &__row 
+            flex-direction: column
+            width: 100%
         &__item
+            min-width: 100%
+            margin-bottom: 20px
         &__img 
+            width: 100%
         &__name
         &__address 
         &__buttons 
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            text-align: center
         &__button
+            
+            &:nth-child(1)
+                margin-bottom: 10px
+                flex: 1 0 100%
+                span
+                    display: inline-block
+                    position: relative
+                    padding-left: 20px
+                    &::before
+                        top: 0
+                        left: 0
+                        transform: translateY(50%)
+            &:nth-child(2),
+            &:nth-child(3)
+                flex: 0 1 47%
+                
 

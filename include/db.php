@@ -2,7 +2,7 @@
     define('DB_HOST', 'localhost');
     define('DB_USER', 'mysql');
     define('DB_PASSWORD', 'mysql');
-    define('DB_NAME', 'medion_db');
+    define('DB_NAME', 'medion2');
 
     $mysql = new mysqli(DB_HOST,
     DB_USER,
@@ -12,5 +12,5 @@
     $mysql->set_charset('utf8');
     $mysql->close();
 
-    $link = mysqli_connect('localhost', 'mysql', 'mysql', 'medion_db')
+    $link = mysqli_connect('localhost', 'mysql', 'mysql', 'medion2')
 ?>

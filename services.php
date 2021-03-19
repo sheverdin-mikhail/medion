@@ -40,7 +40,7 @@ require_once 'views/services_view.php';
                 <div class="services__blueBlock"></div>
                 <div class="container">
                         <div class="services__content">
-                                <ul class="services__menu side-menu">
+                                <ul class="services__menu side-menu _pc">
                                         <?php
                                         foreach ($divisions as $division) {
                                                 printf('<li class="services__menu__item side-menu__item">
@@ -49,7 +49,7 @@ require_once 'views/services_view.php';
                                         }
                                         ?>
                                 </ul>
-
+                                <p class="services__label _mobile">Выберите направление:</p>
                                 <ol class="services__list">
 
                                         <?php foreach ($divisions as $division) : ?>
@@ -59,7 +59,8 @@ require_once 'views/services_view.php';
                                                                         <span>Услуги</span>
                                                                         <?= $division['Подразделение'] ?>
                                                                 </div>
-                                                                <span class="services__item_more">Подробнее об услуге</span>
+                                                                <span class="services__item_more _pc">Подробнее об услуге</span>
+                                                                <span class="services__item_more _mobile">Подробнее</span>
                                                         </div>
                                                         <ul class="services__sublist hide">
                                                                 <?php
@@ -94,7 +95,7 @@ require_once 'views/services_view.php';
                                                                                                                                 <span class="clinics__name"><?= $clinic['name_clinics'] ?> </span>
                                                                                                                                 <span class="clinics__address _icon-pin"><?= $clinic['address_clinics'] ?></span>
                                                                                                                                 <div class="clinics__buttons">
-                                                                                                                                        <a href="/clinic.php?slug=<?= $clinic['clinics_slug'] ?>" class="clinics__button _icon-bookmark">Подробнее о клинике</a>
+                                                                                                                                        <a href="/clinic.php?slug=<?= $clinic['clinics_slug'] ?>" class="clinics__button "><span class="_icon-bookmark">Подробнее о клинике</span></a>
                                                                                                                                         <a href="" class="clinics__button _icon-communications"></a>
                                                                                                                                         <a href="" class="clinics__button _icon-pin"></a>
                                                                                                                                 </div>

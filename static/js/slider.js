@@ -52,11 +52,10 @@ const swiper3 = new Swiper( '.stocks__slider', {
     pagination: {
         el: '.swiper-pagination',
       },
-
     //Стрелки навигации
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.stocks__navigation_next',
+        prevEl: '.stocks__navigation_prev',
     },
     spaceBetween: 10,   
     breakpoints: {

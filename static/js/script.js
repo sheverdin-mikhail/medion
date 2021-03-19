@@ -34,6 +34,9 @@ ymaps.ready(function () {
 
 $(document).ready(function(){
 
+
+
+
     $('.card').hover(function(){
         $(this).toggleClass('active')
     });
@@ -62,19 +65,33 @@ $(document).ready(function(){
 
     });
 
-    $('.services__item_more').on('click', function(){
-        $(this).toggleClass('active')
 
-        if(($(this).hasClass('active'))){
-            $(this).parent().siblings().slideDown()
-            if($(this).parent().parent().siblings().children().children().hasClass('active')){
-                $(this).parent().parent().siblings().children('.hide').slideUp()
-                $(this).parent().parent().siblings().children().children().removeClass('active')
+    
+
+
+
+
+    $('.services__item_row').on('click', function(){
+
+            $(this).toggleClass('active')
+            $(this).children('.services__item_more').toggleClass('active')
+            if(($(this).children('.services__item_more').hasClass('active'))){
+                $(this).siblings().slideDown()
+                if($(this).parent().siblings().children().children().hasClass('active')){
+                    $(this).parent().siblings().children('.hide').slideUp()
+                    $(this).parent().siblings().children().children().removeClass('active')
+                }
+                
+            }else{
+                $(this).siblings().slideUp()
+                
             }
-        }else{
-            $(this).parent().siblings().slideUp()
-        }
+
+        
+
+        
     })
+
 
 
     $('.spa__navigation_object ').on('click', function(){
@@ -88,7 +105,7 @@ $(document).ready(function(){
 
     $('.services__menu__item_text').on('click', function(){
         let href = $(this).attr("href")
-        $(href).children().children('span').trigger('click')
+        $(href).children('.services__item_row').trigger('click')
     })
 
 
