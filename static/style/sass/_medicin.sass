@@ -4,7 +4,7 @@
     &__content
     &__header 
         +header
-        font-size: 30px
+        font-size: 33px
         margin-bottom: 30px
     &__card 
         display: flex
@@ -25,21 +25,21 @@
         display: block
         +buttons
         padding: 16px 28px
-        font-size: 12px
+        font-size: 15px
         line-height: 155%
         &:last-child
             border: 2px solid #193B67
             background: #fff
-            font-size: 12px
+            font-size: 15px
             line-height: 155%
             color: #193B67
             border-radius: 5px
     &__title
-        font-size: 27px
+        font-size: 30px
         line-height: 120%
         margin-bottom: 10px
     &__text
-        font-size: 16px
+        font-size: 19px
         line-height: 160%
         color: #454F5C
 
@@ -49,7 +49,7 @@
 .works 
     
     &__title
-        font-size: 16px
+        font-size: 19px
         line-height: 120%
         letter-spacing: 0.06em
         text-transform: uppercase
@@ -93,7 +93,7 @@
         bottom: 0
         width: 100%
         padding: 12px 0
-        font-size: 14px
+        font-size: 17px
         line-height: 120%
         color: #FFFFFF
         background: $blue
@@ -110,3 +110,79 @@
 ._after
     &::before
         content: 'Результат процедуры'
+    
+@media screen and ( min-width: 310px ) and ( max-width: 990px)
+
+
+    .medicin
+        padding: 72px 0 60px 0
+        &__content 
+        &__header 
+            +header_mob
+        &__card 
+            flex-direction: column
+            padding: 13px 9px 20px 9px
+        &__card_block 
+            &:last-child
+                margin-left: 0
+        &__img 
+            max-width: 100%
+        &__buttons 
+            flex-direction: column
+        &__button 
+            margin-bottom: 12px
+        &__title 
+            font-weight: 600
+            font-size: 19px
+            line-height: 120%
+        &__text 
+            font-size: 15px
+            line-height: 160%
+        &__works 
+
+    .works
+        
+        &__row 
+            background: #fff
+            padding: 0
+            margin-top: 18px
+            border-radius: 0
+            overflow: hidden
+        &__header 
+            
+        &__title 
+            font-weight: 600
+            font-size: 17px
+            line-height: 120%
+            color: #19304C
+    
+        &__button 
+            position: absolute
+            display: block
+            top: 65%
+        &__navigation_prev 
+            left: 0
+        &__navigation_next
+            left: 100%
+            transform: translateX(-100%) rotate(180deg)
+        &__item 
+            border-radius: 2px
+            overflow: hidden
+            width: 100%
+        &__image 
+            width: 100%
+        &__wrapper
+            align-items: flex-end
+
+
+    ._before
+        &::before
+            content: 'До'
+
+    ._in
+        &::before
+            content: 'Во время'
+
+    ._after
+        &::before
+            content: 'После'

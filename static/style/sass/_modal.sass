@@ -20,12 +20,12 @@
         border-radius: 5px
         overflow: hidden
     &__title 
-        font-size: 30px
+        font-size: 33px
         line-height: 120%
         color: #FFFFFF
         max-width: 532px
     &__text 
-        font-size: 16px
+        font-size: 19px
         line-height: 160%
         color: #C8D4E4
         max-width: 450px
@@ -57,7 +57,7 @@
             
             
     &__agree 
-        font-size: 12px
+        font-size: 15px
         line-height: 160%
         color: #FFFFFF
     &__href 
@@ -68,7 +68,7 @@
         background: #FFFFFF
         box-shadow: 0px 21px 47px rgba(12, 29, 52, 0.44)
         border-radius: 5px
-        font-size: 14px
+        font-size: 17px
         line-height: 155%
         color: #19304C
         padding: 19px 32px
@@ -84,5 +84,34 @@
                 right: 0
                 top: 50%
                 transform: translateY(-50%)
-                font-size: 20px
+                font-size: 23px
             
+@media screen and ( min-width: 310px ) and ( max-width: 990px)
+    .modal
+        
+        &__bg 
+            width: 300px
+            height: 102%
+            left: 10px
+            top: 0
+        &__content
+            padding: 35px 25px 45px 30px
+            background: url('../../img/midal_bg_mob.jpg') center no-repeat
+            background-size: cover
+        &__title
+            +header_mob
+            color: #ffffff 
+        &__text 
+            font-size: 17px
+            line-height: 160%
+            color: #C8D4E4
+        &__form 
+        &__row 
+            flex-direction: column
+        &__input 
+            flex: 1 1 auto
+            margin-bottom: 12px
+        &__agree 
+            margin-bottom: 24px
+        &__href 
+        &__button 

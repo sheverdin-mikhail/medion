@@ -181,12 +181,11 @@
                                                </div> 
                                         </div>
 
-
                                 </div>
-                                <div class="swiper-button swiper-button-prev stocks__navigation stocks__navigation_prev"></div>
-                                <div class="swiper-button swiper-button-next stocks__navigation stocks__navigation_next"></div>
                                 <div class="swiper-pagination stocks__pagination"></div>
                         </div>
+                        <div class="swiper-button swiper-button-prev stocks__navigation stocks__navigation_prev"></div>
+                        <div class="swiper-button swiper-button-next stocks__navigation stocks__navigation_next"></div>
                         <a href="" class="stocks__button _mobile">Читать все статьи</a>
                 </div>
         </div>
@@ -203,7 +202,7 @@
                                 <ol class="directions__block card__container">
                                         <?php foreach($divisions as $division):?>
                                                 <li class="directions__card card">
-                                                        <a href="/services.php?division_slug=<?=$division['slug']?>">
+                                                        <a href="/services.php?division_slug=<?=$division['slug']?>#<?=$division['slug']?>">
                                                                 <p class="_icon-<?=$division['icon']?> directions__icon card__icon">
                                                                 <h3 class="card__title"><?=$division['name']?></h3>
                                                                 <p class="card__text"><?=$division['description']?></p>
