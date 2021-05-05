@@ -271,19 +271,20 @@ a
         margin-top: 30px
         
     &__button 
-        font-size: 15px !important
+        font-size: 11px !important
         line-height: 155%
         +buttons
         padding: 13px
         position: relative
-        &:nth-child(1)
-            padding-left: 35px
-            span
-                &::before
-                    position: absolute
-                    top: 14px
-                    left: 20px
-                    transform: translateY(25%)
+        &_small
+            &:nth-child(1)
+                padding-left: 25px
+                span
+                    &::before
+                        position: absolute
+                        transform: translate(-50%, 35%)
+                        left: 15px
+        
         &:hover
             background: #C31C22
             color: #ffffff
@@ -332,6 +333,7 @@ a
 @import 'clinic'
 @import 'doctor'
 @import 'spa-procedure'
+@import 'popup'
 
 .hide
     display: none

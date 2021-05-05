@@ -12,21 +12,27 @@
         border: 1px solid #EFF4F7
         border-radius: 5px
         padding: 30px
+        margin-bottom: 30px
         &_block
+            
             &:last-child
                 margin-left: 30px
+                max-width: 61.53%
     &__img 
         border-radius: 5px
     &__buttons 
         display: flex
         justify-content: space-between
         margin-top: 30px
+
     &__button 
         display: block
         +buttons
         padding: 16px 28px
         font-size: 15px
         line-height: 155%
+        width: 100%
+        text-align: center
         &:last-child
             border: 2px solid #193B67
             background: #fff
@@ -42,12 +48,13 @@
         font-size: 19px
         line-height: 160%
         color: #454F5C
+        margin-bottom: 30px
 
     &__works 
 
 
 .works 
-    
+    max-width: 100%
     &__title
         font-size: 19px
         line-height: 120%
@@ -65,9 +72,10 @@
         background: #EFF4F7
         border-radius: 5px
     &__item 
-
+        max-width: 100%
     &__image 
         position: relative
+        width: 100%
     &__button
         width: 26px
         height: 26px
@@ -79,7 +87,9 @@
             left: -74px
         &_next
             position: absolute
-            left: -38px
+            left: 15px
+    &_slide
+        max-width: 216px
 
 ._before, 
 ._in, 
@@ -141,7 +151,6 @@
         &__works 
 
     .works
-        
         &__row 
             background: #fff
             padding: 0

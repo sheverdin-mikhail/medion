@@ -30,7 +30,11 @@
 .services 
     padding: 60px 0 150px 0 
     position: relative
-
+    &__later
+        font-size: 17px
+        line-height: 155%
+        color: #193B67
+        padding-left: 28px
     &__blueBlock
         top: 0
         background: #FBFBFC
@@ -137,7 +141,7 @@
             &:last-child
                 margin-bottom: 0
             hr
-                flex: 1 1 36.6%
+                flex: 1 1 0%
                 border-bottom: 1px solid #F3F7FA
             &_row
                 display: flex
@@ -319,6 +323,7 @@
             margin-top: 96px
 
 
+
 @media screen and ( min-width: 310px ) and ( max-width: 990px)
     .search
         padding-bottom: 114px
@@ -445,7 +450,6 @@
             justify-content: space-between
             text-align: center
         &__button
-            
             &:nth-child(1)
                 margin-bottom: 10px
                 flex: 1 0 100%
@@ -456,7 +460,7 @@
                     &::before
                         top: 0
                         left: 0
-                        transform: translateY(50%)
+                        transform: translateY(-10%)
             &:nth-child(2),
             &:nth-child(3)
                 flex: 0 1 47%

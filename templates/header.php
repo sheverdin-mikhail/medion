@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Medion</title>
 
     <!-- Обнуление стилей -->
     <link rel="stylesheet" href="static/style/css/normalize.css">
@@ -30,13 +30,16 @@
 <body>
 
     <div class="wrapper">
+        <?php 
+                require_once 'include/popup.php';
+        ?>
         <!--БЛОК Header-->
         <div class="header">
             <div class="container">
                 <div class="header__row">
 
                     <div class="header__logo">
-                        <img src="static/img/medion_logo.jpg" alt="">
+                        <img src="static/img/medion_logo.png" alt="">
                     </div>
                     <div class="language-menu">
                         <div class="language-menu__on">
@@ -55,11 +58,18 @@
 
                     <div class="header__address">
                         <span class="header__label">
-                            Наш адрес:
+                            Наши адреса
                         </span>
+                        <div class="header__addresses">
                         <p class="header__text">
-                            г.Ташкент, ул.Зульфияхонум 18
+                            -MEDION CLINIC, AESTHETIC & SPA <br>
+                            Шайхантахурский район, ул. Зульфияханум 18 <br><br>
+                            -MEDION INNOVATION  <br>
+                            Шайхантахурский район, ул. Абдуллы Кадыри, 39  <br><br>
+                            -MEDION FAMILY HOSPITAL <br>
+                            Шайхантахурский район, ул. Истирохат 258  <br><br>
                         </p>
+                        </div>
                     </div>
                     <div class="header__schedule">
                         <span class="header__label">
@@ -69,7 +79,7 @@
                             Пн - Сб: 8<sup>00</sup> - 17<sup>00</sup>
                         </p>
                     </div>
-                    <a href="#" class="header__button">
+                    <a  id="popup" href="#popup" class="header__button popup-link">
                         <span class="header__button_text _icon-communications">
                             Позвонить нам
                         </span>
@@ -79,14 +89,16 @@
             <nav class="header__navigate">
                 <div class="container">
                     <ul class="header__menu ">
-                        <li><a href="/index.php" class="header__menu__item">
+                        <li > 
+                            <a href="/index.php" class="header__menu__item">
                                 Главная
-                            </a></li>
-                        <li class="header__menu__item submenu">
-                            <ul class="">
-                                <span class="submenu__header">Клиника</span>
-                                <li class="submenu__item"></li>
-                            </ul>
+                            </a>
+                        </li>
+                        <li >
+                            <a href="/clinics.php" class="header__menu__item">
+                                Клиники
+                            </a>
+                        </li>
                         </li>
                         <li><a href="/services.php" class="header__menu__item">
                                 Услуги
@@ -100,19 +112,24 @@
                         <li><a href="/SPA.php" class="header__menu__item">
                                 СПА Комплекс
                             </a></li>
-                        <li><a href="" class="header__menu__item">
+                        <!-- <li><a href="/clinics.php" class="header__menu__item">
                                 Технологии
-                            </a></li>
-                        <li><a href="/clinics.php" class="header__menu__item">
+                            </a></li> -->
+                        <li><a href="/contacts.php" class="header__menu__item">
                                 Контакты
                             </a></li>
                         <li>
                             <div class="header__address _mobile">
                                 <span class="header__label ">
-                                    Наш адрес:
+                                    Наши адреса:
                                 </span>
                                 <p class="header__text">
-                                    г.Ташкент, ул.Зульфияхонум 18
+                                -MEDION CLINIC, AESTHETIC & SPA <br>
+                                Шайхантахурский район, ул. Зульфияханум 18 <br><br>
+                                -MEDION INNOVATION  <br>
+                                Шайхантахурский район, ул. Абдулла Кодирий 39  <br><br>
+                                -MEDION FAMILY HOSPITAL <br>
+                                Шайхантахурский район, ул. Истирохат 258  <br><br>
                                 </p>
                             </div>
                         </li>
@@ -127,7 +144,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href="#" class="header__button _mobile">
+                            <a href="tel:1223" class="header__button _mobile">
                                 <span class="header__button_text _icon-communications">
                                     Позвонить нам
                                 </span>

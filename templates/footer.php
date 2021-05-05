@@ -1,6 +1,6 @@
         <!-- Блок footer -->
         <div class="footer">
-            <div class="footer__map map">
+            <div class="footer__map map" >
                 <div id="map" style="width: 100%; height: 100%"></div>
             </div>
             <div class="container">
@@ -21,16 +21,16 @@
 
                         </div>
                         <div class="footer__column">
-                            <a href="" class="footer__links">Главная</a>
-                            <a href="" class="footer__links">Больница</a>
+                            <a href="/" class="footer__links">Главная</a>
+                            <a href="/clinics.php" class="footer__links">Клиники</a>
                             <a href="/services.php" class="footer__links">Услуги</a>
                             <a href="/medicin.php" class="footer__links">Эстетическая медицина</a>
                         </div>
                         <div class="footer__column">
-                            <a href="" class="footer__links">Врачи</a>
-                            <a href="" class="footer__links">СПА-комплекс</a>
-                            <a href="" class="footer__links">Технологии</a>
-                            <a href="/clinics.php" class="footer__links">Контакты</a>
+                            <a href="/doctors.php" class="footer__links">Врачи</a>
+                            <a href="/SPA.php" class="footer__links">СПА-комплекс</a>
+                            <!-- <a href="" class="footer__links">Технологии</a> -->
+                            <a href="/contacts.php" class="footer__links">Контакты</a>
                         </div>
                         <div class="footer__column">
                             <div class="footer__info">
@@ -39,21 +39,27 @@
                                     8:00 - 17:00</div>
                             </div>
                             <div class="footer__info">
-                                <div class="footer__label">Адрес центра:</div>
-                                <div class="footer__text footer__text_address">г.Ташкента,<br> ул.Зульфияхонум 18</div>
+                                <div class="footer__label">Адреса центра:</div>
+                                <div class="footer__text footer__text_address">
+                                -MEDION CLINIC, AESTHETIC & SPA <br>
+                                Шайхантахурский район, ул. Зульфияханум 18 <br><br>
+                                -MEDION INNOVATION  <br>
+                                Шайхантахурский район, ул. Абдуллы Кадыри, 39 <br><br>
+                                -MEDION FAMILY HOSPITAL <br>
+                                Шайхантахурский район, ул. Истирохат 258  <br><br>
+                                </div>
                             </div>
                         </div>
                         <div class="footer__column">
                             <div class="footer__info">
                                 <div class="footer__label">Телефоны центра:</div>
                                 <div class="footer__text footer__text_numbers">
-                                    <p class="footer__phone">+ 998 78 140 00 10</p>
-                                    <p class="footer__phone">+ 998 78 140 00 10</p>
+                                    <a href="tel:1223" class="footer__phone">Call-center 1223 </a>
                                 </div>
                             </div>
                             <div class="footer__info">
                                 <div class="footer__label">E-mail:</div>
-                                <div class="footer__text footer__text_email">example@info.com</div>
+                                <a href="mailto:info@medion.uz" class="footer__text footer__text_email">info@medion.uz</a>
                             </div>
                         </div>
                     </div>
@@ -87,6 +93,7 @@
         <script src="static/js/script.js"></script>
 
         <script src="static/js/search.js"></script>
+        <script src="static/js/popup.js"></script>
         
         </body>
 

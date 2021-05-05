@@ -66,6 +66,7 @@ require_once 'views/services_view.php';
                                                                 <?php
                                                                 $services = get_services($link, $division['ID']);
                                                                 $clinics = get_clinics($link, $division['ID']);
+                                                                if ($services):
                                                                 foreach ($services as $service) : ?>
                                                                         <li class="services__sublist_item">
                                                                                 <div class="services__sublist_item_row">
@@ -80,7 +81,7 @@ require_once 'views/services_view.php';
                                                                                                 <p class="description__text"><?= $service['description_service'] ?></p>
                                                                                                 <div class="description__buttons">
                                                                                                         <a href="" class="description__button description__button_1">Записаться на прием</a>
-                                                                                                        <a href="" class="description__button description__button_2">Бесплатная консультация</a>
+                                                                                                        <a id="popup" href="#popup"  class="popup-link description__button description__button_2">Бесплатная консультация</a>
                                                                                                 </div>
 
                                                                                                 <div class="description__clinics clinics">
@@ -94,10 +95,10 @@ require_once 'views/services_view.php';
                                                                                                                                 <img src="data:image/jpeg;base64,<?= $img ?>" alt="" class="clinics__img">
                                                                                                                                 <span class="clinics__name"><?= $clinic['name_clinics'] ?> </span>
                                                                                                                                 <span class="clinics__address _icon-pin"><?= $clinic['address_clinics'] ?></span>
-                                                                                                                                <div class="clinics__buttons">
-                                                                                                                                        <a href="/clinic.php?slug=<?= $clinic['clinics_slug'] ?>" class="clinics__button "><span class="_icon-bookmark">Подробнее о клинике</span></a>
-                                                                                                                                        <a href="" class="clinics__button _icon-communications"></a>
-                                                                                                                                        <a href="" class="clinics__button _icon-pin"></a>
+                                                                                                                                <div class="clinics__buttons ">
+                                                                                                                                        <a href="/clinic.php?slug=<?= $clinic['clinics_slug'] ?>" class="clinics__button_small clinics__button "><span class="_icon-bookmark">Подробнее о клинике</span></a>
+                                                                                                                                        <a  id="popup" href="#popup" class="clinics__button clinics__button_small _icon-communications popup-link"></a>
+                                                                                                                                        <a href="" class="clinics__button clinics__button_small _icon-pin"></a>
                                                                                                                                 </div>
                                                                                                                         </div>
                                                                                                                 <?php endforeach; ?>
@@ -106,7 +107,12 @@ require_once 'views/services_view.php';
                                                                                         </div>
                                                                                 </div>
                                                                         </li>
-                                                                <?php endforeach; ?>
+                                                                <?php endforeach;
+                                                                        else: ?>
+                                                                        <div class="services__later">
+                                                                        <?php echo("В скором времени"); ?>
+                                                                        </div>
+                                                                       <?php endif; ?>
                                                         </ul>
                                                 </li>
                                         <?php endforeach; ?>
@@ -125,56 +131,17 @@ require_once 'views/services_view.php';
                         <div class="doctors__row">
                                 <div class="doctors__slider swiper-container">
                                         <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
+                                               <?php foreach($doctors as $doctor): ?>
+                                               <div class="swiper-slide">
                                                         <div class="doctors__card">
-                                                                <img src="static/img/doctor.jpg" alt="" class="doctors__img">
+                                                                <img src="static/img/doctors_photo/<?=$doctor['name_doctor'] ?>.jpg" alt="no photo" class="doctors__img">
                                                                 <div class="doctors__card_info">
-                                                                        <span class="doctors__label">Врач-педиатр высшей категории</span>
-                                                                        <p class="doctors__name">Ильясов Дониёр Ходжиакбарович</p>
-                                                                        <p class="doctors__position">Главный врач. Врач высшей категории — отоларинголог</p>
+                                                                        <span class="doctors__label"><?= $doctor['post_doctor'] ?></span>
+                                                                        <p class="doctors__name"><?= $doctor['name_doctor'] ?></p>                                                              
                                                                 </div>
                                                         </div>
                                                 </div>
-                                                <div class="swiper-slide">
-                                                        <div class="doctors__card">
-                                                                <img src="static/img/doctor.jpg" alt="" class="doctors__img">
-                                                                <div class="doctors__card_info">
-                                                                        <span class="doctors__label">Врач-педиатр высшей категории</span>
-                                                                        <p class="doctors__name">Ильясов Дониёр Ходжиакбарович</p>
-                                                                        <p class="doctors__position">Главный врач. Врач высшей категории — отоларинголог</p>
-                                                                </div>
-                                                        </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                        <div class="doctors__card">
-                                                                <img src="static/img/doctor.jpg" alt="" class="doctors__img">
-                                                                <div class="doctors__card_info">
-                                                                        <span class="doctors__label">Врач-педиатр высшей категории</span>
-                                                                        <p class="doctors__name">Ильясов Дониёр Ходжиакбарович</p>
-                                                                        <p class="doctors__position">Главный врач. Врач высшей категории — отоларинголог</p>
-                                                                </div>
-                                                        </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                        <div class="doctors__card">
-                                                                <img src="static/img/doctor.jpg" alt="" class="doctors__img">
-                                                                <div class="doctors__card_info">
-                                                                        <span class="doctors__label">Врач-педиатр высшей категории</span>
-                                                                        <p class="doctors__name">Ильясов Дониёр Ходжиакбарович</p>
-                                                                        <p class="doctors__position">Главный врач. Врач высшей категории — отоларинголог</p>
-                                                                </div>
-                                                        </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                        <div class="doctors__card">
-                                                                <img src="static/img/doctor.jpg" alt="" class="doctors__img">
-                                                                <div class="doctors__card_info">
-                                                                        <span class="doctors__label">Врач-педиатр высшей категории</span>
-                                                                        <p class="doctors__name">Ильясов Дониёр Ходжиакбарович</p>
-                                                                        <p class="doctors__position">Главный врач. Врач высшей категории — отоларинголог</p>
-                                                                </div>
-                                                        </div>
-                                                </div>
+                                                <? endforeach; ?>
                                         </div>
                                         <div class="swiper-button swiper-button-prev doctors__navigation doctors__navigation_prev"></div>
                                         <div class="swiper-button swiper-button-next doctors__navigation doctors__navigation_next"></div>

@@ -4,6 +4,8 @@
         require_once 'include/db.php';
 ?>
 
+
+
 <?php 
         require_once 'views/index_view.php';
 ?>
@@ -11,6 +13,7 @@
 
 <!-- Блок с основным контентом страницы -->
 <div class="page">
+        
         <!-- Блок с поиском -->
         <div class="search" style="background: url('static/img/search-bg.jpg') center no-repeat; background-size: cover; ">
                 <style>
@@ -76,23 +79,26 @@
                                                 <p class="about__text_text">Медицинский Центр «MEDION», расположенный в самом центре города Ташкента, предлагает своим клиентам насладиться лучшими традициями гостеприимства, оценить качество наших услуг, ощутить чуткое отношение и индивидуальный подход. «MEDION» — это путь к гармонии души и тела, которую так трудно обрести в ритме большого города.</p>
                                                 <p class="about__text_text">Высокая грамотность и многолетний опыт работы наших специалистов позволяет прочувствовать желания каждого пациента и предоставить ему комфортные условия пребывания и лечения в клинике. Тепло и забота о пациентах – наша цель. Именно поэтому, мы уверены, что «MEDION» поможет Вам обрести здоровье, красоту и гармонию души и тела!</p>
                                         </div>
-                                        <a href="" class="about__sendbtn _pc"><span>Отправить заявку</span></a>
+                                        <a  id="popup" href="#popup"  class="about__sendbtn _pc popup-link"><span class="">Отправить заявку</span></a>
                                 </div>
                                 <div class="about__block">
                                         <div class="about__slider swiper-container">
                                                 <div class="swiper-wrapper">
                                                         <div class="swiper-slide">
-                                                                <img src="static/img/about-img.jpg" alt="">
+                                                                <img src="static/img/20180719-DSC04726.jpg" alt="">
                                                         </div>
                                                         <div class="swiper-slide">
-                                                                <img src="static/img/about-img.jpg" alt="">
+                                                                <img src="static/img/pr_1_.jpg" alt="">
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                                <img src="static/img/untitled-2.jpg" alt="">
                                                         </div>
                                                 </div>
                                                 <div class="swiper-button swiper-button-prev about__navigation"></div>
                                                 <div class="swiper-button swiper-button-next about__navigation"></div>
                                                 <div class="swiper-pagination about__pagination"></div>
                                         </div>
-                                        <a href="" class="about__sendbtn _mobile"><span>Отправить заявку</span></a>
+                                        <a id="popup" href="#popup" class="about__sendbtn popup-link _mobile"><span>Отправить заявку</span></a>
                                 </div>
                         </div>
                 </div>
@@ -107,28 +113,32 @@
                         </h2>
                         <div class="why__block">
                                 <div class="why__item">
+                                        <div class="why__imageBox">
+                                                <img src="static/img/hands.svg" alt="" class="why__image">
+                                        </div>
                                         <p class="why__text">Индивидуальный подход к каждому пациенту</p>
-                                        <div class="why__imageBox">
-                                                <img src="static/img/why-img.png" alt="" class="why__image">
-                                        </div>
+                                        
                                 </div>
                                 <div class="why__item">
+                                        <div class="why__imageBox">
+                                                <img src="static/img/family.svg" alt="" class="why__image">
+                                        </div>
                                         <p class="why__text">Программы для всей семьи</p>
-                                        <div class="why__imageBox">
-                                                <img src="static/img/why-img(2).png" alt="" class="why__image">
-                                        </div>
+                                       
                                 </div>
                                 <div class="why__item">
-                                        <p class="why__text">Удобное расположение</p>
                                         <div class="why__imageBox">
-                                                <img src="static/img/why-img(3).png" alt="" class="why__image">
+                                                <img src="static/img/pin2.svg" alt="" class="why__image">
                                         </div>
+                                        <p class="why__text">Удобное расположение клиники</p>
+                                       
                                 </div>
                                 <div class="why__item">
+                                        <div class="why__imageBox">
+                                                <img src="static/img/calendar.svg" alt="" class="why__image">
+                                        </div>
                                         <p class="why__text">Работа центра без выходных</p>
-                                        <div class="why__imageBox">
-                                                <img src="static/img/why-img(1).png" alt="" class="why__image">
-                                        </div>
+                                       
                                 </div>
                         </div>
                 </div>

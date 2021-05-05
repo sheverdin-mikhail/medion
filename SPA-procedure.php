@@ -4,6 +4,9 @@
 <?php
 require_once 'include/db.php';
 ?>
+<?php
+require_once 'include/popup.php';
+?>
 
 <?php
 $procedure_id = (int)$_GET['id'];
@@ -89,8 +92,8 @@ $similar = get_spaSimilar($link, $procedure['id_category-spa']);
                                                 <span class="procedure__price-num"><?= $procedure['price_spa-procedure'] ?> сум за <?= $procedure['quantity_spa-procedure'] ?></span>
                                         </div>
                                         <div class="procedure__buttons">
-                                                <a href="" class="procedure__button">Записаться на прием</a>
-                                                <a href="" class="procedure__button">Бесплатная консультация</a>
+                                                <a href="#popup-modal" class="procedure__button popup-link">Записаться на прием</a>
+                                                <a href="#popup" class="procedure__button popup-link">Бесплатная консультация</a>
                                         </div>
                                 </div>
                         </div>
@@ -113,7 +116,7 @@ $similar = get_spaSimilar($link, $procedure['id_category-spa']);
                                                 <h3 class="similar__item_title"><?= $sim['name_spa-procedure'] ?></h3>
                                                 <p class="similar__item_text"><?= $sim['description_spa-procedure'] ?> </p>
                                                 <div class="similar__item_row">
-                                                        <a href="" class="similar__item_button">Записаться на прием</a>
+                                                        <a href="#popup-modal" class="similar__item_button popup-link">Записаться на прием</a>
                                                         <div class="similar__item_price">
                                                                 <label>Стоимость услуги:</label>
                                                                 <span><?= $sim['price_spa-procedure'] ?> сум<br> за <?= $sim['quantity_spa-procedure'] ?></span>

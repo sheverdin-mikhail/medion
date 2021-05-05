@@ -356,7 +356,7 @@ a:hover, a:active, a:focus {
 }
 
 .clinics__button {
-  font-size: 15px !important;
+  font-size: 11px !important;
   line-height: 155%;
   display: inline-block;
   background: #193B67;
@@ -378,16 +378,15 @@ a:hover, a:active, a:focus {
   color: #C31C22;
 }
 
-.clinics__button:nth-child(1) {
-  padding-left: 35px;
+.clinics__button_small:nth-child(1) {
+  padding-left: 25px;
 }
 
-.clinics__button:nth-child(1) span::before {
+.clinics__button_small:nth-child(1) span::before {
   position: absolute;
-  top: 14px;
-  left: 20px;
-  -webkit-transform: translateY(25%);
-          transform: translateY(25%);
+  -webkit-transform: translate(-50%, 35%);
+          transform: translate(-50%, 35%);
+  left: 15px;
 }
 
 .clinics__button:hover {
@@ -461,10 +460,33 @@ a:hover, a:active, a:focus {
   padding: 25px 0;
 }
 
+.header__addresses {
+  display: none;
+}
+
+.header__addresses.active {
+  position: absolute;
+  display: block;
+  top: 41.5px;
+  left: 50%;
+  z-index: 10;
+  width: 340px;
+  padding: 15px 20px;
+  background: #193B67;
+  color: #fff;
+  border-radius: 0 13px 13px 13px;
+}
+
 .header__address {
   display: block;
   position: relative;
+  padding: 12px 15px;
   padding-left: 43px;
+}
+
+.header__address:hover {
+  cursor: pointer;
+  background: #fcfcfc;
 }
 
 .header__address::before {
@@ -476,6 +498,16 @@ a:hover, a:active, a:focus {
   width: 30px;
   height: 30px;
   background: url("../../img/pin.svg") center no-repeat;
+  -webkit-transform: translateY(25%);
+          transform: translateY(25%);
+}
+
+.header__logo {
+  width: 190px;
+}
+
+.header__logo img {
+  width: 100%;
 }
 
 .header__label {
@@ -560,6 +592,7 @@ a:hover, a:active, a:focus {
 
 .header__menu__item {
   padding: 25px 15px;
+  display: block;
 }
 
 .header__menu__item:hover {
@@ -738,6 +771,10 @@ a:hover, a:active, a:focus {
   margin-bottom: 0;
 }
 
+.footer__info:first-child {
+  margin-bottom: 15px;
+}
+
 .footer__label {
   margin-bottom: 10px;
 }
@@ -797,6 +834,7 @@ a:hover, a:active, a:focus {
 
 .footer__phone {
   margin-bottom: 7px;
+  color: #fff;
 }
 
 .map__card {
@@ -1054,7 +1092,6 @@ a:hover, a:active, a:focus {
   font-size: 17px;
   line-height: 21.7px;
   padding: 19px 32px;
-  margin-top: 64px;
 }
 
 .about__sendbtn:hover, .about__sendbtn:active, .about__sendbtn:focus {
@@ -1065,22 +1102,6 @@ a:hover, a:active, a:focus {
   border: 2px solid #C31C22;
   border-radius: 5px;
   color: #C31C22;
-}
-
-.about__sendbtn span {
-  padding-right: 35px;
-  position: relative;
-}
-
-.about__sendbtn span::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 20px;
-  height: 20px;
-  background: url("../../img/send.svg");
 }
 
 .about__slider {
@@ -1120,33 +1141,37 @@ a:hover, a:active, a:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   background: #EFF4F7;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 22%;
-          flex: 0 1 22%;
+      -ms-flex: 0 1 24.5%;
+          flex: 0 1 24.5%;
   border-radius: 5px;
   padding: 40px 0 0 0;
+  min-height: 250px;
 }
 
 .why__text {
-  padding: 0 35px;
-  font-size: 24px;
-  line-height: 29.4px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+  padding: 25px 28px;
+  color: #19304C;
 }
 
 .why__imageBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .why__image {
@@ -1510,6 +1535,13 @@ a:hover, a:active, a:focus {
   position: relative;
 }
 
+.services__later {
+  font-size: 17px;
+  line-height: 155%;
+  color: #193B67;
+  padding-left: 28px;
+}
+
 .services__blueBlock {
   top: 0;
   background: #FBFBFC;
@@ -1686,8 +1718,8 @@ a:hover, a:active, a:focus {
 
 .services__sublist_item hr {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 36.6%;
-          flex: 1 1 36.6%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
   border-bottom: 1px solid #F3F7FA;
 }
 
@@ -2184,8 +2216,8 @@ a:hover, a:active, a:focus {
   .clinics__button:nth-child(1) span::before {
     top: 0;
     left: 0;
-    -webkit-transform: translateY(50%);
-            transform: translateY(50%);
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
   }
   .clinics__button:nth-child(2), .clinics__button:nth-child(3) {
     -webkit-box-flex: 0;
@@ -2241,11 +2273,10 @@ a:hover, a:active, a:focus {
 
 .clinic__img {
   display: block;
-  height: 100%;
 }
 
 .clinic__info {
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .clinic__title {
@@ -2266,7 +2297,7 @@ a:hover, a:active, a:focus {
 }
 
 .clinic__button {
-  padding: 17px !important;
+  margin-bottom: 6px;
 }
 
 .clinic__button span {
@@ -2640,7 +2671,7 @@ a:hover, a:active, a:focus {
 }
 
 .spa__name {
-  font-size: 23px;
+  font-size: 18px;
   line-height: 145%;
   color: #193B67;
 }
@@ -2748,6 +2779,21 @@ a:hover, a:active, a:focus {
 
 .offer__item_icon::before {
   font-size: 60px;
+}
+
+@media screen and (min-width: 310px) and (max-width: 990px) {
+  .offer__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .offer__item {
+    margin-bottom: 15px;
+  }
+  .offer__item_button {
+    font-size: 15px;
+  }
 }
 
 .specialist {
@@ -3201,6 +3247,149 @@ a:hover, a:active, a:focus {
   }
 }
 
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.popup__lable {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-align: start;
+  color: #193B67;
+}
+
+.popup__input {
+  padding: 13px 0px 13px 30px;
+  margin: 0 -15px;
+  margin-bottom: 15px;
+  border-radius: 23px;
+  border: 2px solid #193B67;
+  resize: none;
+  width: 100%;
+}
+
+.popup__input__block {
+  width: 100%;
+}
+
+.popup__body {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 10px;
+}
+
+.popup__content {
+  background: #fff;
+  text-align: center;
+  color: #fff;
+  max-width: 800px;
+  padding: 40px;
+  position: relative;
+  border-radius: 6px;
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+  -webkit-transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+          transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.popup__title {
+  font-size: 20px;
+  margin: 0 0 1em 0;
+  color: #193B67;
+}
+
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup.open .popup__content {
+  -webkit-transform: perspective(600px) translate(0px, 0px) rotateX(0deg);
+          transform: perspective(600px) translate(0px, 0px) rotateX(0deg);
+  opacity: 1;
+}
+
+.popup__textarea {
+  padding: 26px 0px 0px 34px;
+  margin: 0 -15px;
+  margin-bottom: 15px;
+  border-radius: 23px;
+  border: 2px solid #193B67;
+  resize: none;
+  width: 100%;
+}
+
+.popup__button {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 53px;
+  font-size: 16px;
+  padding: 22px 30px;
+  margin: 0 auto;
+  display: inline-block;
+  background: #193B67;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 17px;
+  line-height: 21.7px;
+}
+
+.popup__button:hover, .popup__button:active, .popup__button:focus {
+  border-radius: 5px;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #C31C22;
+  border-radius: 5px;
+  color: #C31C22;
+}
+
+.popup__button:hover {
+  cursor: pointer;
+}
+
 .hide {
   display: none;
 }
@@ -3294,10 +3483,12 @@ a:hover, a:active, a:focus {
   border: 1px solid #EFF4F7;
   border-radius: 5px;
   padding: 30px;
+  margin-bottom: 30px;
 }
 
 .medicin__card_block:last-child {
   margin-left: 30px;
+  max-width: 61.53%;
 }
 
 .medicin__img {
@@ -3325,6 +3516,8 @@ a:hover, a:active, a:focus {
   padding: 16px 28px;
   font-size: 15px;
   line-height: 155%;
+  width: 100%;
+  text-align: center;
 }
 
 .medicin__button:hover, .medicin__button:active, .medicin__button:focus {
@@ -3356,6 +3549,11 @@ a:hover, a:active, a:focus {
   font-size: 19px;
   line-height: 160%;
   color: #454F5C;
+  margin-bottom: 30px;
+}
+
+.works {
+  max-width: 100%;
 }
 
 .works__title {
@@ -3386,8 +3584,13 @@ a:hover, a:active, a:focus {
   border-radius: 5px;
 }
 
+.works__item {
+  max-width: 100%;
+}
+
 .works__image {
   position: relative;
+  width: 100%;
 }
 
 .works__button {
@@ -3407,7 +3610,11 @@ a:hover, a:active, a:focus {
 
 .works__navigation_next {
   position: absolute;
-  left: -38px;
+  left: 15px;
+}
+
+.works_slide {
+  max-width: 216px;
 }
 
 ._before,

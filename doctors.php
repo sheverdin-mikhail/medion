@@ -49,7 +49,6 @@
                             <li class="medic__item">
                                 <div class="medic__direction">
                                     <span class="medic__direction_name"><?= $cat['name_doctors-category']?></span>
-                                    <span class="medic__direction_numb">4 специалиста</span>
                                 </div>
                                 <ul class="doctors__row">
                                     <div class="doctors__slider swiper-container">
@@ -66,7 +65,7 @@
                                                                 if($doc['experience_doctor']!= (NULL || ' ') )
                                                                     {echo 'Стаж работы '.$doc['experience_doctor'].'в области педиатрии и диагностики детских заболеваний';}; ?>
                                                             </p>
-                                                            <a href="/doctor.php?id_doctor=<?=$doc['id_doctor']?>" class="doctors__more">Подробнее о враче</a>
+                                                            <!-- <a href="/doctor.php?id_doctor=<?=$doc['id_doctor']?>" class="doctors__more">Подробнее о враче</a> -->
                                                         </div>
                                                     </div>
                                                 </li>

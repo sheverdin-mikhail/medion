@@ -70,7 +70,7 @@ $doctors = get_doctorSimilar($link, $doctor['id_doctors-category']);
         <div class="container">
             <div class="specialist__content">
                 <div class="specialist__photo">
-                    <img class="specialist__img" src="static/img/doctor.jpg" alt="" class="doctors__img">
+                <img src="static/img/doctors_photo/<?=$doctor['name_doctor'] ?>.jpg" alt="no photo" class="specialist__img">
                 </div>
                 <div class="specialist__block">
                     <p class="specialist__about">
@@ -91,7 +91,7 @@ $doctors = get_doctorSimilar($link, $doctor['id_doctors-category']);
                     <p class="specialist__text">
                         Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки направлений прогрессивного развития. Не следует, однако забывать, что реализация намеченных плановых заданий играет важную роль в формировании новых предложений. Товарищи! консультация с широким активом позволяет оценить значение дальнейших направлений развития. С другой стороны сложившаяся структура организации позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.
                     </p>
-                    <a class="specialist__button" href="">
+                    <a id="popup" class="specialist__button popup-link" href="#popup">
                         Записаться на прием к врачу
                     </a>
 

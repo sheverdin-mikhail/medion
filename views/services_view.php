@@ -50,6 +50,15 @@
         return $clinics;
     }
 
+    function get_doctors($link){
+        $sql = "SELECT *, `doctors_category`.`name_doctors-category` FROM doctors
+        LEFT JOIN doctors_category ON `doctors_category`.`id_doctors-category` = `doctors`.`id_doctors-category` LIMIT 20" ;
+        $result = mysqli_query($link, $sql);
+        $clinics = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        return $clinics;
+    }
+
+    $doctors = get_doctors($link);
     $divisions = get_divisions($link);
 
 
