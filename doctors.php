@@ -42,7 +42,7 @@
         <div class="medic">
             <div class="container">
                 <div class="medic__content">
-                    <h2 class="medic__title">Специалисты нашего центра</h2>
+                    <h2 class="medic__title _header">Специалисты нашего центра</h2>
 
                     <ul class="medic__list ">
                         <?php foreach($category as $cat): ?>

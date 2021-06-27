@@ -41,7 +41,7 @@
                     <div class="header__logo">
                         <img src="static/img/medion_logo.png" alt="">
                     </div>
-                    <div class="language-menu">
+                    <!-- <div class="language-menu">
                         <div class="language-menu__on">
                             <span class="language-menu__header">Рус</span>
                         </div>
@@ -49,7 +49,7 @@
                             <div class="language-menu__item"><span class="language-menu__item_span language-menu__item_span_RU">Рус</span></div>
                             <div class="language-menu__item"><span class="language-menu__item_span language-menu__item_span_UK">Eng</span></div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="menu__burger _mobile">
                         <span></span>
@@ -62,11 +62,11 @@
                         </span>
                         <div class="header__addresses">
                         <p class="header__text">
-                            -MEDION CLINIC, AESTHETIC & SPA <br>
+                            Medion Clinic, Aesthetic & SPA <br>
                             Шайхантахурский район, ул. Зульфияханум 18 <br><br>
-                            -MEDION INNOVATION  <br>
+                            Medion Innovation  <br>
                             Шайхантахурский район, ул. Абдуллы Кадыри, 39  <br><br>
-                            -MEDION FAMILY HOSPITAL <br>
+                            Medion Family Hospital <br>
                             Шайхантахурский район, ул. Истирохат 258  <br><br>
                         </p>
                         </div>
@@ -115,7 +115,7 @@
                         <!-- <li><a href="/clinics.php" class="header__menu__item">
                                 Технологии
                             </a></li> -->
-                        <li><a href="/contacts.php" class="header__menu__item">
+                        <li><a href="/contacts.php#clinics" class="header__menu__item">
                                 Контакты
                             </a></li>
                         <li>
@@ -124,11 +124,11 @@
                                     Наши адреса:
                                 </span>
                                 <p class="header__text">
-                                -MEDION CLINIC, AESTHETIC & SPA <br>
+                                MEDION CLINIC, AESTHETIC & SPA <br>
                                 Шайхантахурский район, ул. Зульфияханум 18 <br><br>
-                                -MEDION INNOVATION  <br>
+                                MEDION INNOVATION  <br>
                                 Шайхантахурский район, ул. Абдулла Кодирий 39  <br><br>
-                                -MEDION FAMILY HOSPITAL <br>
+                                MEDION FAMILY HOSPITAL <br>
                                 Шайхантахурский район, ул. Истирохат 258  <br><br>
                                 </p>
                             </div>

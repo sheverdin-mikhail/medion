@@ -176,7 +176,7 @@ a:hover, a:active, a:focus {
   width: 56px;
   height: 56px;
   font-size: 57px;
-  color: #F5F5F8;
+  color: #d7d7e3;
 }
 
 .card:nth-child(-n+9):before {
@@ -188,8 +188,8 @@ a:hover, a:active, a:focus {
 }
 
 .card__icon {
-  width: 84px;
-  height: 84px;
+  width: 104px;
+  height: 104px;
   background: #fff;
   position: relative;
 }
@@ -198,7 +198,7 @@ a:hover, a:active, a:focus {
   position: absolute;
   top: 50%;
   left: 50%;
-  font-size: 50px;
+  font-size: 63px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -938,11 +938,6 @@ a:hover, a:active, a:focus {
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
   }
-  .footer__info {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 50%;
-            flex: 0 1 50%;
-  }
   .footer__text {
     font-size: 17px;
     line-height: 17px;
@@ -1034,6 +1029,8 @@ a:hover, a:active, a:focus {
   color: #193B67;
   font-weight: 700;
   margin-bottom: 16px;
+  max-width: 65%;
+  text-align: left;
 }
 
 .search__subtitle {
@@ -1041,6 +1038,8 @@ a:hover, a:active, a:focus {
   line-height: 27.9px;
   color: #454F5C;
   margin-bottom: 192px;
+  max-width: 56%;
+  text-align: left;
 }
 
 .about {
@@ -1305,8 +1304,8 @@ a:hover, a:active, a:focus {
 }
 
 .directions__icon {
-  width: 84px;
-  height: 84px;
+  width: 104px;
+  height: 104px;
   background: #fff;
   position: relative;
 }
@@ -1315,7 +1314,7 @@ a:hover, a:active, a:focus {
   position: absolute;
   top: 50%;
   left: 50%;
-  font-size: 53px;
+  font-size: 63px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -3673,8 +3672,14 @@ a:hover, a:active, a:focus {
             flex-direction: column;
     padding: 13px 9px 20px 9px;
   }
+  .medicin__card_block {
+    max-width: 100%;
+    width: 100%;
+  }
   .medicin__card_block:last-child {
     margin-left: 0;
+    max-width: 100%;
+    width: 100%;
   }
   .medicin__img {
     max-width: 100%;
@@ -3692,10 +3697,12 @@ a:hover, a:active, a:focus {
     font-weight: 600;
     font-size: 19px;
     line-height: 120%;
+    text-align: center;
   }
   .medicin__text {
     font-size: 15px;
     line-height: 160%;
+    text-align: justify;
   }
   .works__row {
     background: #fff;
@@ -3849,5 +3856,10 @@ a:hover, a:active, a:focus {
   }
   ._pc {
     display: none;
+  }
+  ._header {
+    text-align: center;
+    font-size: 26px;
+    min-width: 100%;
   }
 }

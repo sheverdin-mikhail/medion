@@ -52,7 +52,7 @@ require_once 'views/clinic_view.php';
                     <?php endforeach; ?>
                 </ul>
 
-                <div class="clinic__block">
+                <div class="clinic__block" id="clinics">
                     <?php foreach ($clinics as $clinic) : ?>
                         <div class="clinic__card">
                             <div class="clinic__imgbox">

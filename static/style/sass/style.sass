@@ -150,22 +150,22 @@ a
         width: 56px
         height: 56px
         font-size: 57px
-        color: #F5F5F8
+        color: darken(#F5F5F8, 10% ) 
     &:nth-child(-n+9):before
         content: '0' counter(myCounter)
     &:nth-child(4n+4)
         margin-right: 0
 
     &__icon
-        width: 84px
-        height: 84px
+        width: 104px
+        height: 104px
         background: #fff
         position: relative
         &::before
             position: absolute
             top: 50%
             left: 50%
-            font-size: 50px
+            font-size: 63px
             transform: translate(-50%, -50%)            
         
         
@@ -481,7 +481,10 @@ a
        display: none
 
 
-                    
+    ._header
+        text-align: center
+        font-size: 26px
+        min-width: 100% 
 
                 
                 

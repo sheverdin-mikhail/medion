@@ -39,7 +39,7 @@
     <div class="medicin">
         <div class="container">
             <div class="medicin__content">
-                <h2 class="medicin__header">
+                <h2 class="medicin__header _header">
                     Услуги эстетической медицины
                 </h2>
                 <!-- Карточка -->
@@ -237,7 +237,7 @@
                <!-- Карточка -->
                <div class="medicin__card">
                     <div class="medicin__card_block">
-                        <img src="static/img/estetic_med/Rectangle 84.jpg" alt="" class="medicin__img">
+                        <img src="static/img/estetic_med/Rectangle 22.jpg" alt="" class="medicin__img">
                         <div class="medicin__buttons">
                             <a id="popup" href="#popup-modal"  class="popup-link medicin__button">
                                 <span>Записаться на прием</span>

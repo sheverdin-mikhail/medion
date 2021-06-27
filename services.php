@@ -125,7 +125,7 @@ require_once 'views/services_view.php';
         <div class="doctors">
                 <div class="container">
                         <div class="doctors__row">
-                                <h2 class="doctors__title">Наши врачи</h2>
+                                <h2 class="doctors__title _header">Наши врачи</h2>
                                 <a href="/doctors.php" class="doctors__button _pc"><span>Все врачи и специалисты</span></a>
                         </div>
                         <div class="doctors__row">

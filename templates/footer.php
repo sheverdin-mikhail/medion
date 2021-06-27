@@ -9,7 +9,7 @@
                         <div class="footer__column">
                             <img src="/static/img/footer-logo.svg" alt="" class="footer__logo">
 
-                            <div class="language-menu _pc">
+                            <!-- <div class="language-menu _pc">
                                 <div class="language-menu__on">
                                     <span class="language-menu__header">Рус</span>
                                 </div>
@@ -17,7 +17,7 @@
                                     <div class="language-menu__item"><span class="language-menu__item_span language-menu__item_span_RU">Рус</span></div>
                                     <div class="language-menu__item"><span class="language-menu__item_span language-menu__item_span_UK">Eng</span></div>
                                 </div>
-                            </div>
+                            </div> -->
 
                         </div>
                         <div class="footer__column">
@@ -30,7 +30,7 @@
                             <a href="/doctors.php" class="footer__links">Врачи</a>
                             <a href="/SPA.php" class="footer__links">СПА-комплекс</a>
                             <!-- <a href="" class="footer__links">Технологии</a> -->
-                            <a href="/contacts.php" class="footer__links">Контакты</a>
+                            <a href="/contacts.php#clinics" class="footer__links">Контакты</a>
                         </div>
                         <div class="footer__column">
                             <div class="footer__info">
@@ -41,11 +41,11 @@
                             <div class="footer__info">
                                 <div class="footer__label">Адреса центра:</div>
                                 <div class="footer__text footer__text_address">
-                                -MEDION CLINIC, AESTHETIC & SPA <br>
+                                Medion Clinic, Aesthetic & SPA <br>
                                 Шайхантахурский район, ул. Зульфияханум 18 <br><br>
-                                -MEDION INNOVATION  <br>
-                                Шайхантахурский район, ул. Абдуллы Кадыри, 39 <br><br>
-                                -MEDION FAMILY HOSPITAL <br>
+                                Medion Innovation  <br>
+                                Шайхантахурский район, ул. Абдуллы Кадыри, 39  <br><br>
+                                Medion Family Hospital <br>
                                 Шайхантахурский район, ул. Истирохат 258  <br><br>
                                 </div>
                             </div>

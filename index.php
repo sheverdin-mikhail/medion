@@ -15,7 +15,7 @@
 <div class="page">
         
         <!-- Блок с поиском -->
-        <div class="search" style="background: url('static/img/search-bg.jpg') center no-repeat; background-size: cover; ">
+        <div class="search" style="background:  url('static/img/doctors.png')  no-repeat, url('static/img/search-bg (2).jpg') no-repeat; background-size: auto, cover; background-position: 100% 100%, 50% 50%; ">
                 <style>
                         @media screen and ( min-width: 319px ) and ( max-width: 990px){
                                 .search{
@@ -74,7 +74,7 @@
                 <div class="container">
                         <div class="about__content">
                                 <div class="about__block about__block_left">
-                                        <h2 class="about__header">О нашем центре</h2>
+                                        <h2 class="about__header _header">О нашем центре</h2>
                                         <div class="about__text">
                                                 <p class="about__text_text">Медицинский Центр «MEDION», расположенный в самом центре города Ташкента, предлагает своим клиентам насладиться лучшими традициями гостеприимства, оценить качество наших услуг, ощутить чуткое отношение и индивидуальный подход. «MEDION» — это путь к гармонии души и тела, которую так трудно обрести в ритме большого города.</p>
                                                 <p class="about__text_text">Высокая грамотность и многолетний опыт работы наших специалистов позволяет прочувствовать желания каждого пациента и предоставить ему комфортные условия пребывания и лечения в клинике. Тепло и забота о пациентах – наша цель. Именно поэтому, мы уверены, что «MEDION» поможет Вам обрести здоровье, красоту и гармонию души и тела!</p>
@@ -108,7 +108,7 @@
         <!-- Блок почему выбирают нас -->
         <div class="why">
                 <div class="container">
-                        <h2 class="why__header">
+                        <h2 class="why__header _header">
                                 Почему выбирают нас?
                         </h2>
                         <div class="why__block">
@@ -206,7 +206,7 @@
         <div class="directions">
                 <div class="container">
                         <div class="directions__content">
-                                <h2 class="directions__header">
+                                <h2 class="directions__header _header">
                                         Направления медицинского центра
                                 </h2>
                                 <ol class="directions__block card__container">
