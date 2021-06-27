@@ -84,13 +84,13 @@
                                 <div class="about__block">
                                         <div class="about__slider swiper-container">
                                                 <div class="swiper-wrapper">
-                                                        <div class="swiper-slide">
+                                                        <div class="swiper-slide about__slide">
                                                                 <img src="static/img/20180719-DSC04726.jpg" alt="">
                                                         </div>
-                                                        <div class="swiper-slide">
+                                                        <div class="swiper-slide about__slide">
                                                                 <img src="static/img/pr_1_.jpg" alt="">
                                                         </div>
-                                                        <div class="swiper-slide">
+                                                        <div class="swiper-slide about__slide">
                                                                 <img src="static/img/untitled-2.jpg" alt="">
                                                         </div>
                                                 </div>
@@ -148,7 +148,7 @@
 
 
         <!-- Блок акции, новости... -->
-        <div class="stocks">
+        <!-- <div class="stocks">
                 <div class="container">
                         <div class="stocks__row">
                                 <h2 class="stocks__header">
@@ -198,7 +198,7 @@
                         <div class="swiper-button swiper-button-next stocks__navigation stocks__navigation_next"></div>
                         <a href="" class="stocks__button _mobile">Читать все статьи</a>
                 </div>
-        </div>
+        </div> -->
         <!-- Конец блока -->
 
 
@@ -212,10 +212,10 @@
                                 <ol class="directions__block card__container">
                                         <?php foreach($divisions as $division):?>
                                                 <li class="directions__card card">
-                                                        <a href="/services.php?division_slug=<?=$division['slug']?>#<?=$division['slug']?>">
+                                                                <a href="/services.php?division_slug=<?=$division['slug']?>#<?=$division['slug']?>">
                                                                 <p class="_icon-<?=$division['icon']?> directions__icon card__icon">
                                                                 <h3 class="card__title"><?=$division['name']?></h3>
-                                                                <p class="card__text"><?=$division['description']?></p>
+                                                                <!-- <p class="card__text"><?=$division['description']?></p> -->
                                                                 <a href="/services.php?division_slug=<?=$division['slug']?>" class="card__more">Подробнее</a>
                                                         </a>
                                                 </li>

@@ -35,7 +35,7 @@ $clinic = get_clinic($link, $slug)[0];
             </form>
             <ul class="search__navigation">
                 <li class="search__navigation_item"><a href="/index.php">Главная</a></li>
-                <li class="search__navigation_item">Клиники</li>
+                <li class="search__navigation_item"><a href="/clinics.php">Клиники</a></li>
             </ul>
             <h2 class="search__header">
                 <?= $clinic['name_clinics'] ?>

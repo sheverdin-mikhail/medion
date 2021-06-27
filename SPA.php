@@ -46,17 +46,17 @@ require_once 'views/spa_view.php';
                 <h2 class="spa__title">Мы предоставляем процедуры: </h2>
                 <div class="spa__navigation">
                     <?php foreach ($category as $cat) : ?>
-                        <div class="spa__navigation_object _icon-<?= $cat['icon_category'] ?> " data-filter="<?= $cat['name_category'] ?>">
+                        <a class="spa__navigation_object _icon-<?= $cat['icon_category'] ?> " data-filter="<?= $cat['name_category'] ?>" href="#cards">
                             <span class="spa__label"><?= $cat['description_category'] ?></span>
                             <span class="spa__name"><?= $cat['name_category'] ?></span>
-                        </div>
+                        </a>
                     <?php endforeach; ?>
                     <div class="spa__navigation_object active" data-filter="all">
                         <span class="spa__label">Услуг: <?= count($procedures) ?></span>
                         <span class="spa__name">Показать все услуги</span>
                     </div>
                 </div>
-                <ol class="spa__list card__container">
+                <ol class="spa__list card__container" id="cards">
                     <?php foreach ($procedures as $procedure) : ?>
                         <li class="card" data-cat="<?= $procedure['category'] ?>">
                             <a href="/spa-procedure.php?id=<?= $procedure["id_spa-procedure"] ?>">

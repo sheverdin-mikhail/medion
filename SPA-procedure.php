@@ -75,7 +75,7 @@ $similar = get_spaSimilar($link, $procedure['id_category-spa']);
                 <div class="container">
                         <div class="procedure__block">
                                 <div class="procedure__image-box">
-                                        <img src="static/img/spa_img/MRT.jpg" alt="" class="procedure__image">
+                                        <img src="static/img/spa_img/<?= $procedure['id_spa-procedure'] ?>.jpg" alt="" class="procedure__image">
                                 </div>
                                 <div class="procedure__info">
                                         <span class="procedure__label">
@@ -113,7 +113,7 @@ $similar = get_spaSimilar($link, $procedure['id_category-spa']);
                                         <? if($sim['id_spa-procedure'] != $procedure['id_spa-procedure']):?>
                                        <div class="swiper-slide similar__slide">
                                         <li class="similar__item _icon-<?= $sim['icon_category'] ?> ">
-                                                <h3 class="similar__item_title"><?= $sim['name_spa-procedure'] ?></h3>
+                                                <a href="/spa-procedure.php?id=<?= $sim["id_spa-procedure"] ?>" class="similar__item_title"><?= $sim['name_spa-procedure'] ?></a>
                                                 <p class="similar__item_text"><?= $sim['description_spa-procedure'] ?> </p>
                                                 <div class="similar__item_row">
                                                         <a href="#popup-modal" class="similar__item_button popup-link">Записаться на прием</a>

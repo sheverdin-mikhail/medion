@@ -79,7 +79,7 @@
                             Пн - Сб: 8<sup>00</sup> - 17<sup>00</sup>
                         </p>
                     </div>
-                    <a  id="popup" href="#popup" class="header__button popup-link">
+                    <a  href="tel:1223" class="header__button">
                         <span class="header__button_text _icon-communications">
                             Позвонить нам
                         </span>

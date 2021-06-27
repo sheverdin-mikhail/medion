@@ -65,7 +65,7 @@ require_once 'views/clinic_view.php';
                                 <p class="clinic__text clinics__text">Поликлиника «MEDION» является крупным многопрофильным лечебно-профилактическим учреждением, оснащенным новейшим лечебно-диагностическим оборудованием. </p>
                                 <div class="clinic__buttons clinics__buttons">
                                     <a id="popup" href="#popup" class="clinic__button clinics__button popup-link"><span class="_icon-communications">Позвонить</span></a>
-                                    <a href="" class="clinic__button clinics__button "><span class="_icon-pin">Показать на карте</span></a>
+                                    <a href="#map" data-clinic="<?= $clinic['id_clinics'] ?>" class="map_view clinic__button clinics__button "><span class="_icon-pin">Показать на карте</span></a>
                                     <a href="/clinic.php?slug=<?= $clinic['clinics_slug'] ?>" class="clinic__button clinics__button "><span class="_icon-bookmark">Подробнее о клинике</span></a>
                                 </div>
                             </div>

@@ -128,6 +128,9 @@ a
 
 .card 
     padding: 52px 30px 30px 30px
+    -webkit-box-flex: 1
+    -webkit-flex: 0 0 24%
+    -ms-flex: 0 0 24%
     flex: 0 0 24%
     background:  #FBFBFC
     border-radius: 5px
@@ -167,7 +170,12 @@ a
         
         
     &__container
+        display: -webkit-box
+        display: -webkit-flex
+        display: -ms-flexbox
         display: flex
+        -webkit-flex-wrap: wrap
+        -ms-flex-wrap: wrap
         flex-wrap: wrap
         justify-content: flex-start
         list-style: none

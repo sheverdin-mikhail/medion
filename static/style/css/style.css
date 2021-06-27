@@ -152,9 +152,9 @@ a:hover, a:active, a:focus {
 
 .card {
   padding: 52px 30px 30px 30px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 24%;
-          flex: 0 0 24%;
+  -webkit-box-flex: 1;
+  -ms-flex: 0 0 24%;
+  flex: 0 0 24%;
   background: #FBFBFC;
   border-radius: 5px;
   position: relative;
@@ -208,7 +208,7 @@ a:hover, a:active, a:focus {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -1051,6 +1051,10 @@ a:hover, a:active, a:focus {
   background-color: #FBFBFC;
 }
 
+.about__slide img {
+  width: 100%;
+}
+
 .about__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1058,9 +1062,9 @@ a:hover, a:active, a:focus {
 }
 
 .about__block {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+  -webkit-box-flex: 1;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
   min-width: 0;
   max-height: 570px;
 }
@@ -1145,9 +1149,9 @@ a:hover, a:active, a:focus {
       -ms-flex-pack: start;
           justify-content: flex-start;
   background: #EFF4F7;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 24.5%;
-          flex: 0 1 24.5%;
+  -webkit-box-flex: 1;
+  -ms-flex: 0 0 24.5%;
+  flex: 0 1 24.5%;
   border-radius: 5px;
   padding: 40px 0 0 0;
   min-height: 250px;

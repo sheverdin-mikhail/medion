@@ -77,11 +77,11 @@ require_once 'views/services_view.php';
                                                                                 </div>
                                                                                 <div class="services__sublist_item_row hide">
                                                                                         <div class="services__description description ">
-                                                                                                <span class="description__label">Описание услуги</span>
-                                                                                                <p class="description__text"><?= $service['description_service'] ?></p>
+                                                                                                <!-- <span class="description__label">Описание услуги</span>
+                                                                                                <p class="description__text"><?= $service['description_service'] ?></p> -->
                                                                                                 <div class="description__buttons">
-                                                                                                        <a href="" class="description__button description__button_1">Записаться на прием</a>
-                                                                                                        <a id="popup" href="#popup"  class="popup-link description__button description__button_2">Бесплатная консультация</a>
+                                                                                                        <a href="#popup" id="popup" class="description__button description__button_1 popup-link">Записаться на прием</a>
+                                                                                                        <a id="popup" href="#popup-modal"  class="popup-link description__button description__button_2">Бесплатная консультация</a>
                                                                                                 </div>
 
                                                                                                 <div class="description__clinics clinics">
@@ -97,8 +97,8 @@ require_once 'views/services_view.php';
                                                                                                                                 <span class="clinics__address _icon-pin"><?= $clinic['address_clinics'] ?></span>
                                                                                                                                 <div class="clinics__buttons ">
                                                                                                                                         <a href="/clinic.php?slug=<?= $clinic['clinics_slug'] ?>" class="clinics__button_small clinics__button "><span class="_icon-bookmark">Подробнее о клинике</span></a>
-                                                                                                                                        <a  id="popup" href="#popup" class="clinics__button clinics__button_small _icon-communications popup-link"></a>
-                                                                                                                                        <a href="" class="clinics__button clinics__button_small _icon-pin"></a>
+                                                                                                                                        <a id="popup" href="#popup" class="clinics__button clinics__button_small _icon-communications popup-link"></a>
+                                                                                                                                        <a href="#map" data-clinic="<?= $clinic['id_clinics'] ?>" class="map_view clinics__button clinics__button_small _icon-pin" ></a>
                                                                                                                                 </div>
                                                                                                                         </div>
                                                                                                                 <?php endforeach; ?>
