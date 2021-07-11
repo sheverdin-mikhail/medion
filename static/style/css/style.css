@@ -1369,8 +1369,10 @@ a:hover, a:active, a:focus {
     line-height: 130%;
     color: #193B67;
     font-weight: bold;
+    max-width: 100%;
   }
   .search__subtitle {
+    max-width: 100%;
     font-size: 17px;
     line-height: 155%;
     color: #454F5C;
@@ -3489,6 +3491,10 @@ a:hover, a:active, a:focus {
   margin-bottom: 30px;
 }
 
+.medicin__card_block {
+  max-width: 40%;
+}
+
 .medicin__card_block:last-child {
   margin-left: 30px;
   max-width: 61.53%;
@@ -3496,6 +3502,7 @@ a:hover, a:active, a:focus {
 
 .medicin__img {
   border-radius: 5px;
+  width: 100%;
 }
 
 .medicin__buttons {

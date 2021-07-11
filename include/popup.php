@@ -24,7 +24,7 @@
 <div class="modal popup" id="popup-modal">
         <div class="container">
                 <div class="modal__content popup__content_display">
-                        <h2 class="modal__title">Запишитесь на бесплатную консультацию</h2>
+                        <h2 class="modal__title">Запишитесь на консультацию</h2>
                         <p class="modal__text">Разнообразный и богатый опыт реализация намеченных плановых заданий позволяет выполнять важные задания по разработке форм развития.</p>
                         <form action="/views/send.php" method="POST" class="modal__form">
                         <div class="modal__row">

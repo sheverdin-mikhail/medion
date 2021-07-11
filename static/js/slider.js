@@ -111,14 +111,16 @@ const swiper5 = new Swiper( '.works__row', {
     spaceBetween: 11,   
     loop: false,
     loopFillGroupWithBlank: true,
-
+    
 
 
     //Стрелки навигации
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+    // navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    // },
+    navigation: false,
+    
 
 
 });

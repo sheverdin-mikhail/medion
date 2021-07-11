@@ -73,7 +73,7 @@ require_once 'views/services_view.php';
                                                                                         <p class="services__item_text"><?= $service['name_service'] ?></p>
                                                                                         <hr>
                                                                                         <span class="services__more" id="more-<?= $service['id_service'] ?>">подробнее</span>
-                                                                                        <span class="services__price">от <?= $service['price_service'] ?>р.</span>
+                                                                                        <span class="services__price">от <?= $service['price_service'] ?>сум.</span>
                                                                                 </div>
                                                                                 <div class="services__sublist_item_row hide">
                                                                                         <div class="services__description description ">
@@ -81,7 +81,7 @@ require_once 'views/services_view.php';
                                                                                                 <p class="description__text"><?= $service['description_service'] ?></p> -->
                                                                                                 <div class="description__buttons">
                                                                                                         <a href="#popup" id="popup" class="description__button description__button_1 popup-link">Записаться на прием</a>
-                                                                                                        <a id="popup" href="#popup-modal"  class="popup-link description__button description__button_2">Бесплатная консультация</a>
+                                                                                                        <a id="popup" href="#popup-modal"  class="popup-link description__button description__button_2">Записаться на консультацию</a>
                                                                                                 </div>
 
                                                                                                 <div class="description__clinics clinics">

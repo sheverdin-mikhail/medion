@@ -33,11 +33,11 @@
                             <a href="/contacts.php#clinics" class="footer__links">Контакты</a>
                         </div>
                         <div class="footer__column">
-                            <div class="footer__info">
+                            <!-- <div class="footer__info">
                                 <div class="footer__label">График работы:</div>
                                 <div class="footer__text">Пн - Сб: <br>
                                     8:00 - 17:00</div>
-                            </div>
+                            </div> -->
                             <div class="footer__info">
                                 <div class="footer__label">Адреса центра:</div>
                                 <div class="footer__text footer__text_address">

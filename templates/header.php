@@ -71,14 +71,14 @@
                         </p>
                         </div>
                     </div>
-                    <div class="header__schedule">
+                    <!-- <div class="header__schedule">
                         <span class="header__label">
                             График работы:
                         </span>
                         <p class="header__text">
                             Пн - Сб: 8<sup>00</sup> - 17<sup>00</sup>
                         </p>
-                    </div>
+                    </div> -->
                     <a  href="tel:1223" class="header__button">
                         <span class="header__button_text _icon-communications">
                             Позвонить нам
@@ -133,7 +133,7 @@
                                 </p>
                             </div>
                         </li>
-                        <li>
+                        <!-- <li>
                             <div class="header__schedule _mobile">
                                 <span class="header__label">
                                     График работы:
@@ -142,7 +142,7 @@
                                     Пн - Сб: 8<sup>00</sup> - 17<sup>00</sup>
                                 </p>
                             </div>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="tel:1223" class="header__button _mobile">
                                 <span class="header__button_text _icon-communications">

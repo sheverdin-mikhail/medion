@@ -93,7 +93,7 @@ $similar = get_spaSimilar($link, $procedure['id_category-spa']);
                                         </div>
                                         <div class="procedure__buttons">
                                                 <a href="#popup-modal" class="procedure__button popup-link">Записаться на прием</a>
-                                                <a href="#popup" class="procedure__button popup-link">Бесплатная консультация</a>
+                                                <a href="#popup" class="procedure__button popup-link">Записаться на консультацию</a>
                                         </div>
                                 </div>
                         </div>

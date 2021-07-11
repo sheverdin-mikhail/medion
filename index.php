@@ -15,7 +15,7 @@
 <div class="page">
         
         <!-- Блок с поиском -->
-        <div class="search" style="background:  url('static/img/doctors.png')  no-repeat, url('static/img/search-bg (2).jpg') no-repeat; background-size: auto, cover; background-position: 100% 100%, 50% 50%; ">
+        <div class="search" style="background:  url('static/img/doctors.png')  no-repeat, url('static/img/search-bg (2).jpg') no-repeat; background-size: 40%, cover; background-position: 100% 100%, 50% 50%; ">
                 <style>
                         @media screen and ( min-width: 319px ) and ( max-width: 990px){
                                 .search{
@@ -91,7 +91,7 @@
                                                                 <img src="static/img/pr_1_.jpg" alt="">
                                                         </div>
                                                         <div class="swiper-slide about__slide">
-                                                                <img src="static/img/untitled-2.jpg" alt="">
+                                                                <img src="static/img/untitled-6.jpg" alt="">
                                                         </div>
                                                 </div>
                                                 <div class="swiper-button swiper-button-prev about__navigation"></div>
