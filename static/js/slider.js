@@ -8,15 +8,21 @@ const swiper1 = new Swiper( '.search__slider', {
     //Бесконечная прокрутка  
     loop: true,
 
+    autoplay: {
+        delay: 3000,
+      },
+    
+    navigation: false,
 
    breakpoints: {
        990: {
         
             //Стрелки навигации
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
+            // navigation: {
+            //     nextEl: '.swiper-button-next',
+            //     prevEl: '.swiper-button-prev',
+            // },
+            navigation: false,
         }
    }
 
@@ -27,6 +33,7 @@ const swiper2 = new Swiper( '.about__slider', {
 
     //Бесконечная прокрутка  
     loop: true,
+
     
 
     breakpoints: {

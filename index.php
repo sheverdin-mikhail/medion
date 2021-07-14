@@ -15,7 +15,7 @@
 <div class="page">
         
         <!-- Блок с поиском -->
-        <div class="search" style="background:  url('static/img/doctors.png')  no-repeat, url('static/img/search-bg (2).jpg') no-repeat; background-size: 40%, cover; background-position: 100% 100%, 50% 50%; ">
+        <div class="search" style="background: url('static/img/search-bg (2).jpg') no-repeat; background-size: cover; background-position: 50% 50%; ">
                 <style>
                         @media screen and ( min-width: 319px ) and ( max-width: 990px){
                                 .search{
@@ -41,28 +41,40 @@
                                 <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                                 <div class="search__content">
-                                                        <h2 class="search__title">Профессиональная диагностика здоровья в центре “Medion”</h2>
+                                                       <div class="search__content_block">
+                                                       <h2 class="search__title">Профессиональная диагностика здоровья в центре “Medion”</h2>
                                                         <p class="search__subtitle">MEDION- инновационный центр, имеющий отделения: радиологии, диагностики, эстетической медицины, дерматологии, пластической хирургии, SPA и диетологии.</p>
+                                                       </div>
+                                                       <div class="search__content_block">
+                                                               <img src="static/img/main_slider_1.png" alt="" class="search__img">
+                                                       </div>
                                                 </div>
                                         </div>
                                         <div class="swiper-slide">
                                                 <div class="search__content">
-                                                        <h2 class="search__title">Профессиональная диагностика здоровья в центре “Medion”</h2>
-                                                        <p class="search__subtitle">MEDION- инновационный центр, имеющий отделения: радиологии, диагностики, эстетической медицины, дерматологии, пластической хирургии, SPA и диетологии.</p>
+                                                        <div class="search__content_block">  <h2 class="search__title">Эстетическая медицина</h2>
+                                                        <p class="search__subtitle">Мы бы хотели пригласить Вас к нам в гости. Показать, как выглядит наш центр. Почувствовать ауру. Прислушаться к внутреннему голосу и принять разумное решение.</p></div>
+                                                        <div class="search__content_block">
+                                                                <img src="static/img/main_slider_2.png" alt="" class="search__img">
+                                                        </div>
+                                                      
                                                 </div>
                                         </div>
                                         <div class="swiper-slide">
                                                 <div class="search__content">
-                                                        <h2 class="search__title">Профессиональная диагностика здоровья в центре “Medion”</h2>
-                                                        <p class="search__subtitle">MEDION- инновационный центр, имеющий отделения: радиологии, диагностики, эстетической медицины, дерматологии, пластической хирургии, SPA и диетологии.</p>
+                                                        <div class="search__content_block"><h2 class="search__title">SPA-комплекс</h2>
+                                                        <p class="search__subtitle">Клиника MEDION предлагает Вам широкий выбор SPA-услуг, оказывающих благотворный физиотерапевтический и релаксирующий эффект на организм.</p></div>
+                                                        <div class="search__content_block">
+                                                                <img src="static/img/main_slider_3.png" alt="" class="search__img">
+                                                        </div>
                                                 </div>
                                         </div>
 
 
                                 </div>
-                                <div class="swiper-button swiper-button-prev"></div>
-                                <div class="swiper-button swiper-button-next"></div>
-                                <div class="swiper-pagination "></div>
+                                <!-- <div class="swiper-button swiper-button-prev"></div>
+                                <div class="swiper-button swiper-button-next"></div> -->
+                                <div class="swiper-pagination search__pagination "></div>
 
                         </div>
                 </div>

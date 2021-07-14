@@ -2,7 +2,7 @@
 
 
 .search 
-    padding: 60px 0 92px 0
+    padding: 60px 0 0px 0
     background-size: cover
     &__search 
         padding: 10px 10px 10px 30px
@@ -46,18 +46,44 @@
         &:hover
             cursor: pointer
     &__content
-        max-width: 938px
+        max-width: 1170px
+        height: 656px
+        display: flex
+        position: relative
+        overflow: hidden
+        
+        &_block
+            position: relative
+            width: 50%
+            padding-bottom: 121px
+            // &:first-child
+
+                // max-width: 75%
+            max-width: 50%
+            // &:last-child
+            //     min-width: 25%
+    &__img
+        position: absolute
+        display: block
+        bottom: 0
+        right: 0
+        z-index: 20
+
+    &__pagination
+        bottom: 50px !important
        
     &__slider 
         text-align: center
         margin-top: 154px
+        margin-bottom: -13px
     &__title 
         +header
         margin-bottom: 16px
-        max-width: 65%
+        max-width: 100%
         text-align: left
+        font-size: 50px
     &__subtitle 
-        font-size: 21px
+        font-size: 18px
         line-height: 27.9px
         color: #454F5C
         margin-bottom: 192px
@@ -262,6 +288,10 @@
             padding-top: 95px
             
         &__content 
+            flex-direction: column
+            &_block
+                max-width: 100%
+          
         &__title 
             +header_mob
             max-width: 100%
