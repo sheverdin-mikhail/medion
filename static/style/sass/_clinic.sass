@@ -13,13 +13,18 @@
         list-style: none
         justify-content: space-between
         margin: 0px 0px 50px 0px 
+        flex-wrap: wrap
+        
         
     &__item 
+        display: flex
+        flex-direction: column
         background: #EFF4F7
         border-radius: 5px
         flex: 0 1 33%
         padding: 35px 25px 30px 30px 
         position: relative
+        margin: 5px 0
         &::before
             counter-increment: myCounter     
             display: block
@@ -37,12 +42,14 @@
         &_title 
             color: #193B67
             font-size: 23px
-            padding: 34px 0px 10px 0px 
+            padding: 54px 0px 20px 0px 
 
         &_text 
             color: #454F5C
             font-size: 17px
             padding: 0px 0px 40px 0px 
+            flex: 1 1 100%
+            line-height: 22.4px
 
         &_button
             +buttons
@@ -63,6 +70,7 @@
 
         &__block 
             flex-direction: column
+            flex-wrap: nowrap
         &__item 
             margin-bottom: 15px
             &_title 

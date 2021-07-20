@@ -21,6 +21,7 @@
                                 .search{
                                         background: url('static/img/main_page_bg_mob.jpg') center no-repeat !important; 
                                         background-size: cover !important; 
+                                        padding: 0;
                                 }
                         }
                 </style>

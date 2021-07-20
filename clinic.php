@@ -13,6 +13,16 @@ $slug = $_GET['slug'];
 
 $clinic = get_clinic($link, $slug)[0];
 
+$clinics_id = $clinic['id_clinics'];
+function get_details($link, $clinics_id){
+    $sql = "SELECT * FROM clinic_detailed WHERE clinic_detailed.detailed_clinics_id LIKE '$clinics_id'";
+    $result = mysqli_query($link, $sql);
+    $clinics = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    return $clinics;
+}
+
+$detailed = get_details($link, $clinics_id);
+
 ?>
 
 <!-- Блок с основным контентом страницы -->
@@ -35,7 +45,8 @@ $clinic = get_clinic($link, $slug)[0];
             </form>
             <ul class="search__navigation">
                 <li class="search__navigation_item"><a href="/index.php">Главная</a></li>
-                <li class="search__navigation_item"><a href="/clinics.php">Клиники</a></li>
+                <li class="search__navigation_item" style="border-right: 1px solid #ADBAC9;"><a href="/clinics.php">Клиники</a></li>
+                <li class="search__navigation_item"><p><?= $clinic['name_clinics'] ?></p></li>
             </ul>
             <h2 class="search__header">
                 <?= $clinic['name_clinics'] ?>
@@ -53,42 +64,20 @@ $clinic = get_clinic($link, $slug)[0];
                     Что мы предлагаем?
                 </h2>
                 <ol class="offer__block">
-                    <li class="offer__item">
-                        <div class="offer__item_icon _icon-rating"></div>
+                    <?php foreach($detailed as $detail): ?>
+                        <li class="offer__item">
                         <h3 class="offer__item_title">
-                            Индивидуальный подход к спортивным программам
+                           <?= $detail['detailed_title'] ?>
                         </h3>
                         <p class="offer__item_text">
-                            Не следует, однако забывать, что рамки и место обучения кадров требуют от нас анализа системы обучения кадров, соответствует насущным потребностям. Товарищи! рамки и место обучения кадров требуют от нас анализа соответствующий условий активизации. С другой стороны дальнейшее развитие различных форм деятельности влечет за собой.
+                        <?= $detail['detailed_text'] ?>
                         </p>
                         <a id="popup" href="#popup" class="offer__item_button popup-link ">
                             Узнать больше об этом
                         </a>
                     </li>
-                    <li class="offer__item">
-                        <div class="offer__item_icon _icon-certification"></div>
-                        <h3 class="offer__item_title">
-                            Квалифицированные тренера и диетологи
-                        </h3>
-                        <p class="offer__item_text">
-                            Не следует, однако забывать, что рамки и место обучения кадров требуют от нас анализа системы обучения кадров, соответствует насущным потребностям. Товарищи! рамки и место обучения кадров требуют от нас анализа соответствующий условий активизации. С другой стороны дальнейшее развитие различных форм деятельности влечет за собой.
-                        </p>
-                        <a id="popup" href="#popup" class="offer__item_button popup-link" >
-                            Узнать больше об этом
-                        </a>
-                    </li>
-                    <li class="offer__item">
-                        <div class="offer__item_icon _icon-dumbell"></div>
-                        <h3 class="offer__item_title">
-                            Современное и надежное оборудование
-                        </h3>
-                        <p class="offer__item_text">
-                            Не следует, однако забывать, что рамки и место обучения кадров требуют от нас анализа системы обучения кадров, соответствует насущным потребностям. Товарищи! рамки и место обучения кадров требуют от нас анализа соответствующий условий активизации. С другой стороны дальнейшее развитие различных форм деятельности влечет за собой.
-                        </p>
-                        <a id="popup" href="#popup" class="offer__item_button popup-link">
-                            Узнать больше об этом
-                        </a>
-                    </li>
+                    <?php endforeach; ?>
+
                 </ol>
             </div>
         </div>
