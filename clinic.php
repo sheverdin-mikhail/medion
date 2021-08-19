@@ -84,20 +84,6 @@ $detailed = get_details($link, $clinics_id);
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
 <? include "templates/modal.php" ?>
 

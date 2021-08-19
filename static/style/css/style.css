@@ -2663,6 +2663,38 @@ a:hover, a:active, a:focus {
   cursor: pointer;
 }
 
+.admin {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+}
+.admin__form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.admin__blockinput {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+.admin__input {
+  display: block;
+  padding: 10px 15px;
+  border-radius: 13px;
+  border: 1px solid #193B67;
+}
+.admin__label {
+  margin-bottom: 10px;
+}
+.admin__button {
+  background: #193B67;
+  color: #fff;
+  padding: 15px 0;
+  border-radius: 13px;
+}
+
 .hide {
   display: none;
 }
