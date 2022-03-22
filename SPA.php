@@ -1,10 +1,16 @@
-<? include "templates/header.php" ?>
-
-
-<?php
-require_once 'include/db.php';
+<? $slug = 'spa' ?>
+<?  $id_page = 2; ?>
+<?php 
+        require_once 'include/db.php';
 ?>
 
+<?php 
+        require_once 'views/seo_view.php';
+?>
+<? include "templates/header.php" ?>
+<? $header = GetHeadersView($link, $id_page);
+    $header = $header[0];
+?>
 <?php
 require_once 'views/spa_view.php';
 ?>
@@ -17,7 +23,7 @@ require_once 'views/spa_view.php';
         <div class="container">
             <form action="" class="search__search">
                 <div class="search__block">
-                    <input autocomplete="off" id="q" name="q" type="text" class="search__input" placeholder="Поиск по сайту">
+                    <input autocomplete="off" id="q" name="q" type="text" class="search__input" placeholder="Поиск услуг">
                     <input type="submit" class="search__button" value="Поиск">
                 </div>
                 <div class="search__block">
@@ -30,11 +36,11 @@ require_once 'views/spa_view.php';
                 <li class="search__navigation_item"><a href="/index.php">Главная</a></li>
                 <li class="search__navigation_item">СПА комплекс</li>
             </ul>
-            <h2 class="search__header">
-                SPA-комплекс
+                        <h2 class="search__header">
+                <?=$header['header_text']?>
             </h2>
             <h3 class="search__subheader">
-                Клиника MEDION предлагает Вам широкий выбор SPA-услуг, оказывающих благотворный физиотерапевтический и релаксирующий эффект на организм.
+                <?=$header['header_description']?>
             </h3>
         </div>
     </div>
@@ -46,17 +52,17 @@ require_once 'views/spa_view.php';
                 <h2 class="spa__title">Мы предоставляем процедуры: </h2>
                 <div class="spa__navigation">
                     <?php foreach ($category as $cat) : ?>
-                        <div class="spa__navigation_object _icon-<?= $cat['icon_category'] ?> " data-filter="<?= $cat['name_category'] ?>">
+                        <a class="spa__navigation_object _icon-<?= $cat['icon_category'] ?> " data-filter="<?= $cat['name_category'] ?>" href="#cards">
                             <span class="spa__label"><?= $cat['description_category'] ?></span>
                             <span class="spa__name"><?= $cat['name_category'] ?></span>
-                        </div>
+                        </a>
                     <?php endforeach; ?>
                     <div class="spa__navigation_object active" data-filter="all">
                         <span class="spa__label">Услуг: <?= count($procedures) ?></span>
                         <span class="spa__name">Показать все услуги</span>
                     </div>
                 </div>
-                <ol class="spa__list card__container">
+                <ol class="spa__list card__container" id="cards">
                     <?php foreach ($procedures as $procedure) : ?>
                         <li class="card" data-cat="<?= $procedure['category'] ?>">
                             <a href="/spa-procedure.php?id=<?= $procedure["id_spa-procedure"] ?>">

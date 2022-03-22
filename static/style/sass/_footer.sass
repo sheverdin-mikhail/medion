@@ -17,7 +17,7 @@
     &__column
         display: flex
         flex-direction: column
-        justify-content: space-between
+        justify-content: start
         &_social
             flex-direction: row
             justify-content: space-around
@@ -30,6 +30,8 @@
         &:last-child
             margin-bottom: 0
     &__info 
+        &:first-child
+            margin-bottom: 15px
     &__label 
         margin-bottom: 10px
     &__text 
@@ -39,6 +41,8 @@
         &_address
             font-size: 19px
             line-height: 19.2px
+            a
+                color: #fff
         &_numbers
             font-size: 23px
             line-height: 24px
@@ -71,6 +75,7 @@
 
     &__phone
         margin-bottom: 7px
+        color: #fff
         
 
 .map
@@ -102,7 +107,7 @@
             font-size: 23px
         &_address
             line-height: 20px
-
+            
 @media screen and ( min-width: 310px  ) and (max-width: 990px)
     .footer
         &__map 
@@ -113,6 +118,7 @@
         &__column 
             flex-direction: row
             flex-wrap: wrap
+            justify-content: space-between
             &:first-child
                 justify-content: center
             &:nth-child(1),
@@ -135,12 +141,8 @@
                 
         &__logo 
         &__links 
-            flex: 0 1 50%
-           
-                
-
+            flex: 0 1 35%
         &__info 
-            flex: 0 1 50%
         &__label 
         &__text 
             font-size: 17px 

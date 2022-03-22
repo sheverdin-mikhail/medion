@@ -1,8 +1,12 @@
-<? include "templates/header.php" ?>
-
-<?php
-require_once 'include/db.php';
+<? $slug = 'doctors' ?>
+<?php 
+        require_once 'include/db.php';
 ?>
+
+<?php 
+        require_once 'views/seo_view.php';
+?>
+<? include "templates/header.php" ?>
 
 <?php
 $doc_id = (int)$_GET['id_doctor'];
@@ -40,7 +44,7 @@ $doctors = get_doctorSimilar($link, $doctor['id_doctors-category']);
         <div class="container">
             <form action="" class="search__search">
                 <div class="search__block">
-                    <input autocomplete="off" id="q" name="q" type="text" class="search__input" placeholder="Поиск по сайту">
+                    <input autocomplete="off" id="q" name="q" type="text" class="search__input" placeholder="Поиск услуг">
                     <input type="submit" class="search__button" value="Поиск">
                 </div>
                 <div class="search__block">
@@ -70,7 +74,7 @@ $doctors = get_doctorSimilar($link, $doctor['id_doctors-category']);
         <div class="container">
             <div class="specialist__content">
                 <div class="specialist__photo">
-                    <img class="specialist__img" src="static/img/doctor.jpg" alt="" class="doctors__img">
+                <img src="static/img/doctors_photo/<?=$doctor['name_doctor'] ?>.jpg" alt="no photo" class="specialist__img">
                 </div>
                 <div class="specialist__block">
                     <p class="specialist__about">
@@ -91,7 +95,7 @@ $doctors = get_doctorSimilar($link, $doctor['id_doctors-category']);
                     <p class="specialist__text">
                         Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки направлений прогрессивного развития. Не следует, однако забывать, что реализация намеченных плановых заданий играет важную роль в формировании новых предложений. Товарищи! консультация с широким активом позволяет оценить значение дальнейших направлений развития. С другой стороны сложившаяся структура организации позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.
                     </p>
-                    <a class="specialist__button" href="">
+                    <a id="popup" class="specialist__button popup-link" href="#popup">
                         Записаться на прием к врачу
                     </a>
 
@@ -114,7 +118,7 @@ $doctors = get_doctorSimilar($link, $doctor['id_doctors-category']);
                             <?php if ($doc['id_doctor'] != $doctor['id_doctor']) : ?>
                                 <li class="swiper-slide">
                                     <div class="doctors__card">
-                                        <img src="static/img/doctor.jpg" alt="" class="doctors__img">
+                                    <img src="static/img/doctors_photo/<?=$doc['name_doctor'] ?>.jpg" alt="no photo" class="doctors__img">
                                         <div class="doctors__card_info">
                                             <span class="doctors__label"><?=$doc['post_doctor'] ?></span>
                                             <p class="doctors__name"><?=$doc['name_doctor'] ?></p>

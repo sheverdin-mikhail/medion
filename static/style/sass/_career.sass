@@ -1,0 +1,126 @@
+.career 
+    &__content
+        padding: 70px 0 64px 0
+    &__info
+        font-size: 14px
+        line-height: 140%
+        color: #454F5C
+        &_text
+            max-width: 50% 
+        &_contacts
+            margin-top: 25px
+            b
+                font-weight: bold
+    &__list
+        margin: 30px 0
+    &__item
+        &_close
+            background: #EFF4F7
+            border-radius: 5px
+            display: flex
+            justify-content: space-between
+            border-left: 5px solid #193B67
+            border-radius: 5px
+            padding: 20px 25px  
+            margin-bottom: 25px
+        &_name
+            font-size: 19px
+            line-height: 120%
+            color: #19304C
+            display: flex
+            align-items: center
+        &_more
+            font-weight: 600
+            font-size: 14px
+            line-height: 140%
+            letter-spacing: 0.06em
+            text-transform: uppercase
+            color: #193B67
+            display: flex
+            align-items: center
+            padding-right: 8px
+            position: relative
+            
+            &::before
+                content: ""
+                display: block
+                position: absolute
+                right: -10px
+                top: 0
+                width: 12px
+                height: 90%
+                transform: rotate(180deg)
+                background: url('../../img/arrow-down.svg') center no-repeat
+                background-size: contain
+            &:hover
+                cursor: pointer
+            &.active
+                &::before
+                    transform: rotate(0deg)
+
+        &_open
+            padding: 22px 395px 32px 18px
+            background: #FFFFFF
+            border: 1px solid #EFF4F7
+            box-sizing: border-box
+            border-radius: 5px
+            display: none
+        &_title
+            font-weight: 600
+            font-size: 14px
+            line-height: 125%
+            color: #19304C
+            margin-bottom: 16px
+        &_description
+            font-size: 12px
+            line-height: 145%
+            color: #454F5C
+            margin-bottom: 20px
+        &_button
+            +buttons
+            padding: 16px 28px
+            &:hover
+                background: #C31C22
+                color: #fff
+            span
+                padding-left: 26px
+                position: relative
+                display: block
+                &::before
+                    position: absolute
+                    top: 50%
+                    transform: translateY(-50%)
+                    left: 0
+                    font-size: 16px
+                    
+                &._icon-telegramm
+                    &::before
+                        content: ""
+                        display: block
+                        width: 16px
+                        height: 16px
+                        background: url(../../img/telegramm-ico.svg) center no-repeat
+                        background-size: contain
+
+@media screen and ( min-width: 319px ) and ( max-width: 990px)
+
+    .career
+        &__item
+            &_more
+                display: flex
+                align-items: center
+                justify-content: center
+            &_open
+                padding: 22px 10px 32px 18px
+            &_row
+                &:last-child
+                    display: flex
+                    flex-direction: column
+            &_button
+                margin-bottom: 15px
+                display: flex
+                justify-content: center
+                align-items: center
+        &__info
+            &_text
+                max-width: 100%

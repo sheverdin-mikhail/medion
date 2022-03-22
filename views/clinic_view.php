@@ -16,6 +16,7 @@ function get_divisions($link){
 
 
 
+
 function get_clinic($link, $slug){
     $sql = "SELECT * FROM clinics
         WHERE clinics.clinics_slug LIKE '$slug'";
@@ -26,5 +27,6 @@ function get_clinic($link, $slug){
 }
 
 $clinics = get_all($link);
-$divisions = get_divisions($link)
+$divisions = get_divisions($link);
+
 ?>

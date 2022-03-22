@@ -1,0 +1,175 @@
+.news 
+    padding: 64px 0 144px 0
+    background: #FBFBFC
+    &__content 
+    &__row
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        
+        &:first-child
+            align-items: flex-end
+            margin-bottom: 32px
+            justify-content: flex-end
+    &__form
+        display: flex
+        align-items: initial
+        margin: 0 -4px
+        &-item
+            margin: 0 4px
+    &__input
+        padding: 0 8px 0 16px
+        font-size: 12px
+        line-height: 155%
+        color: #454F5C
+        font-weight: 600
+        &::placeholder
+            opacity: 1
+
+
+        &::before
+            content: ""
+            display: block
+         
+    &__button 
+        display: inline-block
+        font-weight: 600
+        font-size: 12px
+        line-height: 155%
+        background: #193B67
+        color: #fff
+        border-radius: 5px
+        padding: 16px 31px
+        margin: 0 16px
+        &.active,
+        &:hover
+            cursor: pointer
+            background: #C31C22
+            color: #fff
+        &-search 
+            padding: 4px 16px
+    &__card
+        border: 1px solid #DFE8EE
+        border-radius: 5px
+        padding: 21px 20px
+        display: block
+        display: flex
+        justify-content: space-between
+        $card_width: 576-16
+        flex: 0 0 $card_width/1160*100%
+        margin: 8px 8px
+        &:hover
+            cursor: pointer
+            border: 1px solid #C31C22
+    &__block 
+        &-buttons
+            margin: 0 -16px
+        &-content
+            max-width: 312px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+        &-img
+            $width_block: 211
+            flex: 0 0 $width_block/536*100%
+    &__img 
+        width: 100%
+    &__title 
+        font-weight: 600
+        font-size: 20px
+        line-height: 135%
+        color: #19304C
+    &__date 
+        font-size: 14px
+        line-height: 135%
+        color: #8591A3
+    &__text 
+        font-size: 14px
+        line-height: 145%
+        color: #454F5C
+        padding: 15px 0 20px 0
+        
+
+    &__more 
+        font-weight: 600
+        font-size: 14px
+        line-height: 140%
+        letter-spacing: 0.06em
+        text-transform: uppercase
+        color: #193B67
+        span
+            padding-right: 8px
+            position: relative
+            display: inline-block
+            &::before
+                content: ""
+                display: block
+                position: absolute
+                right: -10px
+                top: 0
+                width: 12px
+                height: 100%
+                transform: rotate(180deg)
+                background: url('../../img/arrow-down.svg') center no-repeat
+                background-size: contain
+
+.news-view 
+    padding: 64px 0
+    &__content 
+        display: flex
+        justify-content: space-between
+    &__block
+        &:first-child
+            $width_image: 457
+            flex: 0 0 $width_image/1160*100%
+        &:last-child
+            $width_text: 629
+            flex: 0 0 $width_text/1160*100%
+    &__img
+        width: 100%
+    &__text 
+        font-size: 16px
+        line-height: 145%
+        color: #454F5C
+        &.subtext
+            font-size: 14px
+            line-height: 135%
+            color: #8591A3
+        &.address
+            margin: 10px 0
+        &.rules 
+            margin-top: 35px
+            margin-bottom: 10px
+        &.date
+            font-size: 14px
+            line-height: 135%
+            color: #454F5C
+            margin-bottom: 22px
+
+@media screen and ( min-width: 310px  ) and (max-width: 990px)
+    .news
+        &__row
+            flex-direction: column
+            &:first-child
+                align-items: normal
+                
+        &__card
+            flex-direction: column
+            margin-bottom: 15px
+        &__form
+            flex-direction: column
+            &-item
+                margin: 0
+        &__input
+            padding: 5px 10px
+            &:not(:first-child)
+                margin: 10px 0
+                
+    .news-view
+        &__content
+            flex-direction: column
+        &__block
+            &:first-child
+                margin-bottom: 10px
+                
+    
